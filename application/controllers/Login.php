@@ -36,7 +36,7 @@ class Login extends CI_Controller {
             $nameUser = $this->input->post('username');
 
             $user = $this->UserModel->validteLogin($password,$nameUser);
-
+            $user = $this->UserModel->validteLogin($password,$nameUser);
             if($user->getId() === '-1'){
 
                 $data = array('failLogin' => true);
@@ -46,6 +46,15 @@ class Login extends CI_Controller {
             }else {
 
                 $user->persistToSerssion($this->session);
+
+
+                //vista inicial
+                $data = array(
+                   'view.active'  => 1
+                );
+                $this->session->set_userdata($data);
+
+
                 redirect('/dashboard');
             }
 

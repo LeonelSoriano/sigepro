@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title>.::ISM CENTER::.</title>
@@ -302,7 +302,7 @@
         <li class="dropdown toolbar-icon-bg">
             <a href="#" class="dropdown-toggle" data-toggle='dropdown'><span class="icon-bg"><i class="fa fa-fw fa-user"></i></span></a>
             <ul class="dropdown-menu userinfo arrow">
-                <li><a href="usuariosview.php?codigo=1&usuario=leonel"><span class="pull-left">Perfil de Usuario</span> <i class="pull-right fa fa-user"></i></a></li>
+                <li><a href="javascript:void(0)" id="ajax-user-profile"><span class="pull-left">Perfil de Usuario</span> <i class="pull-right fa fa-user"></i></a></li>
                 <li class="divider tohide"></li>
                 <li class="tohide"><a href="#"><span class="pull-left">Asignaciones</span> <i class="pull-right fa fa-fw fa-bars"></i></a></li>
                 <li class="btnDevload tohide"><a href="#"><span class="pull-left">Mensajeria</span> <i class="pull-right fa fa-envelope"></i></a></li>
@@ -336,8 +336,8 @@
                                 </div>
                                 <div class="tabular-cell welcome-options">
                                     <span class="welcome-text">Bienvenido,</span>
-                                    <a href="#" class="name">Edwin</a>
-                                    <span class="welcome-text">Marquez</span>
+                                    <a href="#" class="name"><?php echo($userName) ?></a>
+                                    <span class="welcome-text"><?php echo($userSurName) ?></span>
                                 </div>
                             </div>
                         </div>
@@ -457,171 +457,36 @@
                 </div>
             </div>
         </div>
-        <div class="static-content-wrapper">
-            <div class="static-content">
-                <div class="page-content">
-                    <ol class="breadcrumb">
-                        <li class=""><a>System</a></li>
-                        <li class="active"><a>Inicio</a></li>
-                    </ol>
-                    <div class="page-heading">
-                        <h1>Sistema de Gerenciamiento de Proyectos, <b>Bienvenido</b>  <?php echo($userName); ?>!</h1>
-                        <!--<div class="options">
-                            <div class="btn-toolbar">
-                                <a href="#" class="btn btn-default"><i class="fa fa-fw fa-wrench"></i></a>
-                            </div>
-                        </div>-->
-                    </div>
-                    <div class="container-fluid">
-
-                        <div data-widget-group="group1">
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <a class="info-tile tile-success has-footer" href="proyectoslist.php?cmd=resetall">
-                                        <div class="tile-heading">
-                                            <div class="pull-left">Proyectos Activos</div>
-                                            <div class="pull-right">
-                                                <div id="tileorders" class="sparkline-block"></div>
-                                            </div>
-                                        </div>
-                                        <div class="tile-body">
-                                            <div class="pull-left"><i class="fa fa-folder-open"></i></div>
-                                            <div class="pull-right">01</div>
-                                        </div>
-                                        <div class="tile-footer">
-                                            <div class="pull-left">Completados / Total</div>
-                                            <div class="pull-right percent-change">01 / 02</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 btnDevload tohide">
-                                    <a class="info-tile tile-info has-footer" href="#">
-                                        <div class="tile-heading">
-                                            <div class="pull-left">Tareas Pendientes</div>
-                                            <div class="pull-right">
-                                                <div id="tiletickets" class="sparkline-block"></div>
-                                            </div>
-                                        </div>
-                                        <div class="tile-body">
-                                            <div class="pull-left"><i class="fa fa-tags"></i></div>
-                                            <div class="pull-right">14</div>
-                                        </div>
-                                        <div class="tile-footer">
-                                            <div class="pull-left">Completadas / Total</div>
-                                            <div class="pull-right percent-change">00 / 00</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 btnDevload tohide">
-                                    <a class="info-tile tile-alizarin has-footer" href="#">
-                                        <div class="tile-heading">
-                                            <div class="pull-left">Mensajes Nuevos</div>
-                                            <div class="pull-right">
-                                                <div id="tilerevenues" class="sparkline-block"></div>
-                                            </div>
-                                        </div>
-                                        <div class="tile-body">
-                                            <div class="pull-left"><i class="fa fa-envelope"></i></div>
-                                            <div class="pull-right">03</div>
-                                        </div>
-                                        <div class="tile-footer">
-                                            <div class="pull-left">Mensajes Recibidos</div>
-                                            <div class="pull-right percent-change">00</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 btnDevload tohide">
-                                    <a class="info-tile tile-midnightblue has-footer" href="#">
-                                        <div class="tile-heading">
-                                            <div class="pull-left">Respuestas (Help Desk)</div>
-                                            <div class="pull-right">
-                                                <div id="tilemembers" class="sparkline-block"></div>
-                                            </div>
-                                        </div>
-                                        <div class="tile-body">
-                                            <div class="pull-left"><i class="icon-earphones-alt"></i></div>
-                                            <div class="pull-right">00</div>
-                                        </div>
-                                        <div class="tile-footer">
-                                            <div class="pull-left">Activos / Total Creados</div>
-                                            <div class="pull-right percent-change">00 / 00</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--contenido aca -->
-                            <!-- record estructure -->
-                            <div class="row tohide">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-sm-12" id="NotificacionesOrganizacionales">
-                                            <h4>Notificaciones de la <b>Empresa</b> (En Desarrollo)</h4>
-
-                                            <div class="userWidget-2">
-                                                <div class="info">
-                                                    <div class="name">
-                                                        <i class="icon-speech"></i> &nbsp;Mensaje Organizacional
-                                                        <span class="pullRight"><i class="icon-pin"></i></span>
-                                                    </div>
-                                                    <div class="address" style="margin-top: 10px;">
-                                                        <i class="icon-user"></i> &nbsp;En Desarrollo (En Desarrollo).
-
-                                                        <div class="messageDivider"></div>
-                                                        En Desarrollo.
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div><script type="text/javascript">
-                                                <!--
-                                                EW_LookupFn = "ewlookup.php"; // ewlookup file name
-                                                EW_AddOptFn = "ewaddopt.php"; // ewaddopt.php file name
-
-                                                //-->
-                                            </script>
-                                            <script type="text/javascript" src="<?= base_url('assets/js/ewp.js') ?>"></script>
-                                            <script type="text/javascript">
-                                                <!--
-                                                EW_dateSep = "-"; // set date separator
-                                                EW_UploadAllowedFileExt = "gif,jpg,jpeg,bmp,png,doc,xls,pdf,zip,rar,docx,pptx,xlsx"; // allowed upload file extension
-
-                                                //-->
-                                            </script>
-                                            <script type="text/javascript">
-                                                <!--
-                                                var firstrowoffset = 1; // first data row start at
-                                                var tablename = 'ewlistmain'; // table name
-                                                var lastrowoffset = 0; // footer row
-                                                var usecss = true; // use css
-                                                var rowclass = 'ewTableRow'; // row class
-                                                var rowaltclass = 'ewTableAltRow'; // row alternate class
-                                                var rowmoverclass = 'ewTableHighlightRow'; // row mouse over class
-                                                var rowselectedclass = 'ewTableSelectRow'; // row selected class
-                                                var roweditclass = 'ewTableEditRow'; // row edit class
-                                                var rowcolor = '#FFFFFF'; // row color
-                                                var rowaltcolor = '#F5F5F5'; // row alternate color
-                                                var rowmovercolor = '#FFCCFF'; // row mouse over color
-                                                var rowselectedcolor = '#CCFFFF'; // row selected color
-                                                var roweditcolor = '#FFFF99'; // row edit color
-
-                                                //-->
-                                            </script>
-                                            <script type="text/javascript">
-                                                <!--
-                                                var EW_DHTMLEditors = [];
-
-                                                //-->
-                                            </script>
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- middle screen -->
 
-                        </div>
 
-                    </div> <!-- .container-fluid -->
+
+            <div class="static-content-wrapper" >
+            <div class="static-content" >
+                <div class="page-content" id="ajax-middle">
+
+                 <!--   -------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <!-- ------------------------------------>
                 </div> <!-- #page-content -->
             </div>
             <footer role="contentinfo">
@@ -633,11 +498,58 @@
                 </div>
             </footer>
         </div>
+
+            <!-- middle screen -->
+        </div>
     </div>
 </div>
 
 
 <!-- Load site level scripts -->
+
+
+<script type="text/javascript">
+    <!--
+    EW_LookupFn = "ewlookup.php"; // ewlookup file name
+    EW_AddOptFn = "ewaddopt.php"; // ewaddopt.php file name
+
+    //-->
+</script>
+<script type="text/javascript" src="<?= base_url('assets/js/ewp.js') ?>"></script>
+<script type="text/javascript">
+    <!--
+    EW_dateSep = "-"; // set date separator
+    EW_UploadAllowedFileExt = "gif,jpg,jpeg,bmp,png,doc,xls,pdf,zip,rar,docx,pptx,xlsx"; // allowed upload file extension
+
+    //-->
+</script>
+<script type="text/javascript">
+    <!--
+    var firstrowoffset = 1; // first data row start at
+    var tablename = 'ewlistmain'; // table name
+    var lastrowoffset = 0; // footer row
+    var usecss = true; // use css
+    var rowclass = 'ewTableRow'; // row class
+    var rowaltclass = 'ewTableAltRow'; // row alternate class
+    var rowmoverclass = 'ewTableHighlightRow'; // row mouse over class
+    var rowselectedclass = 'ewTableSelectRow'; // row selected class
+    var roweditclass = 'ewTableEditRow'; // row edit class
+    var rowcolor = '#FFFFFF'; // row color
+    var rowaltcolor = '#F5F5F5'; // row alternate color
+    var rowmovercolor = '#FFCCFF'; // row mouse over color
+    var rowselectedcolor = '#CCFFFF'; // row selected color
+    var roweditcolor = '#FFFF99'; // row edit color
+
+    //-->
+</script>
+<script type="text/javascript">
+    <!--
+    var EW_DHTMLEditors = [];
+
+    //-->
+</script>
+
+
 
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
@@ -710,7 +622,6 @@
 
 
 
-
 <!-- End loading page level scripts-->
 <script type="text/javascript">
     $(document).ready(function(){
@@ -734,6 +645,41 @@
             /*alertify.alert("<img src='images/devload.png' width='100%'>");*/
         });
         /*alertify.alert("Hi");*/
+
+
+
+        var parametros = { view : 0 };
+        $.ajax({
+            data:  parametros,
+            url:   "/sigepro/dashboard/ajaxUserProfile/",
+            type:  "post",
+            beforeSend: function () {
+                // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+            },
+            success:  function (response) {
+                $("#ajax-middle").html(response);
+            }
+        });
+
+
+
+        $( "#ajax-user-profile" ).on("click", function(){
+
+            var parametros = { view : 2 };
+            $.ajax({
+                data:  parametros,
+                url:   "/sigepro/dashboard/ajaxUserProfile/",
+                type:  "post",
+                beforeSend: function () {
+                    // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+                },
+                success:  function (response) {
+
+                    $("#ajax-middle").html(response);
+                }
+            });
+
+        });
 
 
     });

@@ -21,9 +21,12 @@ class UserDTO {
     private $skype;
     private $phone;
     private $typeUser;
+    private $address;
+    private $password;
+    private $positionJob;
 
     public function toSessionVar($session,$id,$nameUser,$name,$surName,
-        $idCard,$email,$img,$skype,$phone,$typeUser){
+        $idCard,$email,$img,$skype,$phone,$typeUser,$address){
 
         $this->id = $id;
         $this->nameUser = $nameUser;
@@ -35,6 +38,8 @@ class UserDTO {
         $this->skype = $skype;
         $this->phone = $phone;
         $this->typeUser = $typeUser;
+        $this->address = $address;
+
 
 
         $data = array(
@@ -47,7 +52,8 @@ class UserDTO {
             'user.img'        => $this->img,
             'user.skype'    => $this->skype,
             'user.phone'   => $this->phone,
-            'user.typeUser' => $this->typeUser
+            'user.typeUser' => $this->typeUser,
+            'user.address' => $this->address
         );
 
 
@@ -70,7 +76,8 @@ class UserDTO {
             'user.img'        => $this->img,
             'user.skype'    => $this->skype,
             'user.phone'   => $this->phone,
-            'user.typeUser' => $this->typeUser
+            'user.typeUser' => $this->typeUser,
+            'user.address' => $this->address
         );
 
         $session->set_userdata($data);
@@ -88,6 +95,7 @@ class UserDTO {
         $session->unset_userdata('user.skype');
         $session->unset_userdata('user.phone');
         $session->unset_userdata('user.typeUser');
+        $session->unset_userdata('user.address');
     }
 
 
@@ -252,6 +260,56 @@ class UserDTO {
     {
         $this->typeUser = $typeUser;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPositionJob()
+    {
+        return $this->positionJob;
+    }
+
+    /**
+     * @param mixed $positionJob
+     */
+    public function setPositionJob($positionJob)
+    {
+        $this->positionJob = $positionJob;
+    }
+
+
 
 
 }
