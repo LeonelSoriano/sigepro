@@ -17,6 +17,9 @@ class StateView
     private $welcome = 1;
     private $profileUser = '2';
     private $updateProfileUser = '3';
+    private $profileUserList = '4';
+    private $profileDelete = '5';
+    private $profileAdd = '6';
 
     function __construct($session,$load)
     {
@@ -26,7 +29,7 @@ class StateView
 
     public function setView($actualView){
 
-        $this->actualView = $actualView;
+        $this->actualView =  strval($actualView);
 
         $data = array(
             'view.active' => $this->actualView
@@ -39,7 +42,8 @@ class StateView
 
     public function renderView($data = '')
     {
-        switch ($this->session->userdata('view.active')) {
+        
+        switch (strval($this->session->userdata('view.active'))) {
             case $this->welcome:
                  echo($this->load->view('dashboard-welcome', $data, TRUE));
         break;
@@ -48,6 +52,15 @@ class StateView
         break;
             case $this->updateProfileUser:
                 echo $this->load->view('dashboard-user-profile-update', $data, TRUE);
+        break;
+            case $this->profileUserList:
+                echo $this->load->view('dashboard-user-list', $data, TRUE);
+        break;
+            case $this->profileDelete:
+                echo $this->load->view('dashboard-user-remove', $data, TRUE);
+        break;
+            case $this->profileAdd:
+                echo $this->load->view('dashboard-user-add', $data, TRUE);
         break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));

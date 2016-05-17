@@ -31,15 +31,15 @@ input[type="submit"], input[type="Button"]{
 }
 
 a:active {
-	color: rgba(0,0,0,0) ; /* active link color */
+	color: ; /* active link color */
 }
 
 a:link {
-	color: rgba(0,0,0,0); /* link color */
+	color: ; /* link color */
 }
 
 a:visited {
-	color: rgba(0,0,0,0); /* visited link color */
+	color: ; /* visited link color */
 }
 
 /* main table */
@@ -162,12 +162,12 @@ a:visited {
 
 /* classes for report */
 .ewReportTable {
-    border: 0px;
-    border-collapse: collapse;
+	border: 0px;
+	border-collapse: collapse;
 }
 
 .ewReportTable td {
-    padding: 3px;
+	padding: 3px;
 }
 
 .ewGroupField {
@@ -213,7 +213,7 @@ a:visited {
 
 .ewAstListBase {
 	position: absolute;
-	padding: 1px;
+	padding: 1;
 }
 
 .ewAstListItem {
@@ -222,7 +222,7 @@ a:visited {
 	cursor: hand;
 	cursor: pointer;
 	white-space: nowrap;
-	padding: 1px;
+	padding: 1;
 }
 
 .ewAstSelListItem {
@@ -231,7 +231,7 @@ a:visited {
 	cursor: hand;
 	cursor: pointer;
 	white-space: nowrap;
-	padding: 1px;
+	padding: 1;
 }
 
 /* MultiPage pager table */

@@ -22,7 +22,7 @@
     <link type="text/css" href="<?= base_url("/assets/css/styles.css") ?>" rel="stylesheet">                                     <!-- Core CSS with all styles -->
 
     <!-- Font Awesome -->
-    <link href="<?= base_url('') ?>assets/css/simple-line-icons.css" rel="stylesheet">
+    <link href="<?= base_url('assets/css/simple-line-icons.css') ?>" rel="stylesheet">
 
     <link type="text/css" href="<?= base_url('/assets/plugins/jstree/dist/themes/avenger/style.min.css') ?>" rel="stylesheet">    <!-- jsTree -->
     <link type="text/css" href="<?= base_url('/assets/plugins/codeprettifier/prettify.css') ?>" rel="stylesheet">                <!-- Code Prettifier -->
@@ -660,7 +660,6 @@
                 $("#ajax-middle").html(response);
             }
         });
-
 
 
         $( "#ajax-user-profile" ).on("click", function(){

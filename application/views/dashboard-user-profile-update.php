@@ -36,22 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         //-->
     </script>
-    <script type="text/javascript">
-        <!--
-        function EW_checkMyForm(EW_this) {
-            if (EW_this.x_imagen && !EW_checkfiletype(EW_this.x_imagen.value)) {
-                if (!EW_onError(EW_this, EW_this.x_imagen, "FILE", "No se permite el tipo de archivo"))
-                    return false;
-            }
-            if (EW_this.x_tipo && !EW_hasValue(EW_this.x_tipo, "SELECT")) {
-                if (!EW_onError(EW_this, EW_this.x_tipo, "SELECT", "Por favor ingrese los campos requeridos - Tipo de Usuario"))
-                    return false;
-            }
-            return true;
-        }
 
-        //-->
-    </script>
     <script type="text/javascript">
         <!--
         var EW_DHTMLEditors = [];
@@ -59,11 +44,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         //-->
     </script>
     <p><span >Editar TABLA: Usuarios<br><br><a href="usuarioslist.php">Volver al listado</a></span></p>
-    <?php echo form_open('/dashboard/updateUser','style="max-width: 65%"','name="fusuariosedit"','id="fusuariosedit"','method="post"','enctype="multipart/form-data"', 'onSubmit="return EW_checkMyForm(this);"') ;?>
-<!--    <form  style="max-width: 65%" name="fusuariosedit" id="fusuariosedit" action="usuariosedit.php" method="post" enctype="multipart/form-data" onSubmit="return EW_checkMyForm(this);">-->
+    <?php echo form_open_multipart('/dashboard/updateUser','style="max-width: 65%"','name="fusuariosedit"','id="fusuariosedit"','method="post"','enctype="multipart/form-data"', 'onSubmit="return EW_checkMyForm(this);"') ;?>
         <p>
-            <input type="hidden" name="a_edit" value="U">
-            <input type="hidden" name="EW_Max_File_Size" value="20000000">
+
         <table class="ewTable">
 
             <tr>
@@ -108,10 +91,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <tr>
                 <td class="ewTableHeader"><span>Fotografía</span></td>
                 <td class="ewTableAltRow"><span id="cb_x_imagen">
-<input type="radio" name="a_x_imagen" value="1" checked>Mantener&nbsp;
-<input type="radio" name="a_x_imagen" value="2">Remover&nbsp;
-<input type="radio" name="a_x_imagen" value="3">Reemplazar<br>
-<input type="file" id="x_imagen" name="x_imagen" size="30" onChange="if (this.form.a_x_imagen[2]) this.form.a_x_imagen[2].checked=true;">
+                    <input type="radio" name="a_x_imagen" value="1" checked>Mantener&nbsp;
+                    <input type="radio" name="a_x_imagen" value="2">Remover&nbsp;
+                    <input type="radio" name="a_x_imagen" value="3">Reemplazar<br>
+
+                        <input type="file" id="x_imagen" name="x_imagen" size="30" >
 </span></td>
             </tr>
             <tr>
@@ -142,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         var parametros = { view : 3 };
         $.ajax({
-            data:  parametros,
+           
             url:   "/sigepro/dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {

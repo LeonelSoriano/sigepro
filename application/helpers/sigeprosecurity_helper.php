@@ -15,4 +15,23 @@ if ( ! function_exists('sigeproSecurity'))
             redirect('/login');
         }
     }
+
+
+
+    function sigeproSecurytyIsAdmin($session){
+        if($session->userdata('user.id') ===  "1" || $session->userdata('user.id') === 1){
+            return true;
+        }
+
+        return false;
+    }
+
+    function sigeproSecurytyIsAdminOut($session,$view){
+        if($session->userdata('user.id') ===  "1" || $session->userdata('user.id') === 1){
+            return true;
+        }
+        $view->setView(1);
+        redirect('/Dashboard');
+        return false;
+    }
 }

@@ -51,9 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form>
                     <table class="table">
                         <tr>
-                            <td class="ewTableHeader"><span>Fotografía</span></td>
+                            <td class="ewTableHeader"><span> Fotografía</span></td>
                             <td><span>
-                    <img class="imgUserProfile" src="<?php echo("img"); ?>" align="not found"> </a>
+
+                    <img class="imgUserProfile" src="<?php echo(base_url(  "/uploads/". $img)); ?>" align="not found"> </a>
 </span></td>
                         </tr>
 
