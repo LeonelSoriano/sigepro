@@ -457,18 +457,20 @@ CREATE TABLE `proyectos` (
   `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) DEFAULT NULL,
   `alias` varchar(255) DEFAULT NULL,
-  `fecha_entrega` varchar(255) DEFAULT NULL,
-  `fecha_creacion` varchar(255) DEFAULT NULL,
-  `fecha_pausa` varchar(255) DEFAULT NULL,
-  `fecha_inicio` varchar(255) DEFAULT NULL,
-  `hora_entrega` varchar(255) DEFAULT NULL,
-  `hora_creacion` varchar(255) DEFAULT NULL,
-  `hora_pausa` varchar(255) DEFAULT NULL,
-  `hora_inicio` varchar(255) DEFAULT NULL,
-  `usuario_creador` varchar(255) DEFAULT NULL,
+  `fecha_entrega` date DEFAULT NULL,
+  `fecha_creacion` date DEFAULT NULL,
+  `fecha_pausa` date DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `hora_entrega` time DEFAULT NULL,
+  `hora_creacion` time DEFAULT NULL,
+  `hora_pausa` time DEFAULT NULL,
+  `hora_inicio` time DEFAULT NULL,
+  `usuario_creador` int(11) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`codigo`),
+  KEY `proyectos_usuarios_fk` (`usuario_creador`),
+  CONSTRAINT `proyectos_usuarios_fk` FOREIGN KEY (`usuario_creador`) REFERENCES `usuarios` (`codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -477,6 +479,7 @@ CREATE TABLE `proyectos` (
 
 LOCK TABLES `proyectos` WRITE;
 /*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
+INSERT INTO `proyectos` VALUES (1,'hola','hola','2016-05-18','2016-05-19',NULL,'2016-05-06','09:30:00','00:00:28',NULL,'09:25:00',1,'127.0.0.1'),(8,'asd','asd','2016-05-31','2016-05-19',NULL,'2016-05-01','00:00:00','00:01:19',NULL,'12:00:00',1,'127.0.0.1'),(9,'descripcion','alias','2016-05-23','2016-05-20',NULL,'2016-05-19','09:10:00','23:57:43',NULL,'23:05:00',1,'127.0.0.1');
 /*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -543,7 +546,7 @@ DROP TABLE IF EXISTS `responsables_actividades`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responsables_actividades` (
-  `codigo` int(255) NOT NULL,
+  `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_objetivo` int(255) DEFAULT NULL,
   `codigo_meta` int(255) DEFAULT NULL,
@@ -578,7 +581,7 @@ DROP TABLE IF EXISTS `responsables_metas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responsables_metas` (
-  `codigo` int(255) NOT NULL,
+  `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_objetivo` int(255) DEFAULT NULL,
   `codigo_meta` int(255) DEFAULT NULL,
@@ -612,7 +615,7 @@ DROP TABLE IF EXISTS `responsables_objetivos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responsables_objetivos` (
-  `codigo` int(255) NOT NULL,
+  `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_objetivo` int(11) DEFAULT NULL,
   `codigo_usuario` int(255) DEFAULT NULL,
@@ -643,7 +646,7 @@ DROP TABLE IF EXISTS `responsables_proyectos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responsables_proyectos` (
-  `codigo` int(255) NOT NULL,
+  `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_usuario` int(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
@@ -651,7 +654,7 @@ CREATE TABLE `responsables_proyectos` (
   KEY `codigo_usuario` (`codigo_usuario`),
   CONSTRAINT `responsables_proyectos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `proyectos` (`codigo`),
   CONSTRAINT `responsables_proyectos_ibfk_2` FOREIGN KEY (`codigo_usuario`) REFERENCES `usuarios` (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -660,6 +663,7 @@ CREATE TABLE `responsables_proyectos` (
 
 LOCK TABLES `responsables_proyectos` WRITE;
 /*!40000 ALTER TABLE `responsables_proyectos` DISABLE KEYS */;
+INSERT INTO `responsables_proyectos` VALUES (1,1,1);
 /*!40000 ALTER TABLE `responsables_proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -817,7 +821,7 @@ CREATE TABLE `tipos_usuarios` (
   `nombre_corto` varchar(255) DEFAULT NULL,
   `indicador` int(11) DEFAULT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -826,7 +830,7 @@ CREATE TABLE `tipos_usuarios` (
 
 LOCK TABLES `tipos_usuarios` WRITE;
 /*!40000 ALTER TABLE `tipos_usuarios` DISABLE KEYS */;
-INSERT INTO `tipos_usuarios` VALUES (1,'administrador','admin',1),(2,'observador','obser',2);
+INSERT INTO `tipos_usuarios` VALUES (1,'administrador','admin',1),(2,'observador','obser',2),(3,'responsable','respon',3);
 /*!40000 ALTER TABLE `tipos_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -869,7 +873,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'leonel','123','leonel','soriano','123456789','hola@hola.net','2001/05/05',1,'12','','01463562587','123asd','',1,'vivo en mi casa ñandú');
+INSERT INTO `usuarios` VALUES (1,'leonel','123','leonel2','soriano','123456789','hola@hola.net','2001/05/05',1,'12','emi.jpg','01463562587','123asd','',3,'hola soy direccion ññññññ');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -971,6 +975,27 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_del_user` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_del_user`(in id integer)
+begin
+	START TRANSACTION;
+	delete from usuarios where usuarios.codigo = id;
+	COMMIT;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_get_combo_position_company_user` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -985,13 +1010,35 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_position_company_user`
 begin
 	select departamentos.codigo as id,
 	concat(empresas.nombre , ' | ', departamentos.nombre, ' | ',cargos.nombre , ' | '  ) as name,
-	if((select usuarios.codigo_cargo from usuarios where usuarios.codigo = 1) = cargos.codigo,1,0) as active 
+	if((select usuarios.codigo_cargo from usuarios where usuarios.codigo = idparam) = cargos.codigo,1,0) as active 
 	from cargos
 	inner join departamentos on
 	departamentos.codigo = cargos.codigo_departamento
 	inner join empresas
 	on empresas.codigo = departamentos.codigo_empresa	
 	;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_combo_user` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_user`(in idparam integer)
+begin
+	select usuarios.codigo as id,
+		usuarios.nombre as name,
+		'0' as active
+	from usuarios;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1013,7 +1060,7 @@ begin
 	select 
 	cargos.codigo as id,
 	cargos.nombre as name,
-	IF(usuarios.codigo_cargo = cargos.codigo, 1, 0) as active 
+	IF(usuarios.codigo_cargo = cargos.codigo, 1, 0 and usuarios.codigo = idparam) as active 
 	from cargos,usuarios
 	where usuarios.codigo = idparam;
 END ;;
@@ -1036,9 +1083,59 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_user_to_typeuser`(IN i
 begin
 	select tipos_usuarios.codigo as id,
 		tipos_usuarios.nombre as name,
-		IF(tipos_usuarios.codigo = usuarios.codigo_tipo_usuario, 1, 0) as active 
+		IF(idparam = usuarios.codigo , 1, 0) as active 
+	from tipos_usuarios,usuarios;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_combo_user_type_project` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_user_type_project`(
+	IN idparam INTEGER
+)
+begin
+		select tipos_usuarios.codigo as id,
+		tipos_usuarios.nombre as name,
+		IF(tipos_usuarios.codigo = usuarios.codigo_tipo_usuario and idparam = usuarios.codigo, 1, 0) as active 
 	from tipos_usuarios,usuarios
-	where usuarios.codigo = idparam;
+		where tipos_usuarios.codigo <> 1
+		union
+		select -1 as id,
+				"Ambos" as name,
+				0 as active
+			
+		;
+	
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_hola` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_hola`(IN id INTEGER)
+begin
+	select hola.id,hola.nombre from hola;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1055,7 +1152,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_user_by_id`(IN nameuser INTEGER)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_user_by_id`(IN id INT)
 begin
 	
 	select 
@@ -1064,25 +1161,155 @@ begin
 	 usuarios.telefono as phone,
 	 usuarios.correo_electronico as email,
 	 usuarios.direccion as addres,
-	 sigepro.cargos.nombre as job_title,
-	 sigepro.departamentos.nombre as departament,
-	 sigepro.empresas.nombre as name_company,
-	 sigepro.tipos_usuarios.nombre as user_type,
-	 sigepro.usuarios.usuario as user_name,
-	sigepro.usuarios.imagen as img,
-    sigepro.usuarios.contrasena as password
+	 cargos.nombre as job_title,
+	 departamentos.nombre as departament,
+	 empresas.nombre as name_company,
+	 tipos_usuarios.nombre as user_type,
+	 usuarios.usuario as user_name,
+	usuarios.imagen as img,
+    usuarios.contrasena as password
 	
 	from usuarios
-	inner join sigepro.cargos 
-	on sigepro.cargos.codigo = sigepro.usuarios.codigo_cargo
-	inner join sigepro.departamentos 
-	on sigepro.departamentos.codigo = sigepro.cargos.codigo_departamento
-	inner join sigepro.empresas
-	on sigepro.empresas.codigo = sigepro.departamentos.codigo_empresa
-	inner join sigepro.tipos_usuarios
-	on sigepro.tipos_usuarios.codigo = sigepro.usuarios.codigo_tipo_usuario
-	;
+	inner join cargos 
+	on cargos.codigo = usuarios.codigo_cargo
+	inner join departamentos 
+	on departamentos.codigo = cargos.codigo_departamento
+	inner join empresas
+	on empresas.codigo = departamentos.codigo_empresa
+	inner join tipos_usuarios
+	on tipos_usuarios.codigo = usuarios.codigo_tipo_usuario
+	where usuarios.codigo = id;
 	
+	
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_user_by_id_view_user_list` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_user_by_id_view_user_list`(in id integer)
+begin
+	select usuarios.nombre as name,
+			usuarios.apellido as surName,
+			usuarios.telefono as phone,
+			usuarios.correo_electronico as email,
+			empresas.nombre as companyName,
+			departamentos.nombre as departamentName,
+			cargos.nombre as positionName,
+			usuarios.imagen as img
+	from usuarios
+	inner join cargos on
+	cargos.codigo = usuarios.codigo_cargo
+	inner join departamentos on
+	departamentos.codigo = cargos.codigo_departamento
+	inner join empresas on
+	empresas.codigo = departamentos.codigo_empresa
+	where usuarios.codigo = id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_user_prokect_by_id` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_user_prokect_by_id`(
+		in idProject integer
+	)
+begin select
+		usuarios.nombre as name,
+		usuarios.apellido as surname,
+		"responsable" as root
+	from
+		usuarios inner join responsables_proyectos on
+		responsables_proyectos.codigo_usuario = usuarios.codigo
+	where
+		responsables_proyectos.codigo_proyecto = idProject
+union select
+		usuarios.nombre as name,
+		usuarios.apellido as surname,
+		"observador" as root
+	from
+		usuarios inner join observadores_proyectos on
+		observadores_proyectos.codigo_usuario = usuarios.codigo
+	where
+		observadores_proyectos.codigo_proyecto = idProject;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_ins_new_project` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ins_new_project`(
+in descriptionp varchar(255),
+in aliasp varchar(255),
+in fechaentregap date,
+in fechainiciop date,
+in horaentregap time,
+in horainiciop time,
+in usercreadorp int,
+in direccionipp varchar(255)
+)
+begin
+	
+	
+INSERT INTO sigepro.proyectos
+( nombre, alias, fecha_entrega, fecha_creacion,  fecha_inicio, hora_entrega, hora_creacion,  hora_inicio, usuario_creador, direccion_ip)
+VALUES(descriptionp, aliasp, fechaentregap, CURDATE(), fechainiciop, horaentregap, CURTIME(),  horainiciop, usercreadorp, direccionipp);
+
+
+
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_ins_user` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ins_user`(in loginName varchar(255),in passwordValue varchar(255),in userName varchar(255),in surName varchar(255),
+		in email varchar(255),in codePosition integer, in img varchar(255),in phone varchar(255),in userType integer )
+begin
+	INSERT INTO usuarios
+( usuario, contrasena, nombre, apellido, correo_electronico,  codigo_cargo, imagen, telefono, codigo_tipo_usuario)
+VALUES( loginName, passwordValue,  userName , surName, email, codePosition,  img, phone,  userType);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1135,4 +1362,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-13 19:25:10
+-- Dump completed on 2016-05-21 20:24:21
