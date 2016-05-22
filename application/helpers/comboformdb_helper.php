@@ -17,13 +17,26 @@ if ( ! function_exists('comboFormDb'))
      */
     function comboFormDb($infoDb,$name)
     {
+        $defaulActive = "";
+
+        $defaulActiveBool = false;
+
         $comboHTML = "<select style='width: 100%' id='$name'  name='$name' >";
-        $comboHTML .= "<option value='-1'>Por favor Seleccione</option>";
+        $comboHTML .= "<option value='-1' ".$defaulActive.">Por favor Seleccione</option>";
         foreach ($infoDb as $key => $value){
             $isActive = $value['active'] === '1' ? "selected" : "";
+
+            if($isActive  === "selected"){
+                $defaulActive = true;
+            }
+
             $comboHTML .= "<option value=\"".$key."\" $isActive>".$value['name']."</option>";
         }
         $comboHTML .= "</select>";
+
+        if(!$defaulActive){
+            $defaulActive = "selected";
+        }
 
         return $comboHTML;
     }
@@ -65,6 +78,51 @@ if ( ! function_exists('comboFormDb'))
         return $inputTextHtml;
     }
 
+
+    /**
+     * @param $name id
+     * @param $header el header footer
+     * @param $data datos
+     * @param $existFooter si se rendeara el footer
+     * @param string $extra cosas extras
+     * @return string regresa la tabla
+     */
+    function tableFromDB($name,$header,$data,$existFooter,$extra=''){
+ 
+        $tableHtml = " ";
+        $footer = "";
+
+        $tableHtml .= "<table class=\"display\" id='$name' $extra > ";
+        $tableHtml .= "<thead><tr>";
+        $footer .= "<tfoot><tr>";
+
+        foreach ($header as $index => $item) {
+            $tableHtml .= "<th> $item </th>";
+            $footer .= " $item ";
+        }
+
+        $footer .= "</tfoot></tr>";
+        $tableHtml .= "</thead></tr>";
+
+        if($existFooter){
+            $tableHtml .= $footer;
+        }
+
+        $tableHtml .= "<tbody><tr>";
+
+        foreach ($data as $index => $item) {
+            $tableHtml .= " <td> $item </td>";
+        }
+
+        $tableHtml .= "</tbody></tr>";
+        $tableHtml .= "</table> ";
+
+
+        $tableHtml .= " <script> </script> ";
+
+        return $tableHtml;
+        
+    }
 
 
 
