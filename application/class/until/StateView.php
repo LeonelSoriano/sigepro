@@ -20,6 +20,9 @@ class StateView
     private $profileUserList = '4';
     private $profileDelete = '5';
     private $profileAdd = '6';
+    private $projectAdd = '7';
+    private $dashboardProjectAdmin = '8';
+    private $dashboardUserInvolved  = '9';
 
     function __construct($session,$load)
     {
@@ -62,6 +65,15 @@ class StateView
             case $this->profileAdd:
                 echo $this->load->view('dashboard-user-add', $data, TRUE);
         break;
+            case $this->projectAdd:
+                echo $this->load->view('dashboard-project-new', $data, TRUE);
+        break;
+            case $this->dashboardProjectAdmin:
+                echo $this->load->view('dashboard-project-admin', $data, TRUE);
+                break;
+            case $this->dashboardUserInvolved:
+                echo $this->load->view('dashboard-user-involved', $data, TRUE);
+                break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));
         }

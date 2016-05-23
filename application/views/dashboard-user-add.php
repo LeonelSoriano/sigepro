@@ -23,14 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
         </div>
         <div class="container-fluid">-->
-        <script type="text/javascript">
-            <!--
-            EW_LookupFn = "ewlookup.php"; // ewlookup file name
-            EW_AddOptFn = "ewaddopt.php"; // ewaddopt.php file name
-
-            //-->
-        </script>
-        <script type="text/javascript" src="ewp.js"></script>
 
 
         <!--..:::::::::::::::::::::..-->
@@ -44,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="page-heading">
             <h1><i class="icon-plus"></i> Agregar Nuevo <b>Usuario</b></h1>
 
-            <a href="usuarioslist.php" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p">
+            <a href="javascript:void(0)" id="returnList" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p">
                 <i class="icon-arrow-left"></i> Volver al Listado
             </a>
         </div>
@@ -59,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-body">
                     <div class="table-responsive">
 
-                        <form name="fusuariosadd" id="fusuariosadd" action="usuariosadd.php" method="post"
+                        <form name="fusuariosadd" id="fusuariosadd" action="Dashboard/addUser" method="post"
                               enctype="multipart/form-data" >
                             <p>
 
@@ -85,55 +77,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <tr>
                                     <td class="ewTableHeader"><span>Correo</span></td>
                                     <td>
-                                        <input type="text" name="x_correo" id="x_correo" size="30" maxlength="255" value="">
+                                        <?php echo($emailInput); ?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ewTableHeader"><span>Dirección</span></td>
                                     <td>
-                                        <textarea cols="35" rows="4" id="x_direccion" name="x_direccion"></textarea>
+                                        <?php echo($addressInput); ?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="ewTableHeader"><span>Empresa</span></td>
-                                    <td>
-                                        <select id='x_codigo_empresa' name='x_codigo_empresa'><option value=''>Por favor Seleccione</option><option value="1">Mantiq</option></select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="ewTableHeader"><span>Departamento</span></td>
-                                    <td>
-                                        <select id='x_codigo_departamento' name='x_codigo_departamento'><option value=''>Por favor Seleccione</option><option
-                                                value="1">TecnologÃ­a de la informaciÃ³n</option></select>
-                                    </td>
-                                </tr>
+
                                 <tr>
                                     <td class="ewTableHeader"><span>Cargo</span></td>
                                     <td>
-                                        <select id='x_cargo' name='x_cargo'><option value=''>Por favor Seleccione</option><option value="1">Presidente</option><option
-                                                value="2">Programador</option><option value="3">DiseÃƒÂ±ador</option><option value="4">Analista</option><option
-                                                value="5">Gerente</option></select>
+                                        <?php echo($positionInput); ?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ewTableHeader"><span>Fotografía</span></td>
                                     <td>
-                                        <input type="file" id="x_imagen" name="x_imagen" size="30">
+                                        <style>
+                                            input[name="imagen"] {
+                                                width: 600px;
+                                            }
+                                        </style>
+                                        <input type="file" id="imagen" name="imagen"  style="width: 600px">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ewTableHeader"><span>Tipo de Usuario<span
                                                 class='ewmsg'>&nbsp;*</span></span></td>
                                     <td>
-                                        <select id='x_tipo' name='x_tipo'><option value=''>Por favor Seleccione</option><option
-                                                value="-1">Administrator</option><option value="0">Anonymous</option></select>
+                                        <?php echo($typeUserInput); ?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ewTableHeader"><span>Usuario<span class='ewmsg'>&nbsp;*</span></span>
                                         </td>
                                     <td>
-                                        <input type="text" name="x_usuario" id="x_usuario" size="30" maxlength="255" value="">
+                                        <input type="text" name="user" id="usuario" size="30" maxlength="255" value="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -167,3 +149,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 </div>
 
+<script>
+    $( "#returnList" ).on("click", function(){
+        var parametros = { view : 4 };
+        $.ajax({
+            data:  parametros,
+            url:   "/sigepro/dashboard/ajaxUserProfile/",
+            type:  "post",
+            beforeSend: function () {
+                // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+            },
+            success:  function (response) {
+                $("#ajax-middle").html(response);
+            }
+        });
+    });
+
+
+</script>

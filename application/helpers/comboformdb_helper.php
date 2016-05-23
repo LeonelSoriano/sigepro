@@ -88,7 +88,7 @@ if ( ! function_exists('comboFormDb'))
      * @return string regresa la tabla
      */
     function tableFromDB($name,$header,$data,$existFooter,$extra=''){
- 
+      
         $tableHtml = " ";
         $footer = "";
 
@@ -111,6 +111,7 @@ if ( ! function_exists('comboFormDb'))
         $tableHtml .= "<tbody><tr>";
 
         foreach ($data as $index => $item) {
+
             $tableHtml .= " <td> $item </td>";
         }
 
@@ -118,7 +119,10 @@ if ( ! function_exists('comboFormDb'))
         $tableHtml .= "</table> ";
 
 
-        $tableHtml .= " <script> </script> ";
+        $tableHtml .= " <script> 
+                $('#$name').DataTable();
+ 
+        </script> ";
 
         return $tableHtml;
         

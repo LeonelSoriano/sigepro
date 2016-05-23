@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Load site level scripts -->
 <link type="text/css" href="<?= base_url('/assets/css/jquery.dataTables.css') ?>" rel="stylesheet">
-<script type="text/javascript" src="<?= base_url('/assets/js/jquery.dataTables.min.js') ?>"></script>     								<!-- Wijet -->
+<script type="text/javascript" src="<?= base_url('/assets/js/jquery.dataTables.min.js') ?>"></script>     						
 <script>
         $('#example').DataTable();
 

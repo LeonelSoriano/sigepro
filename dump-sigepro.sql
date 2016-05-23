@@ -467,10 +467,11 @@ CREATE TABLE `proyectos` (
   `hora_inicio` time DEFAULT NULL,
   `usuario_creador` int(11) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
+  `fecha_final` date DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `proyectos_usuarios_fk` (`usuario_creador`),
   CONSTRAINT `proyectos_usuarios_fk` FOREIGN KEY (`usuario_creador`) REFERENCES `usuarios` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -479,7 +480,7 @@ CREATE TABLE `proyectos` (
 
 LOCK TABLES `proyectos` WRITE;
 /*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
-INSERT INTO `proyectos` VALUES (1,'hola','hola','2016-05-18','2016-05-19',NULL,'2016-05-06','09:30:00','00:00:28',NULL,'09:25:00',1,'127.0.0.1'),(8,'asd','asd','2016-05-31','2016-05-19',NULL,'2016-05-01','00:00:00','00:01:19',NULL,'12:00:00',1,'127.0.0.1'),(9,'descripcion','alias','2016-05-23','2016-05-20',NULL,'2016-05-19','09:10:00','23:57:43',NULL,'23:05:00',1,'127.0.0.1');
+INSERT INTO `proyectos` VALUES (1,'hola','hola','2016-05-18','2016-05-19',NULL,'2016-05-06','09:30:00','00:00:28',NULL,'09:25:00',1,'127.0.0.1',NULL),(8,'asd','asd','2016-05-31','2016-05-19',NULL,'2016-05-01','00:00:00','00:01:19',NULL,'12:00:00',1,'127.0.0.1',NULL),(9,'descripcion','alias','2016-05-23','2016-05-20',NULL,'2016-05-19','09:10:00','23:57:43',NULL,'23:05:00',1,'127.0.0.1',NULL),(10,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:32:47',NULL,'16:00:00',1,'127.0.0.1',NULL),(11,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:38',NULL,'16:00:00',1,'127.0.0.1',NULL),(12,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:39',NULL,'16:00:00',1,'127.0.0.1',NULL),(13,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:39',NULL,'16:00:00',1,'127.0.0.1',NULL),(14,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:46',NULL,'16:00:00',1,'127.0.0.1',NULL),(15,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:53',NULL,'16:00:00',1,'127.0.0.1',NULL),(16,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:40:54',NULL,'16:00:00',1,'127.0.0.1',NULL),(17,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','15:43:59',NULL,'16:00:00',1,'127.0.0.1',NULL),(18,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','19:41:20',NULL,'16:00:00',1,'127.0.0.1',NULL);
 /*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -890,27 +891,29 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `get_user_by_password_username`(IN pass VARCHAR(255), IN nameuser VARCHAR(255))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_user_by_password_username`(
+in pass varchar(255),
+in nameuser varchar(255)
+)
 begin
-
 	
-	DECLARE total INT DEFAULT 0;
-	
-	select count(*) into total  from usuarios where usuarios.contrasena = pass and usuarios.usuario = nameuser;
-	
-	if total = 1 then
-		select usuarios.codigo  as id, usuarios.usuario as nameUser, usuarios.nombre as name,
-			usuarios.apellido as surName, usuarios.identificacion as idcard, usuarios.correo_electronico as email,
-			usuarios.imagen as img, usuarios.skype as skype, usuarios.telefono as phone,
-			usuarios.codigo_tipo_usuario as typeUser, usuarios.direccion as address
-		from usuarios  where usuarios.contrasena = pass and usuarios.usuario = nameuser;
-	
-	else
-	select -1  as id,null as nameUser, null as name,
-			null as surName, null as idcard, null as email,
-			null as img, null as skype, null as phone,
-			null as typeUser, null as address;
-	end if;
+DECLARE total INT DEFAULT 0;
+ 
+ select count(*) into total  from usuarios where usuarios.contrasena = pass and usuarios.usuario = nameuser;
+ 
+ if total = 1 then
+  select usuarios.codigo  as id, usuarios.usuario as nameUser, usuarios.nombre as name,
+   usuarios.apellido as surName, usuarios.identificacion as idcard, usuarios.correo_electronico as email,
+   usuarios.imagen as img, usuarios.skype as skype, usuarios.telefono as phone,
+   usuarios.codigo_tipo_usuario as typeUser, usuarios.direccion as address
+  from usuarios  where usuarios.contrasena = pass and usuarios.usuario = nameuser;
+ 
+ else
+ select -1  as id,null as nameUser, null as name,
+   null as surName, null as idcard, null as email,
+   null as img, null as skype, null as phone,
+   null as typeUser, null as address;
+ end if;
 	
 END ;;
 DELIMITER ;
@@ -1111,7 +1114,7 @@ begin
 	from tipos_usuarios,usuarios
 		where tipos_usuarios.codigo <> 1
 		union
-		select -1 as id,
+		select 0 as id,
 				"Ambos" as name,
 				0 as active
 			
@@ -1316,6 +1319,71 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_ins_user_to_project` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ins_user_to_project`(
+		in typeUsert integer,
+		in projectId integer,
+		in userId integer
+	)
+begin if typeUser = 2 then insert
+		into
+			sigepro.observadores_proyectos(
+				codigo_proyecto,
+				codigo_usuario
+			)
+		values(
+			projectId,
+			userId
+		);
+
+elseif typeUser = 3 then insert
+	into
+		sigepro.responsables_proyectos(
+			codigo_proyecto,
+			codigo_usuario
+		)
+	values(
+		projectId,
+		userId
+	);
+
+elseif typeUser = 0 then insert
+	into
+		sigepro.responsables_proyectos(
+			codigo_proyecto,
+			codigo_usuario
+		)
+	values(
+		projectId,
+		userId
+	);
+
+insert
+	into
+		sigepro.observadores_proyectos(
+			codigo_proyecto,
+			codigo_usuario
+		)
+	values(
+		projectId,
+		userId
+	);
+end if;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_upd_user` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1362,4 +1430,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-21 20:24:21
+-- Dump completed on 2016-05-22 21:38:08

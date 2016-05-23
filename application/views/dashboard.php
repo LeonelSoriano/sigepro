@@ -13,6 +13,7 @@
     <link href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet' type='text/css'>
 
+    <script type="text/javascript" src="<?= base_url('/assets/js/jquery-2.js') ?>"></script> 		<!-- EasyPieChart-->
 
 
     <link href="<?= base_url("/assets/login_style/css/app_list.css") ?>" rel="stylesheet">
@@ -36,7 +37,7 @@
 
     <link type="text/css" href="<?= base_url('/assets/plugins/form-daterangepicker/daterangepicker-bs3.css') ?>" rel="stylesheet"> 	<!-- DateRangePicker -->
     <link type="text/css" href="<?= base_url('/assets/plugins/fullcalendar/fullcalendar.css') ?>" rel="stylesheet"> 					<!-- FullCalendar -->
-    <link type="text/css" href="<?= base_url('/assets/plugins/charts-chartistjs/chartist.min.css') ?>" rel="stylesheet"> 				<!-- Chartist -->
+<!--    <link type="text/css" href="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.css') ?><!--" rel="stylesheet"> 				<!-- Chartist -->
 
     <!-- Alerts-->
     <link rel="stylesheet" href="<?= base_url('/assets/plugins/alertify/themes/alertify.core.css') ?>" />
@@ -46,7 +47,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('/assets/plugins/sweetalert-master/dist/sweetalert.css') ?>">
 
-    <link type="text/css" href="<?= base_url('/assets/plugins/clockface/css/clockface.css') ?>" rel="stylesheet">                   	<!-- Clockface -->
+    <link type="text/css" href="<?= base_url('/assets/plugins/clockface/css/clockface.css') ?>" rel="stylesheet" />                   	<!-- Clockface -->
 
 </head>
 
@@ -56,7 +57,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-6 col-sm-2">
-                <a href="proyectosadd.php" class="shortcut-tile tile-success">
+                <a  href="javascript:void(0)" class="shortcut-tile tile-success">
                     <div class="tile-body">
                         <div class="pull-left"><i class="icon-plus"></i></div>
                     </div>
@@ -349,8 +350,10 @@
                                 <li><a href="<?php echo site_url('/dashboard');?>"><i class="fa fa-home"></i><span>Inicio</span></a></li>
                                 <li><a href="javascript:;"><i class="fa fa-folder-open"></i><span>Proyectos</span><span class="badge badge-info">01</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="proyectoslist.php?cmd=resetall"><i class="icon-user-follow"></i> Asignados</a></li>
-                                        <li><a href="proyectosadd.php"><i class="icon-plus"></i> Agregar Nuevo</a></li>
+                                        <li id="projectasigned"><a href="javascript:void(0)"><i class="icon-user-follow"></i> Asignados</a></li>
+
+                                        <li id="createproject" ><a href="javascript:void(0)"><i class="icon-plus"></i> Agregar Nuevo</a></li>
+
                                         <li><a href="proyectossrch.php"><i class="icon-magnifier"></i> B&uacute;squeda Avanzada</a></li>
                                     </ul>
                                 </li>
@@ -505,56 +508,8 @@
 </div>
 
 
-<!-- Load site level scripts -->
 
 
-<script type="text/javascript">
-    <!--
-    EW_LookupFn = "ewlookup.php"; // ewlookup file name
-    EW_AddOptFn = "ewaddopt.php"; // ewaddopt.php file name
-
-    //-->
-</script>
-<script type="text/javascript" src="<?= base_url('assets/js/ewp.js') ?>"></script>
-<script type="text/javascript">
-    <!--
-    EW_dateSep = "-"; // set date separator
-    EW_UploadAllowedFileExt = "gif,jpg,jpeg,bmp,png,doc,xls,pdf,zip,rar,docx,pptx,xlsx"; // allowed upload file extension
-
-    //-->
-</script>
-<script type="text/javascript">
-    <!--
-    var firstrowoffset = 1; // first data row start at
-    var tablename = 'ewlistmain'; // table name
-    var lastrowoffset = 0; // footer row
-    var usecss = true; // use css
-    var rowclass = 'ewTableRow'; // row class
-    var rowaltclass = 'ewTableAltRow'; // row alternate class
-    var rowmoverclass = 'ewTableHighlightRow'; // row mouse over class
-    var rowselectedclass = 'ewTableSelectRow'; // row selected class
-    var roweditclass = 'ewTableEditRow'; // row edit class
-    var rowcolor = '#FFFFFF'; // row color
-    var rowaltcolor = '#F5F5F5'; // row alternate color
-    var rowmovercolor = '#FFCCFF'; // row mouse over color
-    var rowselectedcolor = '#CCFFFF'; // row selected color
-    var roweditcolor = '#FFFF99'; // row edit color
-
-    //-->
-</script>
-<script type="text/javascript">
-    <!--
-    var EW_DHTMLEditors = [];
-
-    //-->
-</script>
-
-
-
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
-
-<script type="text/javascript" src="<?= base_url('assets/js/jquery-1.10.2.min.js') ?>"></script> 							<!-- Load jQuery -->
 <script type="text/javascript" src="<?= base_url('/assets/js/jqueryui-1.9.2.min.js') ?>"></script> 							<!-- Load jQueryUI -->
 
 <script type="text/javascript" src="<?= base_url('/assets/js/bootstrap.min.js') ?>"></script> 								<!-- Load Bootstrap -->
@@ -575,15 +530,15 @@
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/bootbox/bootbox.js') ?>"></script>							<!-- Bootbox -->
 
-<script type="text/javascript" src="<?= base_url('/assets/plugins/simpleWeather/jquery.simpleWeather.min.js') ?>"></script> <!-- Weather plugin-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/simpleWeather/jquery.simpleWeather.min.js') ?><!--"></script> <!-- Weather plugin-->-->
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/nanoScroller/js/jquery.nanoscroller.min.js') ?>"></script> <!-- nano scroller -->
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js') ?>"></script> 	<!-- Mousewheel support needed for jScrollPane -->
 
 <script type="text/javascript" src="<?= base_url('/assets/js/application.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('/assets/demo/demo.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('/assets/demo/demo-switcher.js') ?>"></script>
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/demo/demo.js') ?><!--"></script>-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/demo/demo-switcher.js') ?><!--"></script>-->
 
 <!-- End loading site level scripts -->
 
@@ -593,8 +548,8 @@
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/wijets/wijets.js') ?>"></script>     								<!-- Wijet -->
 
-<script type="text/javascript" src="<?= base_url('/assets/plugins/charts-chartistjs/chartist.min.js') ?>"></script>               	<!-- Chartist -->
-<script type="text/javascript" src="<?= base_url('/assets/plugins/charts-chartistjs/chartist-plugin-tooltip.js') ?>"></script>    	<!-- Chartist -->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.js') ?><!--"></script>               	<!-- Chartist -->-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist-plugin-tooltip.js') ?><!--"></script>    	<!-- Chartist -->-->
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/form-daterangepicker/moment.min.js') ?>"></script>              	<!-- Moment.js for Date Range Picker -->
 <script type="text/javascript" src="<?= base_url('/assets/plugins/form-daterangepicker/daterangepicker.js') ?>"></script>     				<!-- Date Range Picker -->
@@ -613,41 +568,24 @@
 
 <script src="<?= base_url('/assets/plugins/sweetalert-master/dist/sweetalert.min.js') ?>"></script>
 
-<script type="text/javascript" src="<?= base_url('/assets/demo/demo-index.js') ?>"></script> 										<!-- Initialize scripts for this page-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/demo/demo-index.js') ?><!--"></script> 										<!-- Initialize scripts for this page-->-->
+<link rel="stylesheet" type="text/css" media="all" href="<?php base_url("assets/calendar/calendar-win2k-1.css") ?>" title="win2k-1" />
+<script type="text/javascript" src="<?php base_url("assets/calendar/calendar.js") ?>"></script>
+<script type="text/javascript" src="<?php base_url("assets/calendar/lang/calendar-es.js") ?>"></script>
+<script type="text/javascript" src="<?php base_url("assets/calendar/calendar-setup.js") ?>"></script>
 
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/form-inputmask/jquery.inputmask.bundle.min.js') ?>"></script>  	<!-- Input Masks Plugin -->
 
 <script type="text/javascript" src="<?= base_url('/assets/demo/demo-mask.js') ?>"></script>
 
+<script type="text/javascript" src="<?= base_url('/assets/js/sigepro.js') ?>"></script> 		<!-- EasyPieChart-->
 
 
 <!-- End loading page level scripts-->
 <script type="text/javascript">
     $(document).ready(function(){
-        $(function () {
-            $("#pulsate1").pulsate({glow:false});
-            $("#pulsate2").pulsate({color:"#09f"});
-            $("#pulsate3").pulsate({reach:100});
-            $("#pulsate4").pulsate({speed:2500});
-            $("#pulsate5").pulsate({pause:1000});
-            $("#pulsate6").pulsate({onHover:true});
-        });
-
-
-        $('.btnDevload').click(function(){
-            sweetAlert("..::Noticia::..","Este Modulo se Encuentra Actualmente en Desarrollo", "warning");
-            /*sweetAlert("..::Noticia::..", "Modulo en Desarrollo", "warning");*/
-            /*alertify.alert("<img src='images/devload.png' width='100%'>");*/
-        });
-        $('.btnDevloadFull').click(function(){
-            sweetAlert("..::Noticia::..","Este Modulo se Encuentra Actualmente en Desarrollo", "warning");
-            /*alertify.alert("<img src='images/devload.png' width='100%'>");*/
-        });
-        /*alertify.alert("Hi");*/
-
-
-
+        
         var parametros = { view : 0 };
         $.ajax({
             data:  parametros,
@@ -662,27 +600,14 @@
         });
 
 
-        $( "#ajax-user-profile" ).on("click", function(){
-
-            var parametros = { view : 2 };
-            $.ajax({
-                data:  parametros,
-                url:   "/sigepro/dashboard/ajaxUserProfile/",
-                type:  "post",
-                beforeSend: function () {
-                    // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
-                },
-                success:  function (response) {
-
-                    $("#ajax-middle").html(response);
-                }
-            });
-
-        });
+        loadAjax("#ajax-user-profile" ,2 );
+        loadAjax("#createproject" ,7 );
+        loadAjax("#projectasigned" ,8 );
 
 
     });
 </script>
+
 
 </body>
 </html>
