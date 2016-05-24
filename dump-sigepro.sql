@@ -35,6 +35,9 @@ CREATE TABLE `actividades` (
   `fecha_inicio` varchar(255) DEFAULT NULL,
   `usuario_creador` varchar(255) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
+  `estado` int(11) DEFAULT NULL,
+  `fecha_final` date DEFAULT NULL,
+  `hola_final` time DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo_objetivo` (`codigo_objetivo`),
@@ -201,6 +204,30 @@ INSERT INTO `empresas` VALUES (1,'1','polar ca','polar','123','1123','caracas','
 UNLOCK TABLES;
 
 --
+-- Table structure for table `estados`
+--
+
+DROP TABLE IF EXISTS `estados`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estados` (
+  `codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estados`
+--
+
+LOCK TABLES `estados` WRITE;
+/*!40000 ALTER TABLE `estados` DISABLE KEYS */;
+INSERT INTO `estados` VALUES (1,'Creado'),(2,'Iniciado'),(3,'Pausado'),(4,'Finalizado'),(5,'Eliminado');
+/*!40000 ALTER TABLE `estados` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `metas`
 --
 
@@ -223,10 +250,12 @@ CREATE TABLE `metas` (
   `hora_inicio` varchar(255) DEFAULT NULL,
   `usuario_creador` varchar(255) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
+  `estado` int(11) DEFAULT NULL,
+  `fecha_final` date DEFAULT NULL,
+  `hora_final` time DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo_objetivo` (`codigo_objetivo`),
-  CONSTRAINT `metas_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `objetivos` (`codigo_proyecto`),
   CONSTRAINT `metas_ibfk_2` FOREIGN KEY (`codigo_objetivo`) REFERENCES `objetivos` (`codigo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -252,16 +281,19 @@ CREATE TABLE `objetivos` (
   `codigo_proyecto` int(11) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `alias` varchar(255) DEFAULT NULL,
-  `fecha_entrega` varchar(255) DEFAULT NULL,
-  `fecha_creacion` varchar(255) DEFAULT NULL,
-  `fecha_pausa` varchar(255) DEFAULT NULL,
-  `fecha_inicio` varchar(255) DEFAULT NULL,
-  `hora_entrega` varchar(255) DEFAULT NULL,
-  `hora_creacion` varchar(255) DEFAULT NULL,
-  `hora_pausa` varchar(255) DEFAULT NULL,
-  `hora_inicio` varchar(255) DEFAULT NULL,
-  `usuario_creador` varchar(255) DEFAULT NULL,
+  `fecha_entrega` date DEFAULT NULL,
+  `fecha_creacion` date DEFAULT NULL,
+  `fecha_pausa` date DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `hora_entrega` time DEFAULT NULL,
+  `hora_creacion` time DEFAULT NULL,
+  `hora_pausa` time DEFAULT NULL,
+  `hora_inicio` time DEFAULT NULL,
+  `usuario_creador` int(11) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
+  `fecha_final` date DEFAULT NULL,
+  `hora_final` time DEFAULT NULL,
+  `estado` int(11) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo` (`codigo`,`codigo_proyecto`),
@@ -358,14 +390,9 @@ DROP TABLE IF EXISTS `observadores_objetivos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `observadores_objetivos` (
   `codigo` int(255) NOT NULL,
-  `codigo_proyecto` int(255) DEFAULT NULL,
-  `codigo_objetivo` int(11) DEFAULT NULL,
   `codigo_usuario` int(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
-  KEY `codigo_proyecto` (`codigo_proyecto`,`codigo_objetivo`,`codigo_usuario`),
-  KEY `codigo_objetivo` (`codigo_objetivo`),
-  CONSTRAINT `observadores_objetivos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `objetivos` (`codigo_proyecto`),
-  CONSTRAINT `observadores_objetivos_ibfk_2` FOREIGN KEY (`codigo_objetivo`) REFERENCES `objetivos` (`codigo`)
+  KEY `codigo_proyecto` (`codigo_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -386,7 +413,7 @@ DROP TABLE IF EXISTS `observadores_proyectos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `observadores_proyectos` (
-  `codigo` int(255) NOT NULL,
+  `codigo` int(255) NOT NULL AUTO_INCREMENT,
   `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_usuario` int(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
@@ -468,10 +495,12 @@ CREATE TABLE `proyectos` (
   `usuario_creador` int(11) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
   `fecha_final` date DEFAULT NULL,
+  `hora_final` time DEFAULT NULL,
+  `estado` int(11) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `proyectos_usuarios_fk` (`usuario_creador`),
   CONSTRAINT `proyectos_usuarios_fk` FOREIGN KEY (`usuario_creador`) REFERENCES `usuarios` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -480,7 +509,7 @@ CREATE TABLE `proyectos` (
 
 LOCK TABLES `proyectos` WRITE;
 /*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
-INSERT INTO `proyectos` VALUES (1,'hola','hola','2016-05-18','2016-05-19',NULL,'2016-05-06','09:30:00','00:00:28',NULL,'09:25:00',1,'127.0.0.1',NULL),(8,'asd','asd','2016-05-31','2016-05-19',NULL,'2016-05-01','00:00:00','00:01:19',NULL,'12:00:00',1,'127.0.0.1',NULL),(9,'descripcion','alias','2016-05-23','2016-05-20',NULL,'2016-05-19','09:10:00','23:57:43',NULL,'23:05:00',1,'127.0.0.1',NULL),(10,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:32:47',NULL,'16:00:00',1,'127.0.0.1',NULL),(11,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:38',NULL,'16:00:00',1,'127.0.0.1',NULL),(12,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:39',NULL,'16:00:00',1,'127.0.0.1',NULL),(13,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:39',NULL,'16:00:00',1,'127.0.0.1',NULL),(14,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:46',NULL,'16:00:00',1,'127.0.0.1',NULL),(15,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:36:53',NULL,'16:00:00',1,'127.0.0.1',NULL),(16,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','14:40:54',NULL,'16:00:00',1,'127.0.0.1',NULL),(17,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','15:43:59',NULL,'16:00:00',1,'127.0.0.1',NULL),(18,'','','0000-00-00','2016-05-22',NULL,'0000-00-00','16:00:00','19:41:20',NULL,'16:00:00',1,'127.0.0.1',NULL);
+INSERT INTO `proyectos` VALUES (1,'hola','hola','2016-05-18','2016-05-19',NULL,'2016-05-06','09:30:00','00:00:28',NULL,'09:25:00',1,'127.0.0.1',NULL,NULL,NULL),(8,'asd','asd','2016-05-31','2016-05-19',NULL,'2016-05-01','00:00:00','00:01:19',NULL,'12:00:00',1,'127.0.0.1',NULL,NULL,NULL),(9,'descripcion','alias','2016-05-23','2016-05-20',NULL,'2016-05-19','09:10:00','23:57:43',NULL,'23:05:00',1,'127.0.0.1',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -617,15 +646,12 @@ DROP TABLE IF EXISTS `responsables_objetivos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responsables_objetivos` (
   `codigo` int(255) NOT NULL AUTO_INCREMENT,
-  `codigo_proyecto` int(255) DEFAULT NULL,
   `codigo_objetivo` int(11) DEFAULT NULL,
   `codigo_usuario` int(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
-  KEY `codigo_proyecto` (`codigo_proyecto`,`codigo_usuario`,`codigo_objetivo`),
+  KEY `codigo_proyecto` (`codigo_usuario`,`codigo_objetivo`),
   KEY `codigo_objetivo` (`codigo_objetivo`),
   KEY `codigo_usuario` (`codigo_usuario`),
-  CONSTRAINT `responsables_objetivos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `objetivos` (`codigo_proyecto`),
-  CONSTRAINT `responsables_objetivos_ibfk_2` FOREIGN KEY (`codigo_objetivo`) REFERENCES `objetivos` (`codigo`),
   CONSTRAINT `responsables_objetivos_ibfk_3` FOREIGN KEY (`codigo_usuario`) REFERENCES `usuarios` (`codigo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -664,7 +690,6 @@ CREATE TABLE `responsables_proyectos` (
 
 LOCK TABLES `responsables_proyectos` WRITE;
 /*!40000 ALTER TABLE `responsables_proyectos` DISABLE KEYS */;
-INSERT INTO `responsables_proyectos` VALUES (1,1,1);
 /*!40000 ALTER TABLE `responsables_proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -730,6 +755,9 @@ CREATE TABLE `tareas` (
   `porcentaje` varchar(255) DEFAULT NULL,
   `usuario_creador` varchar(255) DEFAULT NULL,
   `direccion_ip` varchar(255) DEFAULT NULL,
+  `estado` int(11) DEFAULT NULL,
+  `fecha_final` datetime DEFAULT NULL,
+  `hora_final` time DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo_objetivo` (`codigo_objetivo`),
@@ -865,7 +893,7 @@ CREATE TABLE `usuarios` (
   KEY `codigo_cargo` (`codigo_cargo`),
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`codigo_tipo_usuario`) REFERENCES `tipos_usuarios` (`codigo`),
   CONSTRAINT `usuarios_ibfk_4` FOREIGN KEY (`codigo_cargo`) REFERENCES `cargos` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -874,7 +902,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'leonel','123','leonel2','soriano','123456789','hola@hola.net','2001/05/05',1,'12','emi.jpg','01463562587','123asd','',3,'hola soy direccion ññññññ');
+INSERT INTO `usuarios` VALUES (1,'leonel','123','leonel2','soriano','123456789','hola@hola.net','2001/05/05',1,'12','','01463562587','123asd','',1,'hola soy direccion ññññññ'),(2,'soriano','123','soriano','leonel','1233','hola@hola.net','2001/05/05',1,'23',NULL,'213213','123','23213',3,'asd');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1020,6 +1048,59 @@ begin
 	inner join empresas
 	on empresas.codigo = departamentos.codigo_empresa	
 	;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_combo_project_by_user` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_project_by_user`(
+in userId integer
+)
+begin
+	
+	select proyectos.codigo as id,
+		proyectos.nombre as name,
+		'0' as active
+	from proyectos
+	inner join usuarios
+	on usuarios.codigo = proyectos.usuario_creador
+	where usuarios.codigo =userId;
+	
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_get_combo_states` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_combo_states`()
+begin
+	
+		select estados.codigo as id,
+		estados.nombre as name,
+		'0' as active
+	from estados;
+	
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1430,4 +1511,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-22 21:38:08
+-- Dump completed on 2016-05-24  3:20:46

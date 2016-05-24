@@ -42,6 +42,34 @@ if ( ! function_exists('comboFormDb'))
     }
 
 
+    function comboMultiFormDb($infoDb,$name)
+    {
+        $defaulActive = "";
+
+        $defaulActiveBool = false;
+
+        $comboHTML = "<select style='width: 100%' id='$name'   multiple>";
+
+        foreach ($infoDb as $key => $value){
+            $isActive = $value['active'] === '1' ? "selected" : "";
+
+            if($isActive  === "selected"){
+                $defaulActive = true;
+            }
+
+            $comboHTML .= "<option value=\"".$key."\" $isActive>".$value['name']."</option>";
+        }
+        $comboHTML .= "</select>";
+
+        if(!$defaulActive){
+            $defaulActive = "selected";
+        }
+
+        return $comboHTML;
+    }
+
+
+
 
     /**
      * helper para crear de forma mas rapida un input tipo text

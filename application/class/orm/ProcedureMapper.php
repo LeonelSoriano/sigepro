@@ -115,7 +115,6 @@ abstract class ProcedureMapper
             call_user_func_array(array($this->obj, $setMethod), array($item));
         }
 
-        var_dump($this->noReturn);die;
 
         if($consulta->result_id->num_rows != 0 && !$this->noReturn){
             $consulta->next_result();

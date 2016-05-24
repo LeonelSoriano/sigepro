@@ -353,6 +353,11 @@
                                         <li id="projectasigned"><a href="javascript:void(0)"><i class="icon-user-follow"></i> Asignados</a></li>
 
                                         <li id="createproject" ><a href="javascript:void(0)"><i class="icon-plus"></i> Agregar Nuevo</a></li>
+                                        <li id="createObjetivo" ><a href="javascript:void(0)"><i class="icon-plus"></i> Objetivos</a></li>
+
+                                        <li id="createMeta"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Meta</a></li>
+                                        <li id="createActividad"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Actividad</a></li>
+                                        <li id="createTarea"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Tarea</a></li>
 
                                         <li><a href="proyectossrch.php"><i class="icon-magnifier"></i> B&uacute;squeda Avanzada</a></li>
                                     </ul>
@@ -599,11 +604,13 @@
             }
         });
 
-
         loadAjax("#ajax-user-profile" ,2 );
         loadAjax("#createproject" ,7 );
         loadAjax("#projectasigned" ,8 );
-
+        loadAjax("#createMeta" ,10 );
+        loadAjax("#createActividad" ,11 );
+        loadAjax("#createTarea" ,12 );
+        loadAjax("#createObjetivo" ,13 );
 
     });
 </script>

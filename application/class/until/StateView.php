@@ -23,6 +23,11 @@ class StateView
     private $projectAdd = '7';
     private $dashboardProjectAdmin = '8';
     private $dashboardUserInvolved  = '9';
+    private $createMeta = '10';
+    private $createActividad = '11';
+    private $createTarea = '12';
+    private $createObjetivo = '13';
+
 
     function __construct($session,$load)
     {
@@ -37,15 +42,12 @@ class StateView
         $data = array(
             'view.active' => $this->actualView
         );
-
         $this->session->set_userdata($data);
     }
 
 
-
     public function renderView($data = '')
     {
-        
         switch (strval($this->session->userdata('view.active'))) {
             case $this->welcome:
                  echo($this->load->view('dashboard-welcome', $data, TRUE));
@@ -68,11 +70,23 @@ class StateView
             case $this->projectAdd:
                 echo $this->load->view('dashboard-project-new', $data, TRUE);
         break;
-            case $this->dashboardProjectAdmin:
-                echo $this->load->view('dashboard-project-admin', $data, TRUE);
-                break;
+                case $this->dashboardProjectAdmin:
+                    echo $this->load->view('dashboard-project-admin', $data, TRUE);
+        break;
             case $this->dashboardUserInvolved:
                 echo $this->load->view('dashboard-user-involved', $data, TRUE);
+        break;
+            case $this->createMeta:
+                echo $this->load->view('createMeta', $data, TRUE);
+        break;
+            case $this->createActividad:
+                echo $this->load->view('createActividad', $data, TRUE);
+        break;
+            case $this->createTarea:
+                echo $this->load->view('createTarea', $data, TRUE);
+        break;
+            case $this->createObjetivo:
+                echo $this->load->view('createObjetivo', $data, TRUE);
                 break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));

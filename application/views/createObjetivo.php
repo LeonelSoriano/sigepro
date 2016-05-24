@@ -16,11 +16,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <ol class="breadcrumb">
         <li class=""><a>System</a></li>
         <li class=""><a>Inicio</a></li>
-        <li class=""><a>Proyectos</a></li>
+        <li class=""><a>Objetivo</a></li>
         <li class="active"><a>Nuevo</a></li>
     </ol>
     <div class="page-heading">
-        <h1><i class="icon-plus"></i> Agregar Nuevo <b>Proyectos</b></h1>
+        <h1><i class="icon-plus"></i> Agregar Nuevo <b>Objetivo</b></h1>
 
         <a href="proyectoslist.php" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"
            style="margin-left: 5px">
@@ -44,8 +44,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel-body">
                 <div class="table-responsive">
 
-                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/addProject" method="post"
-                          onSubmit="return EW_checkMyForm(this);">
+                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/createObjetivo" method="post"
+                          >
 
 
 
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td class="ewTableHeader">Responsables&nbsp;*</span></span></td>
                                 <td>
                                     <select name="select-responsable[]" id="select-responsable" multiple="multiple" style="width: 80%">
-                              
+
                                     </select>
 
                                     <div class="pull-right icons">
