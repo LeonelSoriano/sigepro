@@ -72,4 +72,11 @@ class ProjectModel extends CI_Model{
         $this->db->trans_complete();
     }
 
+
+    function  findForList($id){
+        $query = $this->db->query('select codigo,nombre,alias,fecha_inicio,fecha_entrega from proyectos 
+        WHERE  proyectos.usuario_creador = '. $id);
+        return $query->result();
+    }
+
 }

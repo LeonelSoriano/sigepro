@@ -68,7 +68,6 @@ class Dashboard extends CI_Controller {
 
     public function ajaxUserProfile(){
 
-
         if($this->input->post('view') !== '0'){
             $this->stateView->setView($this->input->post('view'));
         }
@@ -242,9 +241,14 @@ class Dashboard extends CI_Controller {
                 'select_observador_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-observador-dialog"),
                 'master_combo' =>  comboFormDb($spGetComboProjectByUser->toArrayMappeToComnbo(),"master_combo")
             );
-            
+
+        }else if($this->session->userdata('view.active') === '14'){
+            $this->data = array();
+            $this->data["tabla"] = $this->ProjectModel->findForList($this->session->userdata('user.id'));
+
         }else{
             $this->ajaxProject();
+            $this->listView();
             return;
         }
 
@@ -257,6 +261,8 @@ class Dashboard extends CI_Controller {
      */
     public function ajaxProject(){
 
+        $renderHere = false;
+
         if( $this->input->post('pk') !== null){
 
             $data = array(
@@ -268,12 +274,10 @@ class Dashboard extends CI_Controller {
 
         $pk = $this->session->userdata('view.project');
 
-        if($this->input->post('view') !== '0'){
-            $this->stateView->setView($this->input->post('view'));
-        }
 
 
         if($this->session->userdata('view.active') === '9'){
+            $renderHere = true;
             require_once(APPPATH ."/class/orm/SpGetComboUserTypeProject.php");
             require_once(APPPATH ."/class/orm/SpGetComboUser.php");
             require_once(APPPATH ."/class/orm/SpGetUserProkectById.php");
@@ -296,8 +300,85 @@ class Dashboard extends CI_Controller {
                 'table' => $spGetUserProkectById->toArray()
             );
         }
+        if($renderHere){
+            $this->stateView->renderView($this->data);
+        }
 
-        $this->stateView->renderView($this->data);
+    }
+    
+    
+    public function listView(){
+
+        $renderHere = false;
+
+        if($this->input->post('view') != 0){
+        $this->stateView->setView($this->input->post('view'));
+        }
+
+
+        if($this->session->userdata('view.active') === '17'){
+            $renderHere = true;
+            if($this->input->post('key') != null){
+                $data = array(
+                    'list.objetivo'  => $this->input->post('key')
+                );
+                $this->session->set_userdata($data);
+            }
+
+            $this->data = array();
+            $this->data["tabla"] =$this->ObjetivoModel->findForList($this->session->userdata('list.objetivo'));
+
+        }else if($this->session->userdata('view.active') === '16'){
+            $renderHere = true;
+            if($this->input->post('key') != null){
+                $data = array(
+                    'list.meta'  => $this->input->post('key')
+                );
+                $this->session->set_userdata($data);
+            }
+
+            $this->data = array();
+            $this->data["tabla"] =$this->MetaModel->findForList($this->session->userdata('list.meta'));
+            
+        }else if($this->session->userdata('view.active') === '15'){
+            $renderHere = true;
+            if($this->input->post('key') != null){
+                $data = array(
+                    'list.actividad'  => $this->input->post('key')
+                );
+                $this->session->set_userdata($data);
+            }
+
+
+            $this->data = array();
+            $this->data["tabla"] =$this->ActividadModel->findForList($this->session->userdata('list.actividad'));
+
+        }else if($this->session->userdata('view.active') === '18'){
+            $renderHere = true;
+            if($this->input->post('key') != null){
+                $data = array(
+                    'list.tarea'  => $this->input->post('key')
+                );
+                $this->session->set_userdata($data);
+            }
+
+
+            $this->data = array();
+            $this->data["tabla"] =$this->TareaModel->findForList($this->session->userdata('list.tarea'));
+
+        }
+
+        if($renderHere ){
+            $this->stateView->renderView($this->data);
+        }
+
+    }
+
+
+    public function completeTask(){
+
+        $this->TareaModel->completeTask($this->input->post('idTask'));
+        $this->listView();
     }
 
 
@@ -440,7 +521,6 @@ class Dashboard extends CI_Controller {
         if($_FILES['imagen']['name'] != ''){
             move_uploaded_file($_FILES['imagen']['tmp_name'],APPPATH . "../uploads/" . basename($_FILES['imagen']['name']));
         }
-
         redirect('/dashboard');
 
     }

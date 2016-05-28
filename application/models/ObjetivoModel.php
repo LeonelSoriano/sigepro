@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: leonel
  * Date: 24/05/16
  * Time: 2:02
  */
+class ObjetivoModel extends CI_Model
+{
 
-class ObjetivoModel extends CI_Model{
-
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->database();
     }
@@ -28,9 +30,10 @@ class ObjetivoModel extends CI_Model{
         $userId,
         $ip,
         $idAsociado
-    ){
+    )
+    {
         $this->db->trans_start();
-    //proyecto
+        //proyecto
         $dataProject = array(
             'nombre' => $descripcion,
             'alias' => $alias,
@@ -51,7 +54,7 @@ class ObjetivoModel extends CI_Model{
 
         $dataObservador = array();
 
-        for($i = 0;$i < count($select_responsable);$i++){
+        for ($i = 0; $i < count($select_responsable); $i++) {
             array_push($dataObservador, array(
                 'codigo_objetivos' => $insert_id,
                 'codigo_usuario' => $select_responsable[$i]
@@ -62,7 +65,7 @@ class ObjetivoModel extends CI_Model{
 
         $dataResponsable = array();
 
-        for($i = 0;$i < count($select_observador);$i++){
+        for ($i = 0; $i < count($select_observador); $i++) {
             array_push($dataResponsable, array(
                 'codigo_objetivos' => $insert_id,
                 'codigo_usuario' => $select_observador[$i]
@@ -71,6 +74,14 @@ class ObjetivoModel extends CI_Model{
         $this->db->insert_batch('responsables_objetivos', $dataResponsable);
 
         $this->db->trans_complete();
+    }
+
+
+    function findForList($id)
+    {
+        $query = $this->db->query('SELECT codigo,nombre,alias,fecha_inicio,fecha_entrega FROM objetivos
+                    WHERE objetivos.codigo_proyecto = ' . $id);
+        return $query->result();
     }
 
 }

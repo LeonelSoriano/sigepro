@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3123786032">
-    <data-source source="LOCAL" name="MySQL - sigepro@localhost" uuid="13722c5a-f59f-4322-8c62-fff04ad56344">
+  <component name="DataSourceManagerImpl" format="xml" hash="2853556443">
+    <data-source source="LOCAL" name="MySQL - sigepro@localhost" uuid="2fc9c715-322c-4dac-871c-0d72b598a682">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/sigepro</jdbc-url>
       <driver-properties>
+        <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
         <property name="characterEncoding" value="utf8" />

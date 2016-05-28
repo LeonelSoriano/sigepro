@@ -11,6 +11,7 @@ class MetaModel extends CI_Model{
     public function __construct() {
         parent::__construct();
         $this->load->database();
+        
     }
 
     public function insertProject(
@@ -72,5 +73,14 @@ class MetaModel extends CI_Model{
 
         $this->db->trans_complete();
     }
+
+
+    function findForList($id)
+    {
+        $query = $this->db->query('SELECT codigo,nombre,alias,fecha_entrega FROM metas
+                    WHERE metas.codigo_objetivo = ' . $id);
+        return $query->result();
+    }
+
 
 }

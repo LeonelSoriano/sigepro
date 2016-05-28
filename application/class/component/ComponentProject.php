@@ -14,7 +14,6 @@ class ComponentProject
     private $alias;
     private $nameOperator;
 
-
     private $dateStart;
     private $dateEnd;
     private $dateDeathLine;

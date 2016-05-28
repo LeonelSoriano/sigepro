@@ -45,7 +45,7 @@ CREATE TABLE `actividades` (
   CONSTRAINT `actividades_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `metas` (`codigo_proyecto`),
   CONSTRAINT `actividades_ibfk_2` FOREIGN KEY (`codigo_objetivo`) REFERENCES `metas` (`codigo_objetivo`),
   CONSTRAINT `actividades_ibfk_3` FOREIGN KEY (`codigo_meta`) REFERENCES `metas` (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,6 +54,7 @@ CREATE TABLE `actividades` (
 
 LOCK TABLES `actividades` WRITE;
 /*!40000 ALTER TABLE `actividades` DISABLE KEYS */;
+INSERT INTO `actividades` VALUES (1,NULL,NULL,1,'activi','nete','2000-01-01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `actividades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +258,7 @@ CREATE TABLE `metas` (
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo_objetivo` (`codigo_objetivo`),
   CONSTRAINT `metas_ibfk_2` FOREIGN KEY (`codigo_objetivo`) REFERENCES `objetivos` (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -266,6 +267,7 @@ CREATE TABLE `metas` (
 
 LOCK TABLES `metas` WRITE;
 /*!40000 ALTER TABLE `metas` DISABLE KEYS */;
+INSERT INTO `metas` VALUES (1,NULL,1,'mneta','merata2','2000-01-01',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `metas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -298,7 +300,7 @@ CREATE TABLE `objetivos` (
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo` (`codigo`,`codigo_proyecto`),
   CONSTRAINT `objetivos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `proyectos` (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -307,6 +309,7 @@ CREATE TABLE `objetivos` (
 
 LOCK TABLES `objetivos` WRITE;
 /*!40000 ALTER TABLE `objetivos` DISABLE KEYS */;
+INSERT INTO `objetivos` VALUES (1,1,'leonel','leonel',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `objetivos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -500,7 +503,7 @@ CREATE TABLE `proyectos` (
   PRIMARY KEY (`codigo`),
   KEY `proyectos_usuarios_fk` (`usuario_creador`),
   CONSTRAINT `proyectos_usuarios_fk` FOREIGN KEY (`usuario_creador`) REFERENCES `usuarios` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -681,7 +684,7 @@ CREATE TABLE `responsables_proyectos` (
   KEY `codigo_usuario` (`codigo_usuario`),
   CONSTRAINT `responsables_proyectos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `proyectos` (`codigo`),
   CONSTRAINT `responsables_proyectos_ibfk_2` FOREIGN KEY (`codigo_usuario`) REFERENCES `usuarios` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1511,4 +1514,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-24  3:20:46
+-- Dump completed on 2016-05-26  7:42:30

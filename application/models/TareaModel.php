@@ -74,4 +74,20 @@ class TareaModel extends CI_Model{
         $this->db->trans_complete();
     }
 
+
+    function  findForList($id){
+        $query = $this->db->query('select codigo,nombre,alias,fecha_inicio,fecha_entrega from tareas 
+        WHERE (tareas.completado = null or tareas.completado = "0002-11-30") and tareas.codigo_actividad = '. $id);
+        return $query->result();
+    }
+
+
+    function  completeTask($id){
+        $data = array(
+            'completado' => date('Y-m-d')
+        );
+        $this->db->where('codigo', $id);
+        $this->db->update('tareas', $data);
+    }
+
 }

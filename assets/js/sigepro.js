@@ -43,3 +43,24 @@ function loadAjaxtProject(numberview,pk) {
         });
 
 }
+
+
+function loadAjaxtListView(numberview,key) {
+
+        var parametros = {
+            view : numberview,
+            key: key
+        };
+        $.ajax({
+            data:  parametros,
+            url:   "/sigepro/dashboard/listView/",
+            type:  "post",
+            beforeSend: function () {
+                // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+            },
+            success:  function (response) {
+                $("#ajax-middle").html(response);
+            }
+      
+    });
+}

@@ -47,7 +47,6 @@ class Login extends CI_Controller {
 
                 $user->persistToSerssion($this->session);
 
-
                 //vista inicial
                 $data = array(
                    'view.active'  => 1

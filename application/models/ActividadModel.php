@@ -73,4 +73,13 @@ class ActividadModel extends CI_Model{
         $this->db->trans_complete();
     }
 
+    function findForList($id)
+    {
+        $query = $this->db->query('SELECT codigo,nombre,alias,fecha_entrega FROM actividades
+                    WHERE actividades.codigo_meta = ' . $id);
+        return $query->result();
+    }
+
+
+
 }
