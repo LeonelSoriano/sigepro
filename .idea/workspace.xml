@@ -3,41 +3,16 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/application/helpers/comboformdb_helper.php" line="103" mnemonic="3" />
     <bookmark url="file://$PROJECT_DIR$/application/models/ProjectModel.php" line="130" mnemonic="4" />
-    <bookmark url="file://$PROJECT_DIR$/application/controllers/Dashboard.php" line="254" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/application/views/dashboard.php" line="503" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b474e9-386c-4815-8960-2977b5b0dd15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listsTareas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/class/until/StateView.php" afterPath="$PROJECT_DIR$/application/class/until/StateView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" afterPath="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ActividadModel.php" afterPath="$PROJECT_DIR$/application/models/ActividadModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/MetaModel.php" afterPath="$PROJECT_DIR$/application/models/MetaModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ObjetivoModel.php" afterPath="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ProjectModel.php" afterPath="$PROJECT_DIR$/application/models/ProjectModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/TareaModel.php" afterPath="$PROJECT_DIR$/application/models/TareaModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createActividad.php" afterPath="$PROJECT_DIR$/application/views/createActividad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createMeta.php" afterPath="$PROJECT_DIR$/application/views/createMeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createObjetivo.php" afterPath="$PROJECT_DIR$/application/views/createObjetivo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createTarea.php" afterPath="$PROJECT_DIR$/application/views/createTarea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-project-new.php" afterPath="$PROJECT_DIR$/application/views/dashboard-project-new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-add.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-list.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard.php" afterPath="$PROJECT_DIR$/application/views/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listActividad.php" afterPath="$PROJECT_DIR$/application/views/listActividad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listMeta.php" afterPath="$PROJECT_DIR$/application/views/listMeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listObjetivo.php" afterPath="$PROJECT_DIR$/application/views/listObjetivo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listProjecto.php" afterPath="$PROJECT_DIR$/application/views/listProjecto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listTarea.php" afterPath="$PROJECT_DIR$/application/views/listTarea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/sigepro.js" afterPath="$PROJECT_DIR$/assets/js/sigepro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump-sigepro.sql" afterPath="$PROJECT_DIR$/dump-sigepro.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listsTareas.php" afterPath="$PROJECT_DIR$/application/views/listsTareas.php" />
     </list>
     <ignored path="sigepro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,6 +34,12 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -66,11 +47,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="45" />
+              <folding>
+                <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
+                <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="503" column="41" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
+            <state relative-caret-position="208">
+              <caret line="324" column="81" selection-start-line="324" selection-start-column="81" selection-end-line="324" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -96,16 +90,16 @@
       <file leaf-file-name="listsTareas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/listsTareas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1464672383517" expanded="true" signature="1939:2133" placeholder="..." />
-                <marker date="1464672383517" expanded="true" signature="1992:2128" placeholder="..." />
-                <marker date="1464672383517" expanded="true" signature="2168:2357" placeholder="..." />
-                <marker date="1464672383517" expanded="true" signature="2221:2352" placeholder="..." />
-                <marker date="1464672383517" expanded="true" signature="2391:2575" placeholder="..." />
-                <marker date="1464672383517" expanded="true" signature="2440:2570" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="1948:2142" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="2001:2137" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="2177:2366" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="2230:2361" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="2400:2584" placeholder="..." />
+                <marker date="1464674100141" expanded="true" signature="2449:2579" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -123,6 +117,54 @@
                 <marker date="1464665817113" expanded="true" signature="2278:2409" placeholder="..." />
                 <marker date="1464665817113" expanded="true" signature="2456:2640" placeholder="..." />
                 <marker date="1464665817113" expanded="true" signature="2505:2635" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sigepro.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/sigepro.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="54" column="47" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TareaModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/TareaModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="n#insertTarea#0;n#TareaModel#0;n#!!top" expanded="false" />
+                <marker date="1464673967212" expanded="true" signature="2648:2864" placeholder="select codig... tareas" />
+                <marker date="1464673967212" expanded="true" signature="2976:3548" placeholder="SELECT tarea... tareas" />
+                <marker date="1464673967212" expanded="true" signature="3995:4211" placeholder="SELECT estad... estados" />
+                <marker date="1464673967212" expanded="true" signature="4112:4165" placeholder="SELECT tarea... tareas" />
+                <marker date="1464673967212" expanded="true" signature="4348:4590" placeholder="SELECT usuar... responsables_tareas" />
+                <marker date="1464673967212" expanded="true" signature="4720:4963" placeholder="SELECT usuar... observadores_tareas" />
               </folding>
             </state>
           </provider>
@@ -152,18 +194,18 @@
         <option value="$PROJECT_DIR$/application/models/MetaModel.php" />
         <option value="$PROJECT_DIR$/application/views/createActividad.php" />
         <option value="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql" />
         <option value="$PROJECT_DIR$/application/models/ActividadModel.php" />
         <option value="$PROJECT_DIR$/application/views/createTarea.php" />
         <option value="$PROJECT_DIR$/application/views/listTarea.php" />
-        <option value="$PROJECT_DIR$/application/class/until/StateView.php" />
-        <option value="$PROJECT_DIR$/application/models/TareaModel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
         <option value="$PROJECT_DIR$/application/views/listActividad.php" />
-        <option value="$PROJECT_DIR$/application/views/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/listProjecto.php" />
+        <option value="$PROJECT_DIR$/application/class/until/StateView.php" />
+        <option value="$PROJECT_DIR$/application/views/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql" />
+        <option value="$PROJECT_DIR$/application/models/TareaModel.php" />
         <option value="$PROJECT_DIR$/application/views/listsTareas.php" />
       </list>
     </option>
@@ -236,20 +278,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cladbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cladbox" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -269,6 +297,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cladbox" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="class" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,7 +424,7 @@
       <workItem from="1464564428363" duration="16776000" />
       <workItem from="1464645703174" duration="2912000" />
       <workItem from="1464657766148" duration="7132000" />
-      <workItem from="1464670438399" duration="1476000" />
+      <workItem from="1464670438399" duration="3215000" />
     </task>
     <task id="LOCAL-00001" summary="terminado boton de culminar tareas">
       <created>1464460157046</created>
@@ -351,34 +433,41 @@
       <option name="project" value="LOCAL" />
       <updated>1464460157046</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="terminado traza uno">
+      <created>1464672471283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1464672471284</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60380000" />
+    <option name="totallyTimeSpent" value="62119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1152" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34774774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33427763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32342342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27207208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18288289" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33427763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -394,7 +483,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="terminado boton de culminar tareas" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminado boton de culminar tareas" />
+    <MESSAGE value="terminado traza uno" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado traza uno" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -450,6 +540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="77" column="56" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -457,6 +548,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -464,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -511,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="793">
           <caret line="301" column="24" selection-start-line="301" selection-start-column="22" selection-end-line="301" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -519,13 +605,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="172" column="89" selection-start-line="172" selection-start-column="78" selection-end-line="172" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -540,6 +620,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="250" column="10" selection-start-line="250" selection-start-column="10" selection-end-line="250" selection-end-column="10" />
+          <folding>
+            <element signature="n#insertActividad#0;n#ActividadModel#0;n#!!top" expanded="false" />
+            <marker date="1464648642524" expanded="true" signature="2625:2778" placeholder="SELECT codig... actividades" />
+            <marker date="1464648642524" expanded="true" signature="3217:3448" placeholder="SELECT estad... estados" />
+            <marker date="1464648642524" expanded="true" signature="3334:3402" placeholder="SELECT activ... actividades" />
+            <marker date="1464648642524" expanded="true" signature="3585:3846" placeholder="SELECT usuar... responsables_actividades" />
+            <marker date="1464648642524" expanded="true" signature="3976:4238" placeholder="SELECT usuar... observadores_actividades" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,17 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="555" column="42" selection-start-line="555" selection-start-column="42" selection-end-line="555" selection-end-column="42" />
-          <folding>
-            <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
-            <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layout/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -606,36 +683,6 @@
             <marker date="1464665817208" expanded="true" signature="2453:2639" placeholder="..." />
             <marker date="1464665817208" expanded="true" signature="2502:2634" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/sigepro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/TareaModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="249" column="20" selection-start-line="249" selection-start-column="20" selection-end-line="249" selection-end-column="31" />
-          <folding>
-            <marker date="1464663170217" expanded="true" signature="2648:2864" placeholder="select codig... tareas" />
-            <marker date="1464663170217" expanded="true" signature="3309:3525" placeholder="SELECT estad... estados" />
-            <marker date="1464663170217" expanded="true" signature="3426:3479" placeholder="SELECT tarea... tareas" />
-            <marker date="1464663170217" expanded="true" signature="3662:3904" placeholder="SELECT usuar... responsables_tareas" />
-            <marker date="1464663170217" expanded="true" signature="4034:4277" placeholder="SELECT usuar... observadores_tareas" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="503" column="41" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,18 +716,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/sigepro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="45" />
+          <folding>
+            <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
+            <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="324" column="81" selection-start-line="324" selection-start-column="81" selection-end-line="324" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/TareaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="n#insertTarea#0;n#TareaModel#0;n#!!top" expanded="false" />
+            <marker date="1464673967212" expanded="true" signature="2648:2864" placeholder="select codig... tareas" />
+            <marker date="1464673967212" expanded="true" signature="2976:3548" placeholder="SELECT tarea... tareas" />
+            <marker date="1464673967212" expanded="true" signature="3995:4211" placeholder="SELECT estad... estados" />
+            <marker date="1464673967212" expanded="true" signature="4112:4165" placeholder="SELECT tarea... tareas" />
+            <marker date="1464673967212" expanded="true" signature="4348:4590" placeholder="SELECT usuar... responsables_tareas" />
+            <marker date="1464673967212" expanded="true" signature="4720:4963" placeholder="SELECT usuar... observadores_tareas" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/listsTareas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1464672383517" expanded="true" signature="1939:2133" placeholder="..." />
-            <marker date="1464672383517" expanded="true" signature="1992:2128" placeholder="..." />
-            <marker date="1464672383517" expanded="true" signature="2168:2357" placeholder="..." />
-            <marker date="1464672383517" expanded="true" signature="2221:2352" placeholder="..." />
-            <marker date="1464672383517" expanded="true" signature="2391:2575" placeholder="..." />
-            <marker date="1464672383517" expanded="true" signature="2440:2570" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="1948:2142" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="2001:2137" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="2177:2366" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="2230:2361" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="2400:2584" placeholder="..." />
+            <marker date="1464674100141" expanded="true" signature="2449:2579" placeholder="..." />
           </folding>
         </state>
       </provider>

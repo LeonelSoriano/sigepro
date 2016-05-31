@@ -32,6 +32,7 @@ class StateView
     private $listMeta = '16';
     private $listObjetivo = '17';
     private $listTarea = '18';
+    private $listsTareas = '19';
 
 
     function __construct($session, $load)
@@ -109,6 +110,9 @@ class StateView
             case $this->listTarea:
                 echo $this->load->view('listTarea', $data, TRUE);
                 break;
+            case $this->listsTareas:
+            echo $this->load->view('listsTareas', $data, TRUE);
+            break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));
         }

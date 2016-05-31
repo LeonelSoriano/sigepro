@@ -11,10 +11,10 @@
 <ol class="breadcrumb">
     <li class=""><a>System</a></li>
     <li class=""><a>Inicio</a></li>
-    <li class=""><a>Usuarios</a></li>
+    <li class=""><a>Tareas</a></li>
 </ol>
 <div class="page-heading">
-    <h1><i class="fa fa-user"></i> Listado de Tareas</b></h1>
+    <h1><i class="fa fa-book"></i> Listado de Todas las Tareas </b></h1>
     <!---->
     <!--    <a href="proyectoslist.php" style="color:#455A64" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"><i-->
     <!--            class="icon-arrow-left"></i> Volver a las Proyectos</a>-->
@@ -105,7 +105,6 @@
 <div style="margin-top: 20px">
     <input type="button" class="pullRight btn btn-success" name="btnAction" id="listProject" value="Lista de Projectos"/>
 
-    <input type="button" style="margin-right: 10px" class="pullRight btn btn-success" name="btnAction" id="newTarea" value="Nueva Tarea"/>
 </div>
 
 <!-- Load site level scripts -->

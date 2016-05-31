@@ -322,7 +322,7 @@
                                     <ul class="acc-menu">
                                         <li id="projectasigned"><a href="javascript:void(0)"><i class="icon-user-follow"></i> Proyectos</a></li>
 
-                                        <li id="listarTareas" ><a href="javascript:void(0)"><i class="icon-plus"></i> Tareas</a></li>
+                                        <li id="listarTareas" onclick="loadAjaxtListView(19,-1)" ><a href="javascript:void(0)"><i class="icon-plus"></i> Tareas</a></li>
                                         <li id="createObjetivo" ><a href="javascript:void(0)"><i class="icon-plus"></i> Recursos Físicos</a></li>
 
                                         <li id="createMeta"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Recursos Económicos</a></li>

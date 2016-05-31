@@ -514,6 +514,12 @@ class Dashboard extends CI_Controller {
             $this->data = array();
             $this->data["tabla"] =$this->TareaModel->findForList($this->session->userdata('list.tarea'));
 
+        }else if($this->session->userdata('view.active') === '19'){
+            
+            $renderHere = true;
+            $this->data = array();
+            $this->data["tabla"] =$this->TareaModel->findForListAll();
+
         }
 
         if($renderHere ){

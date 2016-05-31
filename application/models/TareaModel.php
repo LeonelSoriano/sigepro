@@ -105,6 +105,27 @@ class TareaModel extends CI_Model{
     }
 
 
+    function  findForListALL(){
+        $query = $this->db->query("SELECT
+  tareas.codigo,
+  tareas.nombre,
+  tareas.alias,
+  tareas.fecha_inicio,
+  tareas.fecha_entrega,
+  proyectos.nombre as nameProjet,
+  actividades.codigo as idActivity
+FROM tareas
+INNER JOIN  actividades ON 
+    actividades.codigo = tareas.codigo_actividad
+  INNER  JOIN metas ON actividades.codigo_meta = metas.codigo
+  INNER JOIN objetivos on objetivos.codigo = metas.codigo_objetivo
+  INNER JOIN proyectos ON objetivos.codigo_proyecto = proyectos.codigo
+WHERE (tareas.completado = NULL OR tareas.completado = '0002-11-30') AND tareas.fecha_eliminado = '0002-11-30';
+");
+        return $query->result();
+    }
+
+
     public function  findByid($id){
         $this->db->select('nombre,alias,fecha_creacion,fecha_entrega,hora_entrega,porcentaje');
         $this->db->from('tareas');
@@ -259,6 +280,8 @@ WHERE observadores_tareas.codigo_tarea = $id ");
         $this->db->update('tareas', $dataProject);
     }
 
+    
+    
 
 
 
