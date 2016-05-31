@@ -38,6 +38,37 @@ if ( ! function_exists('comboFormDb'))
             $defaulActive = "selected";
         }
 
+
+        return $comboHTML;
+    }
+
+
+    function comboFormDbCode($infoDb,$name)
+    {
+        $defaulActive = "";
+
+        $defaulActiveBool = false;
+
+        $comboHTML = "<select style='width: 100%' id='$name'  name='$name' >";
+        $comboHTML .= "<option value='-1' ".$defaulActive.">Por favor Seleccione</option>";
+
+
+        foreach ($infoDb as $key => $value){
+
+            $isActive = $value->active === '1' ? "selected" : "";
+
+            if($isActive  === "selected"){
+                $defaulActive = true;
+            }
+
+            $comboHTML .= "<option value=\"".$value->id."\" $isActive>".$value->name."</option>";
+        }
+        $comboHTML .= "</select>";
+
+        if(!$defaulActive){
+            $defaulActive = "selected";
+        }
+
         return $comboHTML;
     }
 
@@ -68,7 +99,31 @@ if ( ! function_exists('comboFormDb'))
         return $comboHTML;
     }
 
+    function comboMultiFormDbCode($infoDb,$name)
+    {
+        $defaulActive = "";
 
+        $defaulActiveBool = false;
+
+        $comboHTML = "<select style='width: 80%' name='$name"."[]"."' id='$name'   multiple>";
+
+        foreach ($infoDb as $key => $value){
+            $isActive = $value->active === '1' ? "selected" : "";
+
+            if($isActive  === "selected"){
+                $defaulActive = true;
+            }
+
+            $comboHTML .= "<option value=\"".$value->id."\" $isActive>".$value->name."</option>";
+        }
+        $comboHTML .= "</select>";
+
+        if(!$defaulActive){
+            $defaulActive = "selected";
+        }
+
+        return $comboHTML;
+    }
 
 
     /**

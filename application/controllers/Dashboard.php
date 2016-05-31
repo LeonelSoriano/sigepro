@@ -42,7 +42,7 @@ class Dashboard extends CI_Controller {
         $this->load->helper(array('url', 'form', 'sigeproSecurity','comboFormDb'));
         $this->load->library(array('session','upload'));
 
-       $this->stateView = new StateView($this->session,$this->load);
+        $this->stateView = new StateView($this->session,$this->load);
     }
 
 
@@ -135,7 +135,7 @@ class Dashboard extends CI_Controller {
             );
 
         }else if($this->session->userdata('view.active') === '7'){
-//------->
+
 
             require_once(APPPATH ."/class/orm/SpGetComboStates.php");
             require_once(APPPATH ."/class/orm/SpGetComboUser.php");
@@ -146,13 +146,38 @@ class Dashboard extends CI_Controller {
             $spGetComboUser = new SpGetComboUser(-1);
             $spGetComboUser->exec();
 
-            
             $this->data = array(
                 'inputStados' =>  comboFormDb($spGetComboStates->toArrayMappeToComnbo(),'inputStados'),
                  'select_responsable_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-responsable-dialog"),
                  'select_observador_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-observador-dialog")
-
             );
+
+            if($this->input->post('idProject') !== null ){
+
+                $proyectActive = $this->ProjectModel->findByid($this->input->post('idProject'));
+
+                $this->data['proyectActive'] = $this->input->post('idProject');
+                
+                $this->data['inputName'] = textAreaFormData("descripcion",0,0,$proyectActive->nombre);
+                $this->data['inputAlias'] = form_input('"alias"', $proyectActive->nombre);
+                $this->data['fechaEntrega'] =  $proyectActive->fecha_creacion;
+                $this->data['horaEntrega'] = $proyectActive->hora_entrega;
+
+                $this->data['inputStados'] = comboFormDbCode($this->ProjectModel->estadoForCombo(
+                    $this->input->post('idProject')),
+                    'inputStados');
+
+                $this->data['multiObservador'] = comboMultiFormDbCode($this->ProjectModel->getMultiObservador(
+                    $this->input->post('idProject')),'select-observador');
+
+                $this->data['multiResponsable'] = comboMultiFormDbCode($this->ProjectModel->getMultiResposanble(
+                    $this->input->post('idProject')),'select-responsable');
+
+                $this->data['idHidden'] = form_hidden(array("idHidden"=>$this->input->post('idProject')));
+
+
+            }
+
         }else if( $this->session->userdata('view.active') ===   '8'){
 
             require_once(APPPATH ."/class/component/ComponentProject.php");
@@ -178,6 +203,33 @@ class Dashboard extends CI_Controller {
                 'select_observador_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-observador-dialog")
 
             );
+
+            if($this->input->post('idProject') !== null ) {
+
+                $proyectActive = $this->MetaModel->findByid($this->input->post('idProject'));
+
+                $this->data['proyectActive'] = $this->input->post('idProject');
+
+                $this->data['inputName'] = textAreaFormData("descripcion", 0, 0, $proyectActive->nombre);
+                $this->data['inputAlias'] = form_input('"alias"', $proyectActive->nombre);
+                $this->data['fechaEntrega'] = $proyectActive->fecha_entrega;
+                $this->data['horaEntrega'] = $proyectActive->hora_entrega;
+
+                $this->data['inputStados'] = comboFormDbCode($this->MetaModel->estadoForCombo(
+                    $this->input->post('idProject')),
+                    'inputStados');
+
+                $this->data['multiObservador'] = comboMultiFormDbCode($this->MetaModel->getMultiObservador(
+                    $this->input->post('idProject')), 'select-observador');
+
+                $this->data['multiResponsable'] = comboMultiFormDbCode($this->MetaModel->getMultiResposanble(
+                    $this->input->post('idProject')), 'select-responsable');
+
+                $this->data['idHidden'] = form_hidden(array("idHidden" => $this->input->post('idProject')));
+
+            }
+
+
             
         }else if($this->session->userdata('view.active') === '11'){
 
@@ -197,8 +249,39 @@ class Dashboard extends CI_Controller {
                 'select_observador_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-observador-dialog")
 
             );
-            
-            
+
+
+
+
+            if($this->input->post('idProject') !== null ) {
+
+                $proyectActive = $this->ActividadModel->findByid($this->input->post('idProject'));
+
+                $this->data['proyectActive'] = $this->input->post('idProject');
+
+                $this->data['inputName'] = textAreaFormData("descripcion", 0, 0, $proyectActive->nombre);
+                $this->data['inputAlias'] = form_input('alias', $proyectActive->nombre);
+                $this->data['fechaEntrega'] = $proyectActive->fecha_entrega;
+                $this->data['horaEntrega'] = $proyectActive->hora_entrega;
+
+
+
+                $this->data['inputStados'] = comboFormDbCode($this->ActividadModel->estadoForCombo(
+                    $this->input->post('idProject')),
+                    'inputStados');
+
+                $this->data['multiObservador'] = comboMultiFormDbCode($this->ActividadModel->getMultiObservador(
+                    $this->input->post('idProject')), 'select-observador');
+
+                $this->data['multiResponsable'] = comboMultiFormDbCode($this->ActividadModel->getMultiResposanble(
+                    $this->input->post('idProject')), 'select-responsable');
+
+                $this->data['idHidden'] = form_hidden(array("idHidden" => $this->input->post('idProject')));
+
+            }
+
+
+
         }else if($this->session->userdata('view.active') === '12'){
 
             require_once(APPPATH ."/class/orm/SpGetComboStates.php");
@@ -217,8 +300,40 @@ class Dashboard extends CI_Controller {
                 'select_observador_dialog'  => comboMultiFormDb($spGetComboUser->toArrayMappeToComnbo(),"select-observador-dialog")
 
             );
-            
-            
+
+
+
+            if($this->input->post('idProject') !== null ) {
+
+                $proyectActive = $this->TareaModel->findByid($this->input->post('idProject'));
+
+                $this->data['proyectActive'] = $this->input->post('idProject');
+
+                $this->data['inputName'] = textAreaFormData("descripcion", 0, 0, $proyectActive->nombre);
+                $this->data['inputAlias'] = form_input('alias', $proyectActive->nombre);
+                $this->data['fechaEntrega'] = $proyectActive->fecha_entrega;
+                $this->data['horaEntrega'] = $proyectActive->hora_entrega;
+
+
+                $this->data['porcentaje'] =  $proyectActive->porcentaje;
+
+                $this->data['inputStados'] = comboFormDbCode($this->TareaModel->estadoForCombo(
+                    $this->input->post('idProject')),
+                    'inputStados');
+
+                $this->data['multiObservador'] = comboMultiFormDbCode($this->TareaModel->getMultiObservador(
+                    $this->input->post('idProject')), 'select-observador');
+
+                $this->data['multiResponsable'] = comboMultiFormDbCode($this->TareaModel->getMultiResposanble(
+                    $this->input->post('idProject')), 'select-responsable');
+
+                $this->data['idHidden'] = form_hidden(array("idHidden" => $this->input->post('idProject')));
+
+            }
+
+
+
+
         }else if($this->session->userdata('view.active') === '13'){
 
             require_once(APPPATH ."/class/orm/SpGetComboStates.php");
@@ -242,7 +357,37 @@ class Dashboard extends CI_Controller {
                 'master_combo' =>  comboFormDb($spGetComboProjectByUser->toArrayMappeToComnbo(),"master_combo")
             );
 
+
+            if($this->input->post('idProject') !== null ){
+
+
+                $active = $this->ObjetivoModel->findByid($this->input->post('idProject'));
+
+                $this->data['proyectActive'] = $this->input->post('idProject');
+
+                $this->data['inputName'] = textAreaFormData("descripcion",0,0,$active->nombre);
+                $this->data['inputAlias'] = form_input('"alias"', $active->nombre);
+                $this->data['fechaEntrega'] =  $active->fecha_entrega;
+                $this->data['horaEntrega'] = $active->hora_entrega;
+
+                $this->data['inputStados'] = comboFormDbCode($this->ObjetivoModel->estadoForCombo(
+                    $this->input->post('idProject')),
+                    'inputStados');
+
+                $this->data['multiObservador'] = comboMultiFormDbCode($this->ObjetivoModel->getMultiObservador(
+                    $this->input->post('idProject')),'select-observador');
+
+                $this->data['multiResponsable'] = comboMultiFormDbCode($this->ObjetivoModel->getMultiResposanble(
+                    $this->input->post('idProject')),'select-responsable');
+
+                $this->data['idHidden'] = form_hidden(array("idHidden"=>$this->input->post('idProject')));
+
+            }
+
+
+
         }else if($this->session->userdata('view.active') === '14'){
+
             $this->data = array();
             $this->data["tabla"] = $this->ProjectModel->findForList($this->session->userdata('user.id'));
 
@@ -318,6 +463,7 @@ class Dashboard extends CI_Controller {
 
         if($this->session->userdata('view.active') === '17'){
             $renderHere = true;
+
             if($this->input->post('key') != null){
                 $data = array(
                     'list.objetivo'  => $this->input->post('key')
@@ -329,6 +475,8 @@ class Dashboard extends CI_Controller {
             $this->data["tabla"] =$this->ObjetivoModel->findForList($this->session->userdata('list.objetivo'));
 
         }else if($this->session->userdata('view.active') === '16'){
+
+
             $renderHere = true;
             if($this->input->post('key') != null){
                 $data = array(
@@ -375,6 +523,53 @@ class Dashboard extends CI_Controller {
     }
 
 
+    public  function deleteInList(){
+
+        if($this->session->userdata('view.active') === '14'){
+
+            $this->ProjectModel->deleteProject($this->input->post('deleteid'));
+
+            $this->data = array();
+            $this->data["tabla"] = $this->ProjectModel->findForList($this->session->userdata('user.id'));
+
+        }else if($this->session->userdata('view.active') === '17'){
+
+            $this->ObjetivoModel->deleteObjetive($this->input->post('deleteid'));
+
+            if($this->input->post('key') != null){
+                $data = array(
+                    'list.objetivo'  => $this->input->post('key')
+                );
+                $this->session->set_userdata($data);
+            }
+
+            $this->data = array();
+            $this->data["tabla"] =$this->ObjetivoModel->findForList($this->session->userdata('list.objetivo'));
+
+        }else if($this->session->userdata('view.active') === '16'){
+
+            $this->MetaModel->deleteMeta($this->input->post('deleteid'));
+
+            $this->data = array();
+            $this->data["tabla"] =$this->MetaModel->findForList($this->session->userdata('list.meta'));
+
+        }else if($this->session->userdata('view.active') === '15'){
+
+            $this->ActividadModel->deleteActividad($this->input->post('deleteid'));
+            $this->data = array();
+            $this->data["tabla"] =$this->ActividadModel->findForList($this->session->userdata('list.actividad'));
+
+        }else if($this->session->userdata('view.active') === '18'){
+
+            $this->TareaModel->deleteTarea($this->input->post('deleteid'));
+            $this->data = array();
+            $this->data["tabla"] =$this->TareaModel->findForList($this->session->userdata('list.tarea'));
+
+        }
+        
+        $this->stateView->renderView($this->data);
+    }
+
     public function completeTask(){
 
         $this->TareaModel->completeTask($this->input->post('idTask'));
@@ -384,120 +579,198 @@ class Dashboard extends CI_Controller {
 
     public function addProject()
     {
+       
+        if($this->input->post('idHidden')!== null){
 
-        $this->ProjectModel->insertProject(
-            $this->input->post('descripcion'),
-            $this->input->post('alias'),
-            $this->input->post('select-responsable'),
-            $this->input->post('select-observador'),
-            $this->input->post('fecha_inicio'),
-            date('H:i', strtotime($this->input->post('hourstart'))),
-            $this->input->post('fecha_entrega'),
-            date('H:i', strtotime($this->input->post('hoursend'))),
-            $this->input->post('fecha_final'),
-            date('H:i', strtotime($this->input->post('hoursfinal'))),
-            $this->input->post('inputStados'),
-            $this->session->userdata('user.id'),
-            $this->input->ip_address()
-        );
+            $this->ProjectModel->updateProyect(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $this->input->post('idHidden')
+            );
 
+        }else{
+
+            $this->ProjectModel->insertProject(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address()
+            );
+        }
         redirect('/dashboard');
     }
 
 
     public function createActividad(){
 
-        //$codigoMetas = $this->session->userdata('view.metas');
+        $codigoMetas = $this->session->userdata('list.actividad');
 
-        $codigoMetas = 0;
+        if($this->input->post('idHidden')!== null){
 
-        $this->ActividadModel->insertActividad(
-            $this->input->post('descripcion'),
-            $this->input->post('alias'),
-            $this->input->post('select-responsable'),
-            $this->input->post('select-observador'),
-            $this->input->post('fecha_inicio'),
-            date('H:i', strtotime($this->input->post('hourstart'))),
-            $this->input->post('fecha_entrega'),
-            date('H:i', strtotime($this->input->post('hoursend'))),
-            $this->input->post('fecha_final'),
-            date('H:i', strtotime($this->input->post('hoursfinal'))),
-            $this->input->post('inputStados'),
-            $this->session->userdata('user.id'),
-            $this->input->ip_address(),
-            $codigoMetas
-        );
 
+
+            $this->ActividadModel->update_activity(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoMetas,
+                $this->input->post('idHidden')
+            );
+
+
+        }else{
+
+            $this->ActividadModel->insertActividad(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoMetas
+            );
+
+        }
+
+
+        redirect('/dashboard');
     }
 
     public function  createMeta(){
-        //$codigoObejtivos = $this->session->userdata('view.obejetivos');
-        $codigoObejtivos = 1;
 
-        $this->MetatModel->insertMeta(
-            $this->input->post('descripcion'),
-            $this->input->post('alias'),
-            $this->input->post('select-responsable'),
-            $this->input->post('select-observador'),
-            $this->input->post('fecha_inicio'),
-            date('H:i', strtotime($this->input->post('hourstart'))),
-            $this->input->post('fecha_entrega'),
-            date('H:i', strtotime($this->input->post('hoursend'))),
-            $this->input->post('fecha_final'),
-            date('H:i', strtotime($this->input->post('hoursfinal'))),
-            $this->input->post('inputStados'),
-            $this->session->userdata('user.id'),
-            $this->input->ip_address(),
-            $codigoObejtivos
-        );
+
+        $codigoMeta = $this->session->userdata('list.meta');
+
+
+        if($this->input->post('idHidden')!== null){
+            $this->MetaModel->updateMetas(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoMeta,
+                $this->input->post('idHidden')
+            );
+        }else{
+            $this->MetaModel->insertMeta(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoMeta
+            );
+        }
+
+        redirect('/dashboard');
     }
 
 
     public function  createObjetivo(){
 
-        //$codigoProyectos = $this->session->userdata('view.proyectos');
-        $codigoProyectos = 1;
+        $codigoProyectos = $this->session->userdata('list.objetivo');
 
-        $this->ObjetivoModel->insertObjetivo(
-            $this->input->post('descripcion'),
-            $this->input->post('alias'),
-            $this->input->post('select-responsable'),
-            $this->input->post('select-observador'),
-            $this->input->post('fecha_inicio'),
-            date('H:i', strtotime($this->input->post('hourstart'))),
-            $this->input->post('fecha_entrega'),
-            date('H:i', strtotime($this->input->post('hoursend'))),
-            $this->input->post('fecha_final'),
-            date('H:i', strtotime($this->input->post('hoursfinal'))),
-            $this->input->post('inputStados'),
-            $this->session->userdata('user.id'),
-            $this->input->ip_address(),
-            $codigoProyectos
-        );
+
+        if($this->input->post('idHidden')!== null){
+            $this->ObjetivoModel->updateObjetivos(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoProyectos,
+                $this->input->post('idHidden')
+            );
+
+        }else{
+            $this->ObjetivoModel->insertObjetive(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoProyectos
+            );
+        }
+
+        redirect('/dashboard');
     }
 
     //proyectos->obejtivos->metas->actividades->tareas
     public function createTarea(){
 
-        //$codigoActividades = $this->session->userdata('view.actividades');
-        $codigoActividades = 1;
+        $codigoActividades = $this->session->userdata('list.tarea');
 
-        $this->TareaModel->insertTarea(
-            $this->input->post('descripcion'),
-            $this->input->post('alias'),
-            $this->input->post('select-responsable'),
-            $this->input->post('select-observador'),
-            $this->input->post('fecha_inicio'),
-            date('H:i', strtotime($this->input->post('hourstart'))),
-            $this->input->post('fecha_entrega'),
-            date('H:i', strtotime($this->input->post('hoursend'))),
-            $this->input->post('fecha_final'),
-            date('H:i', strtotime($this->input->post('hoursfinal'))),
-            $this->input->post('inputStados'),
-            $this->session->userdata('user.id'),
-            $this->input->ip_address(),
-            $codigoActividades
-        );
+        if($this->input->post('idHidden')!== null){
+            $this->TareaModel->update_tarea(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoActividades,
+                $this->input->post('porcentaje'),
+                $this->input->post('idHidden')
+            );
+        }else{
+            $this->TareaModel->insertTarea(
+                $this->input->post('descripcion'),
+                $this->input->post('alias'),
+                $this->input->post('select-responsable'),
+                $this->input->post('select-observador'),
+                $this->input->post('fecha_entrega'),
+                date('H:i', strtotime($this->input->post('hoursend'))),
+                $this->input->post('inputStados'),
+                $this->session->userdata('user.id'),
+                $this->input->ip_address(),
+                $codigoActividades,
+                $this->input->post('porcentaje')
+            );
+        }
+
+        redirect('/dashboard');
 
     }
 

@@ -154,7 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var parametros = { view : 4 };
         $.ajax({
             data:  parametros,
-            url:   "/sigepro/dashboard/ajaxUserProfile/",
+            url:   "/cladbox/dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");

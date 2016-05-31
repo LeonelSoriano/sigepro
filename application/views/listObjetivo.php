@@ -20,9 +20,9 @@
     <li class=""><a>Usuarios</a></li>
 </ol>
 <div class="page-heading">
-    <h1><i class="fa fa-user"></i> Listado Objetivos</b></h1>
+    <h1><i class="fa fa-book"></i> Listado Objetivos</b></h1>
 
-    <a href="proyectoslist.php" style="color:#455A64" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"><i
+    <a id="listProject" href="javascript:void(0)" style="color:#455A64" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"><i
             class="icon-arrow-left"></i> Volver a las Proyectos</a>
 </div>
 <div class="container-fluid">
@@ -71,12 +71,12 @@
     ");
             echo ("
     <td><a href=\"javascript:void(0)\" id=\"modificateAjax\"
-                   class=\"btn btn-info-alt\"><i class=\"fa fa-edit\"></i> Modificar</a></td>
+              onclick='goUpdateProject($index->codigo)'  class=\"btn btn-info-alt\"><i class=\"fa fa-edit\"></i> Modificar</a></td>
     
     ");
             echo ("
     <td><a href=\"javascript:void(0)\" id=\"deleteAjax\"
-                   class=\"btn btn-danger-alt\"><i class=\"icon-trash\"></i> Eliminar</a></td>
+               onclick='deleteProyect($index->codigo)'    class=\"btn btn-danger-alt\"><i class=\"icon-trash\"></i> Eliminar</a></td>
     
     ");
 
@@ -105,7 +105,7 @@
 </div>
 
 <div style="margin-top: 20px">
-    <input type="button" class="pullRight btn btn-success" name="btnAction" id="listProject" value="Lista de Projectos"/>
+
 
     <input type="button" style="margin-right: 10px" class="pullRight btn btn-success" name="btnAction" id="newObjetivo" value="Nuevo Objetivo"/>
 </div>
@@ -118,5 +118,48 @@
 
     loadAjax("#listProject" ,14 );
     loadAjax("#newObjetivo" ,13 );
+
+
+
+    function goUpdateProject(idProject) {
+
+        var parametros = {
+            view : 13,
+            idProject : idProject
+        };
+        $.ajax({
+            data:  parametros,
+            url:   "/cladbox/dashboard/ajaxUserProfile/",
+            type:  "post",
+            beforeSend: function () {
+                // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+            },
+            success:  function (response) {
+
+                $("#ajax-middle").html(response);
+            }
+        });
+    }
+
+
+    function deleteProyect(idProject) {
+        var parametros = {
+            deleteid : idProject
+        };
+        $.ajax({
+            data:  parametros,
+            url:   "/cladbox/dashboard/deleteInList/",
+            type:  "post",
+            beforeSend: function () {
+                // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
+            },
+            success:  function (response) {
+
+                $("#ajax-middle").html(response);
+            }
+        });
+    }
+
+
 
 </script>

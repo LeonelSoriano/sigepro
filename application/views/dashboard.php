@@ -37,7 +37,7 @@
 
     <link type="text/css" href="<?= base_url('/assets/plugins/form-daterangepicker/daterangepicker-bs3.css') ?>" rel="stylesheet"> 	<!-- DateRangePicker -->
     <link type="text/css" href="<?= base_url('/assets/plugins/fullcalendar/fullcalendar.css') ?>" rel="stylesheet"> 					<!-- FullCalendar -->
-<!--    <link type="text/css" href="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.css') ?><!--" rel="stylesheet"> 				<!-- Chartist -->
+    <!--    <link type="text/css" href="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.css') ?><!--" rel="stylesheet"> 				<!-- Chartist -->
 
     <!-- Alerts-->
     <link rel="stylesheet" href="<?= base_url('/assets/plugins/alertify/themes/alertify.core.css') ?>" />
@@ -253,36 +253,6 @@
 
                 <div class="scrollthis scroll-pane">
                     <ul class="scroll-content">
-                        <li class="">
-                            <a href="#">
-                                <img class="msg-avatar" src="foto_user/avatar.jpg" alt="avatar" />
-                                <div class="msg-content">
-                                    <span class="name">Fabio Acevedo</span>
-                                    <span class="msg">Nonummy nibh epismod dolor sit lorem ipsum [...]</span>
-                                </div>
-                                <span class="msg-time">30s</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img class="msg-avatar" src="foto_user/avatar.jpg" alt="avatar" />
-                                <div class="msg-content">
-                                    <span class="name">Jorge Pereira <i class="fa fa-paperclip attachment"></i></span>
-                                    <span class="msg">Nonummy nibh epismod dolor sit lorem ipsum [...]</span>
-                                </div>
-                                <span class="msg-time">5m</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img class="msg-avatar" src="foto_user/avatar.jpg" alt="avatar" />
-                                <div class="msg-content">
-                                    <span class="name">Jose A. Alvarado</span>
-                                    <span class="msg">:)</span>
-                                </div>
-                                <span class="msg-time">3h</span>
-                            </a>
-                        </li>
                         <li>
                             <a href="#">
                                 <img class="msg-avatar" src="foto_user/avatar.jpg" alt="avatar" />
@@ -348,18 +318,14 @@
                             <ul class="acc-menu">
                                 <li class="nav-separator">Menu Principal</li>
                                 <li><a href="<?php echo site_url('/dashboard');?>"><i class="fa fa-home"></i><span>Inicio</span></a></li>
-                                <li><a href="javascript:;"><i class="fa fa-folder-open"></i><span>Proyectos</span><span class="badge badge-info">01</span></a>
+                                <li><a href="javascript:;"><i class="fa fa-folder-open"></i><span>Planificación</span><span class="badge badge-info">01</span></a>
                                     <ul class="acc-menu">
-                                        <li id="projectasigned"><a href="javascript:void(0)"><i class="icon-user-follow"></i> Asignados</a></li>
+                                        <li id="projectasigned"><a href="javascript:void(0)"><i class="icon-user-follow"></i> Proyectos</a></li>
 
-                                        <li id="createproject" ><a href="javascript:void(0)"><i class="icon-plus"></i> Agregar Nuevo</a></li>
-                                        <li id="createObjetivo" ><a href="javascript:void(0)"><i class="icon-plus"></i> Objetivos</a></li>
+                                        <li id="listarTareas" ><a href="javascript:void(0)"><i class="icon-plus"></i> Tareas</a></li>
+                                        <li id="createObjetivo" ><a href="javascript:void(0)"><i class="icon-plus"></i> Recursos Físicos</a></li>
 
-                                        <li id="createMeta"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Meta</a></li>
-                                        <li id="createActividad"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Actividad</a></li>
-                                        <li id="createTarea"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Tarea</a></li>
-
-                                        <li><a href="proyectossrch.php"><i class="icon-magnifier"></i> B&uacute;squeda Avanzada</a></li>
+                                        <li id="createMeta"><a  href="javascript:void(0)"><i class="icon-magnifier"></i> Recursos Económicos</a></li>
                                     </ul>
                                 </li>
                                 <li class="tohide"><a href="#"><i class="fa fa-tags"></i><span>Tareas</span><span class="badge badge-info">14</span></a>
@@ -373,90 +339,21 @@
 
                                 <li class="nav-separator">Controles</li>
 
-                                <li><a href="#"><i class="fa fa-hdd-o"></i><span>Data Maestra</span></a>
+                                <li><a href="#"><i class="fa fa-hdd-o"></i><span>Datos Maestros</span></a>
                                     <ul class="acc-menu" id="scrollingUlMenu">
-
-                                        <li><a href="cargolist.php?cmd=resetall"><i class="icon-trophy"></i> Cargos</a></li>
-
-
-                                        <li><a href="empresaslist.php?cmd=resetall"><i class="fa fa-building-o"></i> Empresas</a></li>
-
-
-                                        <li><a href="estatuslist.php?cmd=resetall"><i class="icon-bar-chart"></i> Estatus</a></li>
-
-
-                                        <li><a href="estatus_recursos_financieroslist.php?cmd=resetall"><i class="icon-bar-chart"></i> Estus Rec. Financieros</a></li>
-
-
-                                        <li><a href="estatus_recursos_fisicoslist.php?cmd=resetall"><i class="icon-bar-chart"></i> Estatus Rec. Físicos</a></li>
-
-
-                                        <li><a href="eventos_auditorialist.php?cmd=resetall"><i class="icon-eyeglasses"></i> Eventos de Auditoria</a></li>
-
-
-                                        <li><a href="recursos_financieroslist.php?cmd=resetall"><i class="fa fa-dollar"></i> Recursos Finacieros</a></li>
-
-
-                                        <li><a href="recursos_fisicoslist.php?cmd=resetall"><i class="icon-social-dropbox"></i> Recusos Fisicos</a></li>
-
-
-                                        <li><a href="sinolist.php?cmd=resetall"><i class="icon-directions"></i> Si / No</a></li>
-
-
-
-
-
-
-                                        <li><a href="usuarioslist.php?cmd=resetall"><i class="icon-user"></i> Usuarios</a></li>
-
-
+                                        <li><a href="cargolist.php?cmd=resetall"><i class="icon-trophy"></i>Empresas</a></li>
+                                        <li><a href="empresaslist.php?cmd=resetall"><i class="fa fa-building-o"></i>Departamentos</a></li>
+                                        <li><a href="estatuslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Tipos de Usuarios</a></li>
+                                        <li><a href="estatus_recursos_financieroslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Usuarios</a></li>
                                         <li><a href="userlevelslist.php?cmd=resetall"><i class="icon-users"></i> Tipos de Usuarios</a></li>
-
-
-                                        <li class="tohide"><a href="userlevelpermissionslist.php?cmd=resetall"><i class="icon-shield"></i> Permisos de Usuario</a></li>
-
-
-
-
-
-
-                                        <li class="tohide"><a href="actividadeslist.php?cmd=resetall"><i class="icon-magnifier"></i> Actividades</a></li>
-
-
-                                        <li class="tohide"><a href="departamentoslist.php?cmd=resetall"><i class="icon-magnifier"></i> Departamentos</a></li>
-
-
-
-                                        <li class="tohide"><a href="metaslist.php?cmd=resetall"><i class="icon-magnifier"></i> Metas del Proyecto</a></li>
-
-
-                                        <li class="tohide"><a href="objetivoslist.php?cmd=resetall"><i class="icon-magnifier"></i> Objetivos del Proyecto</a></li>
-
-
-                                        <li class="tohide"><a href="observadores_proyectoslist.php?cmd=resetall"><i class="icon-magnifier"></i> Quien Participa en el Proyecto</a></li>
-
-
-                                        <li class="tohide"><a href="observadores_tareaslist.php?cmd=resetall"><i class="icon-magnifier"></i> Quien Participa en la Tarea</a></li>
-
-
-                                        <li class="tohide"><a href="proyectoslist.php?cmd=resetall"><i class="icon-magnifier"></i> Proyectos</a></li>
-
-
-                                        <li class="tohide"><a href="recursos_financieros_tareaslist.php?cmd=resetall"><i class="icon-magnifier"></i> Recursos Financiros de las Tareas</a></li>
-
-
-                                        <li class="tohide"><a href="recursos_fisicos_tareaslist.php?cmd=resetall"><i class="icon-magnifier"></i> Recursos Fisicos de las Tareas</a></li>
-
-
-                                        <li class="tohide"><a href="tareaslist.php?cmd=resetall"><i class="icon-magnifier"></i> Tareas</a></li>
-
-
-
                                     </ul>
                                 </li>
-                                <li class="btnDevload tohide"><a href="javascript:;"><i class="icon-earphones-alt"></i><span>Help Desk</span></a>
+                                <li><a href="#"><i class="fa fa-hdd-o"></i><span>Configuraciones</span></a>
+                                    <ul class="acc-menu" id="scrollingUlMenu">
+                                        <li><a href="cargolist.php?cmd=resetall"><i class="icon-trophy"></i>Auditoría</a></li>
+                                        <li><a href="empresaslist.php?cmd=resetall"><i class="fa fa-building-o"></i>Configuración</a></li>
+                                    </ul>
                                 </li>
-
                                 <li><a href="<?php echo site_url('/dashboard/logout');?>"><i class="icon-logout"></i> Salir</a></li>
 
                             </ul>
@@ -467,15 +364,15 @@
         </div>
 
 
-            <!-- middle screen -->
+        <!-- middle screen -->
 
 
 
-            <div class="static-content-wrapper" >
+        <div class="static-content-wrapper" >
             <div class="static-content" >
                 <div class="page-content" id="ajax-middle">
 
-                 <!--   -------------------->
+                    <!--   -------------------->
 
 
 
@@ -494,7 +391,7 @@
 
 
 
-               <!-- ------------------------------------>
+                    <!-- ------------------------------------>
                 </div> <!-- #page-content -->
             </div>
             <footer role="contentinfo">
@@ -507,9 +404,9 @@
             </footer>
         </div>
 
-            <!-- middle screen -->
-        </div>
+        <!-- middle screen -->
     </div>
+</div>
 </div>
 
 
@@ -590,11 +487,10 @@
 <!-- End loading page level scripts-->
 <script type="text/javascript">
     $(document).ready(function(){
-        
         var parametros = { view : 0 };
         $.ajax({
             data:  parametros,
-            url:   "/sigepro/dashboard/ajaxUserProfile/",
+            url:   "/cladbox/dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -603,14 +499,10 @@
                 $("#ajax-middle").html(response);
             }
         });
-
         loadAjax("#ajax-user-profile" ,2 );
         loadAjax("#createproject" ,7 );
         loadAjax("#projectasigned" ,14 );
-        loadAjax("#createMeta" ,10 );
-        loadAjax("#createActividad" ,11 );
-        loadAjax("#createTarea" ,12 );
-        loadAjax("#createObjetivo" ,13 );
+
 
     });
 </script>

@@ -9,13 +9,12 @@ function loadAjax(id,numberview) {
         var parametros = { view : numberview };
         $.ajax({
             data:  parametros,
-            url:   "/sigepro/dashboard/ajaxUserProfile/",
+            url:   "/cladbox/dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
             },
             success:  function (response) {
-
                 $("#ajax-middle").html(response);
             }
         });
@@ -31,7 +30,7 @@ function loadAjaxtProject(numberview,pk) {
         };
         $.ajax({
             data:  parametros,
-            url:   "/sigepro/dashboard/ajaxProject/",
+            url:   "/cladbox/dashboard/ajaxProject/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -53,7 +52,7 @@ function loadAjaxtListView(numberview,key) {
         };
         $.ajax({
             data:  parametros,
-            url:   "/sigepro/dashboard/listView/",
+            url:   "/cladbox/dashboard/listView/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");

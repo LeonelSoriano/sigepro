@@ -22,15 +22,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="page-heading">
         <h1><i class="icon-plus"></i> Agregar Nuevo <b>Objetivo</b></h1>
 
-        <a href="proyectoslist.php" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"
-           style="margin-left: 5px">
-            <i class="icon-arrow-left"></i> Buscar Projecto
-        </a>
+
 
 
         <input type="button" class="pullRight btn btn-success" name="btnAction" id="btnAction" value="Buscar"
                style="margin-left: 5px">
-        <input type="button" class="pullRight btn btn-success" name="btnAction" id="btnAction" value="Nuevo"/>
 
     </div>
     <div class="container-fluid">
@@ -44,32 +40,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel-body">
                 <div class="table-responsive">
 
-                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/createObjetivo" method="post"
-                          >
+                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/createObjetivo" method="post">
 
-
+                        <?php if (isset($proyectActive) ): ?>
+                            <?php echo($idHidden); ?>
+                        <?php endif; ?>
 
                         <table class="table">
                             <tr>
                                 <td class="ewTableHeader"><span>Descripción<span class='ewmsg'>&nbsp;*</span></span>
                                 </td>
                                 <td>
-                                    <textarea cols="0" rows="0" id="descripcion" name="descripcion"></textarea>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($inputName);?>
+                                    <?php else: ?>
+                                        <textarea cols="0" rows="0" id="descripcion" name="descripcion"></textarea>
+                                    <?php endif; ?>
+
                                 </td>
                             </tr>
                             <tr>
                                 <td class="ewTableHeader"><span>Alias</span></td>
                                 <td>
-                                    <input type="text" name="alias" id="x_alias" size="30" maxlength="255" value="">
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($inputAlias);?>
+                                    <?php else: ?>
+                                        <input type="text" name="alias" id="x_alias" size="30" maxlength="255" value="">
+                                    <?php endif; ?>
+
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Responsables&nbsp;*</span></span></td>
                                 <td>
-                                    <select name="select-responsable[]" id="select-responsable" multiple="multiple" style="width: 80%">
-
-                                    </select>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($multiResponsable);?>
+                                    <?php else: ?>
+                                        <select name="select-responsable[]" id="select-responsable" multiple="multiple" style="width: 80%"></select>
+                                    <?php endif; ?>
 
                                     <div class="pull-right icons">
                                         <input type="button" data-toggle="modal" data-target="#mimodal-responsable"
@@ -90,9 +99,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tr>
                                 <td class="ewTableHeader">Observadores&nbsp;*</span></span></td>
                                 <td>
-                                    <select name="select-observador[]" id="select-observador"  class="ilstSelected" multiple="multiple" style="width: 80%">
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($multiObservador);?>
+                                    <?php else: ?>
+                                        <select name="select-observador[]" id="select-observador"  class="ilstSelected" multiple="multiple" style="width: 80%"></select>
+                                    <?php endif; ?>
 
-                                    </select>
+
 
                                     <div class="pull-right icons">
                                         <input type="button" data-toggle="modal" data-target="#mimodal-observador"
@@ -110,56 +123,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </tr>
 
 
-                            <tr>
-                                <td class="ewTableHeader">Fecha Inicio&nbsp;*</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_inicio"
-                                           id="fecha_iniciojs" value="">&nbsp;<i class="icon-calendar"></i>
-                                </td>
-                            </tr>
 
 
-                            <tr>
-                                <td class="ewTableHeader">Hora Inicio&nbsp;*</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="hourstart" id="hourstartjs"
-                                           value="">&nbsp;<i class="icon-clock"></i>
-                                </td>
-                            </tr>
 
 
                             <tr>
                                 <td class="ewTableHeader">Fecha entrega&nbsp;*</span></span></td>
                                 <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_entrega"
-                                           id="fecha_entregajs" value="">&nbsp;<i class="icon-calendar"></i>
+
+
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <input style="width:  97% !important" type="text" name="fecha_entrega"
+                                               id="fecha_entregajs" value="<?php echo($fechaEntrega); ?>">&nbsp;<i class="icon-calendar"></i>
+                                    <?php else: ?>
+                                        <input style="width:  97% !important" type="text" name="fecha_entrega"
+                                               id="fecha_entregajs" value="">&nbsp;<i class="icon-calendar"></i>
+                                    <?php endif; ?>
+                                    
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Hora Entrega&nbsp;*</span></span></td>
                                 <td>
-                                    <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
-                                           value="">&nbsp;<i class="icon-clock"></i>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
+                                               value="<?php echo($horaEntrega); ?>">&nbsp;<i class="icon-clock"></i>
+                                    <?php else: ?>
+                                        <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
+                                               value="">&nbsp;<i class="icon-clock"></i>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
 
-
-                            <tr>
-                                <td class="ewTableHeader">Fecha Final</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_final"
-                                           id="fecha_finaljs" value="">&nbsp;<i class="icon-calendar"></i>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="ewTableHeader">Hora Final</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="hoursfinal"
-                                           id="hourfinaldjs" value="">&nbsp;<i class="icon-clock"></i>
-                                </td>
-                            </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Estados</span></span></td>
@@ -286,26 +282,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         autoclose: true,
     });
 
-    $('#fecha_iniciojs').datepicker({
-        "format": "yyyy-mm-dd",
-        'startView': 0,
-        showTodayButton: true,
-        autoclose: true,
-    });
-
-    $('#hourstartjs').datetimepicker({
-        format: 'HH:ii p',
-        autoclose: true,
-        // todayHighlight: true,
-        showMeridian: true,
-        startView: 1,
-        maxView: 1,
-        pickDate: false
-    }).on("show", function () {
-        $(".table-condensed th").text("");
-    });
-
-
     $('#hoursendjs').datetimepicker({
         format: 'HH:ii p',
         autoclose: true,
@@ -319,25 +295,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     });
 
 
-    $('#fecha_finaljs').datepicker({
-        "format": "yyyy-mm-dd",
-        'startView': 0,
-        showTodayButton: true,
-        autoclose: true,
-    });
-
-
-    $('#hourfinaldjs').datetimepicker({
-        format: 'HH:ii p',
-        autoclose: true,
-        // todayHighlight: true,
-        showMeridian: true,
-        startView: 1,
-        maxView: 1,
-        pickDate: false
-    }).on("show", function () {
-        $(".table-condensed th").text("");
-    });
 
 
     $('#responsable-menos').on("click", function () {

@@ -136,384 +136,403 @@
       <column id="61" parent="2" name="fecha_final">
         <data-type>date</data-type>
       </column>
-      <column id="62" parent="2" name="hola_final">
+      <column id="62" parent="2" name="hora_final">
         <data-type>time</data-type>
       </column>
-      <index id="63" parent="2" name="codigo_meta">
+      <column id="63" parent="2" name="fecha_eliminado">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0002-11-30&apos;</default-expression>
+      </column>
+      <column id="64" parent="2" name="hora_entrega">
+        <data-type>time</data-type>
+      </column>
+      <index id="65" parent="2" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="64" parent="2" name="codigo_objetivo">
+      <index id="66" parent="2" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="65" parent="2" name="codigo_proyecto">
+      <index id="67" parent="2" name="codigo_proyecto">
         <columns>codigo_proyecto</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="66" parent="2" name="PRIMARY">
+      <key id="68" parent="2" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="67" parent="2" name="actividades_ibfk_1">
+      <foreign-key id="69" parent="2" name="actividades_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.metas(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="68" parent="2" name="actividades_ibfk_2">
+      <foreign-key id="70" parent="2" name="actividades_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.metas(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="69" parent="2" name="actividades_ibfk_3">
+      <foreign-key id="71" parent="2" name="actividades_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>~.metas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="70" parent="3" name="codigo">
+      <column id="72" parent="3" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="71" parent="3" name="sentencia">
+      <column id="73" parent="3" name="sentencia">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="72" parent="3" name="usuario">
+      <column id="74" parent="3" name="usuario">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="73" parent="3" name="direccion_ip">
+      <column id="75" parent="3" name="direccion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="74" parent="3" name="modulo">
+      <column id="76" parent="3" name="modulo">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="75" parent="3" name="PRIMARY">
+      <key id="77" parent="3" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="76" parent="4" name="codigo">
+      <column id="78" parent="4" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="77" parent="4" name="codigo_departamento">
+      <column id="79" parent="4" name="codigo_departamento">
         <data-type>int(11)</data-type>
       </column>
-      <column id="78" parent="4" name="codigo_alterno">
+      <column id="80" parent="4" name="codigo_alterno">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="79" parent="4" name="nombre">
+      <column id="81" parent="4" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="80" parent="4" name="alias">
+      <column id="82" parent="4" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="81" parent="4" name="codigo_departamento">
+      <index id="83" parent="4" name="codigo_departamento">
         <columns>codigo_departamento</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="82" parent="4" name="codigo_empresa">
+      <index id="84" parent="4" name="codigo_empresa">
         <columns>codigo_departamento</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="83" parent="4" name="PRIMARY">
+      <key id="85" parent="4" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="84" parent="4" name="cargos_ibfk_2">
+      <foreign-key id="86" parent="4" name="cargos_ibfk_2">
         <columns>codigo_departamento</columns>
         <ref-key>~.departamentos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="85" parent="5" name="codigo">
+      <column id="87" parent="5" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="86" parent="5" name="tipo_bd">
+      <column id="88" parent="5" name="tipo_bd">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="87" parent="5" name="ubicacion_ip">
+      <column id="89" parent="5" name="ubicacion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="88" parent="5" name="nombre">
+      <column id="90" parent="5" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="89" parent="5" name="usuario">
+      <column id="91" parent="5" name="usuario">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="90" parent="5" name="password">
+      <column id="92" parent="5" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="91" parent="5" name="PRIMARY">
+      <key id="93" parent="5" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="92" parent="6" name="codigo">
+      <column id="94" parent="6" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="93" parent="6" name="codigo_empresa">
+      <column id="95" parent="6" name="codigo_empresa">
         <data-type>int(11)</data-type>
       </column>
-      <column id="94" parent="6" name="codigo_alterno">
+      <column id="96" parent="6" name="codigo_alterno">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="95" parent="6" name="nombre">
+      <column id="97" parent="6" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="96" parent="6" name="alias">
+      <column id="98" parent="6" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="97" parent="6" name="codigo_empresa">
+      <index id="99" parent="6" name="codigo_empresa">
         <columns>codigo_empresa</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="98" parent="6" name="PRIMARY">
+      <key id="100" parent="6" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="99" parent="6" name="departamentos_ibfk_1">
+      <foreign-key id="101" parent="6" name="departamentos_ibfk_1">
         <columns>codigo_empresa</columns>
         <ref-key>~.empresas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="100" parent="7" name="codigo">
+      <column id="102" parent="7" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="101" parent="7" name="codigo_alterno">
+      <column id="103" parent="7" name="codigo_alterno">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="102" parent="7" name="nombre">
+      <column id="104" parent="7" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="103" parent="7" name="nombre_corto">
+      <column id="105" parent="7" name="nombre_corto">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="104" parent="7" name="rif">
+      <column id="106" parent="7" name="rif">
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="105" parent="7" name="nit">
+      <column id="107" parent="7" name="nit">
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="106" parent="7" name="direccion">
+      <column id="108" parent="7" name="direccion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="107" parent="7" name="telefono">
+      <column id="109" parent="7" name="telefono">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="108" parent="7" name="responsable">
+      <column id="110" parent="7" name="responsable">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="109" parent="7" name="telefono_responsable">
+      <column id="111" parent="7" name="telefono_responsable">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="110" parent="7" name="correo_responsable">
+      <column id="112" parent="7" name="correo_responsable">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="111" parent="7" name="periodo">
+      <column id="113" parent="7" name="periodo">
         <data-type>varchar(4)</data-type>
       </column>
-      <key id="112" parent="7" name="PRIMARY">
+      <key id="114" parent="7" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="113" parent="8" name="codigo">
+      <column id="115" parent="8" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="114" parent="8" name="nombre">
+      <column id="116" parent="8" name="nombre">
         <data-type>varchar(64)</data-type>
       </column>
-      <key id="115" parent="8" name="PRIMARY">
+      <key id="117" parent="8" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="116" parent="9" name="codigo">
+      <column id="118" parent="9" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="117" parent="9" name="codigo_proyecto">
+      <column id="119" parent="9" name="codigo_proyecto">
         <data-type>int(11)</data-type>
       </column>
-      <column id="118" parent="9" name="codigo_objetivo">
+      <column id="120" parent="9" name="codigo_objetivo">
         <data-type>int(11)</data-type>
       </column>
-      <column id="119" parent="9" name="nombre">
+      <column id="121" parent="9" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="120" parent="9" name="alias">
+      <column id="122" parent="9" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="121" parent="9" name="fecha_entrega">
+      <column id="123" parent="9" name="fecha_entrega">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="122" parent="9" name="fecha_creacion">
+      <column id="124" parent="9" name="fecha_creacion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="123" parent="9" name="fecha_pausa">
+      <column id="125" parent="9" name="fecha_pausa">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="124" parent="9" name="fecha_inicio">
+      <column id="126" parent="9" name="fecha_inicio">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="125" parent="9" name="hora_entrega">
+      <column id="127" parent="9" name="hora_entrega">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="126" parent="9" name="hora_creacion">
+      <column id="128" parent="9" name="hora_creacion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="127" parent="9" name="hora_pausa">
+      <column id="129" parent="9" name="hora_pausa">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="128" parent="9" name="hora_inicio">
+      <column id="130" parent="9" name="hora_inicio">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="129" parent="9" name="usuario_creador">
+      <column id="131" parent="9" name="usuario_creador">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="130" parent="9" name="direccion_ip">
+      <column id="132" parent="9" name="direccion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="131" parent="9" name="estado">
+      <column id="133" parent="9" name="estado">
         <data-type>int(11)</data-type>
       </column>
-      <column id="132" parent="9" name="fecha_final">
+      <column id="134" parent="9" name="fecha_final">
         <data-type>date</data-type>
       </column>
-      <column id="133" parent="9" name="hora_final">
+      <column id="135" parent="9" name="hora_final">
         <data-type>time</data-type>
       </column>
-      <index id="134" parent="9" name="codigo_objetivo">
+      <column id="136" parent="9" name="fecha_eliminado">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0002-11-30&apos;</default-expression>
+      </column>
+      <index id="137" parent="9" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="135" parent="9" name="codigo_proyecto">
+      <index id="138" parent="9" name="codigo_proyecto">
         <columns>codigo_proyecto</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="136" parent="9" name="PRIMARY">
+      <key id="139" parent="9" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="137" parent="9" name="metas_ibfk_2">
+      <foreign-key id="140" parent="9" name="metas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>~.objetivos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="138" parent="10" name="codigo">
+      <column id="141" parent="10" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="139" parent="10" name="codigo_proyecto">
+      <column id="142" parent="10" name="codigo_proyecto">
         <data-type>int(11)</data-type>
       </column>
-      <column id="140" parent="10" name="nombre">
+      <column id="143" parent="10" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="141" parent="10" name="alias">
+      <column id="144" parent="10" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="142" parent="10" name="fecha_entrega">
+      <column id="145" parent="10" name="fecha_entrega">
         <data-type>date</data-type>
       </column>
-      <column id="143" parent="10" name="fecha_creacion">
+      <column id="146" parent="10" name="fecha_creacion">
         <data-type>date</data-type>
       </column>
-      <column id="144" parent="10" name="fecha_pausa">
+      <column id="147" parent="10" name="fecha_pausa">
         <data-type>date</data-type>
       </column>
-      <column id="145" parent="10" name="fecha_inicio">
+      <column id="148" parent="10" name="fecha_inicio">
         <data-type>date</data-type>
       </column>
-      <column id="146" parent="10" name="hora_entrega">
+      <column id="149" parent="10" name="hora_entrega">
         <data-type>time</data-type>
       </column>
-      <column id="147" parent="10" name="hora_creacion">
+      <column id="150" parent="10" name="hora_creacion">
         <data-type>time</data-type>
       </column>
-      <column id="148" parent="10" name="hora_pausa">
+      <column id="151" parent="10" name="hora_pausa">
         <data-type>time</data-type>
       </column>
-      <column id="149" parent="10" name="hora_inicio">
+      <column id="152" parent="10" name="hora_inicio">
         <data-type>time</data-type>
       </column>
-      <column id="150" parent="10" name="usuario_creador">
+      <column id="153" parent="10" name="usuario_creador">
         <data-type>int(11)</data-type>
       </column>
-      <column id="151" parent="10" name="direccion_ip">
+      <column id="154" parent="10" name="direccion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="152" parent="10" name="fecha_final">
+      <column id="155" parent="10" name="fecha_final">
         <data-type>date</data-type>
       </column>
-      <column id="153" parent="10" name="hora_final">
+      <column id="156" parent="10" name="hora_final">
         <data-type>time</data-type>
       </column>
-      <column id="154" parent="10" name="estado">
+      <column id="157" parent="10" name="estado">
         <data-type>int(11)</data-type>
       </column>
-      <index id="155" parent="10" name="codigo">
+      <column id="158" parent="10" name="fecha_eliminado">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0002-11-30&apos;</default-expression>
+      </column>
+      <index id="159" parent="10" name="codigo">
         <columns>codigo
 codigo_proyecto</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="156" parent="10" name="codigo_proyecto">
+      <index id="160" parent="10" name="codigo_proyecto">
         <columns>codigo_proyecto</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="157" parent="10" name="PRIMARY">
+      <key id="161" parent="10" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="158" parent="10" name="objetivos_ibfk_1">
+      <foreign-key id="162" parent="10" name="objetivos_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>~.proyectos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="159" parent="11" name="codigo">
+      <column id="163" parent="11" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="160" parent="11" name="codigo_proyecto">
+      <column id="164" parent="11" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="161" parent="11" name="codigo_objetivo">
+      <column id="165" parent="11" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="162" parent="11" name="codigo_meta">
+      <column id="166" parent="11" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="163" parent="11" name="codigo_actividad">
+      <column id="167" parent="11" name="codigo_actividad">
         <data-type>int(255)</data-type>
       </column>
-      <column id="164" parent="11" name="codigo_usuario">
+      <column id="168" parent="11" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="165" parent="11" name="codigo_actividad">
+      <index id="169" parent="11" name="codigo_actividad">
         <columns>codigo_actividad</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="166" parent="11" name="codigo_meta">
+      <index id="170" parent="11" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="167" parent="11" name="codigo_objetivo">
+      <index id="171" parent="11" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="168" parent="11" name="codigo_proyecto">
+      <index id="172" parent="11" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_objetivo
 codigo_meta
@@ -521,392 +540,404 @@ codigo_actividad
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="169" parent="11" name="codigo_usuario">
+      <index id="173" parent="11" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="170" parent="11" name="PRIMARY">
+      <key id="174" parent="11" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="171" parent="11" name="observadores_actividades_ibfk_1">
+      <foreign-key id="175" parent="11" name="observadores_actividades_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.actividades(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="172" parent="11" name="observadores_actividades_ibfk_2">
+      <foreign-key id="176" parent="11" name="observadores_actividades_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.actividades(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="173" parent="11" name="observadores_actividades_ibfk_3">
+      <foreign-key id="177" parent="11" name="observadores_actividades_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>sigepro.actividades(codigo_meta)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="174" parent="11" name="observadores_actividades_ibfk_4">
+      <foreign-key id="178" parent="11" name="observadores_actividades_ibfk_4">
         <columns>codigo_actividad</columns>
         <ref-key>~.actividades.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="175" parent="11" name="observadores_actividades_ibfk_5">
+      <foreign-key id="179" parent="11" name="observadores_actividades_ibfk_5">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="176" parent="12" name="codigo">
+      <column id="180" parent="12" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="177" parent="12" name="codigo_proyecto">
+      <column id="181" parent="12" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="178" parent="12" name="codigo_objetivo">
+      <column id="182" parent="12" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="179" parent="12" name="codigo_meta">
+      <column id="183" parent="12" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="180" parent="12" name="codigo_usuario">
+      <column id="184" parent="12" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="181" parent="12" name="codigo_meta">
+      <index id="185" parent="12" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="182" parent="12" name="codigo_objetivo">
+      <index id="186" parent="12" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="183" parent="12" name="codigo_proyecto">
+      <index id="187" parent="12" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_objetivo
 codigo_meta
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="184" parent="12" name="codigo_usuario">
+      <index id="188" parent="12" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="185" parent="12" name="PRIMARY">
+      <key id="189" parent="12" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="186" parent="12" name="observadores_metas_ibfk_1">
+      <foreign-key id="190" parent="12" name="observadores_metas_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.metas(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="187" parent="12" name="observadores_metas_ibfk_2">
+      <foreign-key id="191" parent="12" name="observadores_metas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.metas(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="188" parent="12" name="observadores_metas_ibfk_3">
+      <foreign-key id="192" parent="12" name="observadores_metas_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>~.metas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="189" parent="12" name="observadores_metas_ibfk_4">
+      <foreign-key id="193" parent="12" name="observadores_metas_ibfk_4">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="190" parent="13" name="codigo">
-        <mandatory>1</mandatory>
-        <data-type>int(255)</data-type>
-      </column>
-      <column id="191" parent="13" name="codigo_usuario">
-        <data-type>int(255)</data-type>
-      </column>
-      <index id="192" parent="13" name="codigo_proyecto">
-        <columns>codigo_usuario</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <key id="193" parent="13" name="PRIMARY">
-        <columns>codigo</columns>
-        <primary>1</primary>
-      </key>
-      <column id="194" parent="14" name="codigo">
+      <column id="194" parent="13" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="195" parent="14" name="codigo_proyecto">
+      <column id="195" parent="13" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <column id="196" parent="14" name="codigo_usuario">
+      <column id="196" parent="13" name="codigo_objetivo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="197" parent="13" name="codigo_proyecto">
+        <columns>codigo_usuario</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="198" parent="13" name="PRIMARY">
+        <columns>codigo</columns>
+        <primary>1</primary>
+      </key>
+      <column id="199" parent="14" name="codigo">
+        <mandatory>1</mandatory>
+        <data-type>int(255)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="200" parent="14" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <index id="197" parent="14" name="codigo_proyecto">
+      <column id="201" parent="14" name="codigo_usuario">
+        <data-type>int(255)</data-type>
+      </column>
+      <index id="202" parent="14" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="198" parent="14" name="codigo_usuario">
+      <index id="203" parent="14" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="199" parent="14" name="PRIMARY">
+      <key id="204" parent="14" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="200" parent="14" name="observadores_proyectos_ibfk_1">
+      <foreign-key id="205" parent="14" name="observadores_proyectos_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>~.proyectos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="201" parent="14" name="observadores_proyectos_ibfk_2">
+      <foreign-key id="206" parent="14" name="observadores_proyectos_ibfk_2">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="202" parent="15" name="codigo">
+      <column id="207" parent="15" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="203" parent="15" name="codigo_proyecto">
+      <column id="208" parent="15" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="204" parent="15" name="codigo_objetivo">
+      <column id="209" parent="15" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="205" parent="15" name="codigo_meta">
+      <column id="210" parent="15" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="206" parent="15" name="codigo_actividad">
+      <column id="211" parent="15" name="codigo_actividad">
         <data-type>int(255)</data-type>
       </column>
-      <column id="207" parent="15" name="codigo_tareas">
+      <column id="212" parent="15" name="codigo_tarea">
         <data-type>int(255)</data-type>
       </column>
-      <column id="208" parent="15" name="codigo_usuario">
+      <column id="213" parent="15" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="209" parent="15" name="codigo_actividad">
+      <index id="214" parent="15" name="codigo_actividad">
         <columns>codigo_actividad</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="210" parent="15" name="codigo_meta">
+      <index id="215" parent="15" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="211" parent="15" name="codigo_objetivo">
+      <index id="216" parent="15" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="212" parent="15" name="codigo_proyecto">
+      <index id="217" parent="15" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_objetivo
 codigo_meta
 codigo_actividad
-codigo_tareas
+codigo_tarea
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="213" parent="15" name="codigo_tareas">
-        <columns>codigo_tareas</columns>
+      <index id="218" parent="15" name="codigo_tareas">
+        <columns>codigo_tarea</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="214" parent="15" name="codigo_usuario">
+      <index id="219" parent="15" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="215" parent="15" name="PRIMARY">
+      <key id="220" parent="15" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="216" parent="15" name="observadores_tareas_ibfk_1">
+      <foreign-key id="221" parent="15" name="observadores_tareas_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.tareas(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="217" parent="15" name="observadores_tareas_ibfk_2">
+      <foreign-key id="222" parent="15" name="observadores_tareas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.tareas(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="218" parent="15" name="observadores_tareas_ibfk_3">
+      <foreign-key id="223" parent="15" name="observadores_tareas_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>sigepro.tareas(codigo_meta)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="219" parent="15" name="observadores_tareas_ibfk_4">
+      <foreign-key id="224" parent="15" name="observadores_tareas_ibfk_4">
         <columns>codigo_actividad</columns>
         <ref-key>sigepro.tareas(codigo_actividad)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="220" parent="15" name="observadores_tareas_ibfk_6">
+      <foreign-key id="225" parent="15" name="observadores_tareas_ibfk_6">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="221" parent="16" name="codigo">
+      <column id="226" parent="16" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="222" parent="16" name="nombre">
+      <column id="227" parent="16" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="223" parent="16" name="alias">
+      <column id="228" parent="16" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="224" parent="16" name="fecha_entrega">
+      <column id="229" parent="16" name="fecha_entrega">
         <data-type>date</data-type>
       </column>
-      <column id="225" parent="16" name="fecha_creacion">
+      <column id="230" parent="16" name="fecha_creacion">
         <data-type>date</data-type>
       </column>
-      <column id="226" parent="16" name="fecha_pausa">
+      <column id="231" parent="16" name="fecha_pausa">
         <data-type>date</data-type>
       </column>
-      <column id="227" parent="16" name="fecha_inicio">
+      <column id="232" parent="16" name="fecha_inicio">
         <data-type>date</data-type>
       </column>
-      <column id="228" parent="16" name="hora_entrega">
+      <column id="233" parent="16" name="hora_entrega">
         <data-type>time</data-type>
       </column>
-      <column id="229" parent="16" name="hora_creacion">
+      <column id="234" parent="16" name="hora_creacion">
         <data-type>time</data-type>
       </column>
-      <column id="230" parent="16" name="hora_pausa">
+      <column id="235" parent="16" name="hora_pausa">
         <data-type>time</data-type>
       </column>
-      <column id="231" parent="16" name="hora_inicio">
+      <column id="236" parent="16" name="hora_inicio">
         <data-type>time</data-type>
       </column>
-      <column id="232" parent="16" name="usuario_creador">
+      <column id="237" parent="16" name="usuario_creador">
         <data-type>int(11)</data-type>
       </column>
-      <column id="233" parent="16" name="direccion_ip">
+      <column id="238" parent="16" name="direccion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="234" parent="16" name="fecha_final">
+      <column id="239" parent="16" name="fecha_final">
         <data-type>date</data-type>
       </column>
-      <column id="235" parent="16" name="hora_final">
+      <column id="240" parent="16" name="hora_final">
         <data-type>time</data-type>
       </column>
-      <column id="236" parent="16" name="estado">
+      <column id="241" parent="16" name="estado">
         <data-type>int(11)</data-type>
       </column>
-      <index id="237" parent="16" name="proyectos_usuarios_fk">
+      <column id="242" parent="16" name="fecha_eliminado">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0002-11-30&apos;</default-expression>
+      </column>
+      <index id="243" parent="16" name="proyectos_usuarios_fk">
         <columns>usuario_creador</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="238" parent="16" name="PRIMARY">
+      <key id="244" parent="16" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="239" parent="16" name="proyectos_usuarios_fk">
+      <foreign-key id="245" parent="16" name="proyectos_usuarios_fk">
         <columns>usuario_creador</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="240" parent="17" name="codigo">
+      <column id="246" parent="17" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="241" parent="17" name="nombre">
+      <column id="247" parent="17" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="242" parent="17" name="fecha_ingreso">
+      <column id="248" parent="17" name="fecha_ingreso">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="243" parent="17" name="saldo_inicial">
+      <column id="249" parent="17" name="saldo_inicial">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="244" parent="17" name="saldo">
+      <column id="250" parent="17" name="saldo">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="245" parent="17" name="debito">
+      <column id="251" parent="17" name="debito">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="246" parent="17" name="credito">
+      <column id="252" parent="17" name="credito">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="247" parent="17" name="fecha_movimiento">
+      <column id="253" parent="17" name="fecha_movimiento">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="248" parent="17" name="codigo_referencia">
+      <column id="254" parent="17" name="codigo_referencia">
         <comment>Es el codigo de la Tarea</comment>
         <data-type>int(11)</data-type>
       </column>
-      <key id="249" parent="17" name="PRIMARY">
+      <key id="255" parent="17" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="250" parent="18" name="codigo">
+      <column id="256" parent="18" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="251" parent="18" name="descripcion">
+      <column id="257" parent="18" name="descripcion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="252" parent="18" name="cantidad">
+      <column id="258" parent="18" name="cantidad">
         <data-type>int(11)</data-type>
       </column>
-      <column id="253" parent="18" name="fecha_ingreso">
+      <column id="259" parent="18" name="fecha_ingreso">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="254" parent="18" name="PRIMARY">
+      <key id="260" parent="18" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="255" parent="19" name="codigo">
+      <column id="261" parent="19" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="256" parent="19" name="codigo_proyecto">
+      <column id="262" parent="19" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="257" parent="19" name="codigo_objetivo">
+      <column id="263" parent="19" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="258" parent="19" name="codigo_meta">
+      <column id="264" parent="19" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="259" parent="19" name="codigo_actividad">
+      <column id="265" parent="19" name="codigo_actividad">
         <data-type>int(255)</data-type>
       </column>
-      <column id="260" parent="19" name="codigo_usuario">
+      <column id="266" parent="19" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="261" parent="19" name="codigo_actividad">
+      <index id="267" parent="19" name="codigo_actividad">
         <columns>codigo_actividad</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="262" parent="19" name="codigo_meta">
+      <index id="268" parent="19" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="263" parent="19" name="codigo_objetivo">
+      <index id="269" parent="19" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="264" parent="19" name="codigo_proyecto">
+      <index id="270" parent="19" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_objetivo
 codigo_meta
@@ -914,692 +945,701 @@ codigo_actividad
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="265" parent="19" name="PRIMARY">
+      <key id="271" parent="19" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="266" parent="19" name="responsables_actividades_ibfk_1">
+      <foreign-key id="272" parent="19" name="responsables_actividades_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.actividades(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="267" parent="19" name="responsables_actividades_ibfk_2">
+      <foreign-key id="273" parent="19" name="responsables_actividades_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.actividades(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="268" parent="19" name="responsables_actividades_ibfk_3">
+      <foreign-key id="274" parent="19" name="responsables_actividades_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>sigepro.actividades(codigo_meta)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="269" parent="19" name="responsables_actividades_ibfk_4">
+      <foreign-key id="275" parent="19" name="responsables_actividades_ibfk_4">
         <columns>codigo_actividad</columns>
         <ref-key>~.actividades.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="270" parent="20" name="codigo">
+      <column id="276" parent="20" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="271" parent="20" name="codigo_proyecto">
+      <column id="277" parent="20" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="272" parent="20" name="codigo_objetivo">
+      <column id="278" parent="20" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="273" parent="20" name="codigo_meta">
+      <column id="279" parent="20" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="274" parent="20" name="codigo_usuario">
+      <column id="280" parent="20" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="275" parent="20" name="codigo_meta">
+      <index id="281" parent="20" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="276" parent="20" name="codigo_objetivo">
+      <index id="282" parent="20" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="277" parent="20" name="codigo_proyecto">
+      <index id="283" parent="20" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_objetivo
 codigo_meta
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="278" parent="20" name="codigo_usuario">
+      <index id="284" parent="20" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="279" parent="20" name="PRIMARY">
+      <key id="285" parent="20" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="280" parent="20" name="responsables_metas_ibfk_1">
+      <foreign-key id="286" parent="20" name="responsables_metas_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.metas(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="281" parent="20" name="responsables_metas_ibfk_2">
+      <foreign-key id="287" parent="20" name="responsables_metas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.metas(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="282" parent="20" name="responsables_metas_ibfk_3">
+      <foreign-key id="288" parent="20" name="responsables_metas_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>~.metas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="283" parent="20" name="responsables_metas_ibfk_4">
+      <foreign-key id="289" parent="20" name="responsables_metas_ibfk_4">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="284" parent="21" name="codigo">
+      <column id="290" parent="21" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="285" parent="21" name="codigo_objetivo">
+      <column id="291" parent="21" name="codigo_objetivo">
         <data-type>int(11)</data-type>
       </column>
-      <column id="286" parent="21" name="codigo_usuario">
+      <column id="292" parent="21" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="287" parent="21" name="codigo_objetivo">
+      <index id="293" parent="21" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="288" parent="21" name="codigo_proyecto">
+      <index id="294" parent="21" name="codigo_proyecto">
         <columns>codigo_usuario
 codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="289" parent="21" name="codigo_usuario">
+      <index id="295" parent="21" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="290" parent="21" name="PRIMARY">
+      <key id="296" parent="21" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="291" parent="21" name="responsables_objetivos_ibfk_3">
+      <foreign-key id="297" parent="21" name="responsables_objetivos_ibfk_3">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="292" parent="22" name="codigo">
+      <column id="298" parent="22" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="293" parent="22" name="codigo_proyecto">
+      <column id="299" parent="22" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="294" parent="22" name="codigo_usuario">
+      <column id="300" parent="22" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="295" parent="22" name="codigo_proyecto">
+      <index id="301" parent="22" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="296" parent="22" name="codigo_usuario">
+      <index id="302" parent="22" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="297" parent="22" name="PRIMARY">
+      <key id="303" parent="22" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="298" parent="22" name="responsables_proyectos_ibfk_1">
+      <foreign-key id="304" parent="22" name="responsables_proyectos_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>~.proyectos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="299" parent="22" name="responsables_proyectos_ibfk_2">
+      <foreign-key id="305" parent="22" name="responsables_proyectos_ibfk_2">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="300" parent="23" name="codigo">
+      <column id="306" parent="23" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(255)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="301" parent="23" name="codigo_proyecto">
+      <column id="307" parent="23" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="302" parent="23" name="codigo_objetivo">
+      <column id="308" parent="23" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="303" parent="23" name="codigo_meta">
+      <column id="309" parent="23" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="304" parent="23" name="codigo_actividad">
+      <column id="310" parent="23" name="codigo_actividad">
         <data-type>int(255)</data-type>
       </column>
-      <column id="305" parent="23" name="codigo_tareas">
+      <column id="311" parent="23" name="codigo_tarea">
         <data-type>int(255)</data-type>
       </column>
-      <column id="306" parent="23" name="codigo_usuario">
+      <column id="312" parent="23" name="codigo_usuario">
         <data-type>int(255)</data-type>
       </column>
-      <index id="307" parent="23" name="codigo_actividad">
+      <index id="313" parent="23" name="codigo_actividad">
         <columns>codigo_actividad</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="308" parent="23" name="codigo_meta">
+      <index id="314" parent="23" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="309" parent="23" name="codigo_objetivo">
+      <index id="315" parent="23" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="310" parent="23" name="codigo_proyecto">
+      <index id="316" parent="23" name="codigo_proyecto">
         <columns>codigo_proyecto
 codigo_usuario
 codigo_objetivo
 codigo_meta
 codigo_actividad
-codigo_tareas</columns>
+codigo_tarea</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="311" parent="23" name="codigo_tareas">
-        <columns>codigo_tareas</columns>
+      <index id="317" parent="23" name="codigo_tareas">
+        <columns>codigo_tarea</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="312" parent="23" name="codigo_usuario">
+      <index id="318" parent="23" name="codigo_usuario">
         <columns>codigo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="313" parent="23" name="PRIMARY">
+      <key id="319" parent="23" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="314" parent="23" name="responsables_tareas_ibfk_1">
+      <foreign-key id="320" parent="23" name="responsables_tareas_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.tareas(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="315" parent="23" name="responsables_tareas_ibfk_2">
+      <foreign-key id="321" parent="23" name="responsables_tareas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.tareas(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="316" parent="23" name="responsables_tareas_ibfk_3">
+      <foreign-key id="322" parent="23" name="responsables_tareas_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>sigepro.tareas(codigo_meta)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="317" parent="23" name="responsables_tareas_ibfk_4">
+      <foreign-key id="323" parent="23" name="responsables_tareas_ibfk_4">
         <columns>codigo_actividad</columns>
         <ref-key>sigepro.tareas(codigo_actividad)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="318" parent="23" name="responsables_tareas_ibfk_6">
+      <foreign-key id="324" parent="23" name="responsables_tareas_ibfk_6">
         <columns>codigo_usuario</columns>
         <ref-key>~.usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="319" parent="24" name="codigo">
+      <column id="325" parent="24" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="320" parent="24" name="codigo_proyecto">
+      <column id="326" parent="24" name="codigo_proyecto">
         <data-type>int(255)</data-type>
       </column>
-      <column id="321" parent="24" name="codigo_objetivo">
+      <column id="327" parent="24" name="codigo_objetivo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="322" parent="24" name="codigo_meta">
+      <column id="328" parent="24" name="codigo_meta">
         <data-type>int(255)</data-type>
       </column>
-      <column id="323" parent="24" name="codigo_actividad">
+      <column id="329" parent="24" name="codigo_actividad">
         <data-type>int(255)</data-type>
       </column>
-      <column id="324" parent="24" name="nombre">
+      <column id="330" parent="24" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="325" parent="24" name="alias">
+      <column id="331" parent="24" name="alias">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="326" parent="24" name="fecha_entrega">
+      <column id="332" parent="24" name="fecha_entrega">
         <data-type>date</data-type>
       </column>
-      <column id="327" parent="24" name="fecha_creacion">
+      <column id="333" parent="24" name="fecha_creacion">
         <data-type>date</data-type>
       </column>
-      <column id="328" parent="24" name="fecha_pausa">
+      <column id="334" parent="24" name="fecha_pausa">
         <data-type>date</data-type>
       </column>
-      <column id="329" parent="24" name="fecha_inicio">
+      <column id="335" parent="24" name="fecha_inicio">
         <data-type>date</data-type>
       </column>
-      <column id="330" parent="24" name="porcentaje">
+      <column id="336" parent="24" name="porcentaje">
+        <data-type>float</data-type>
+      </column>
+      <column id="337" parent="24" name="usuario_creador">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="331" parent="24" name="usuario_creador">
+      <column id="338" parent="24" name="direccion_ip">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="332" parent="24" name="direccion_ip">
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="333" parent="24" name="estado">
+      <column id="339" parent="24" name="estado">
         <data-type>int(11)</data-type>
       </column>
-      <column id="334" parent="24" name="fecha_final">
+      <column id="340" parent="24" name="fecha_final">
         <data-type>datetime</data-type>
       </column>
-      <column id="335" parent="24" name="hora_final">
+      <column id="341" parent="24" name="hora_final">
         <data-type>time</data-type>
       </column>
-      <column id="336" parent="24" name="completado">
+      <column id="342" parent="24" name="completado">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
         <default-expression>&apos;0002-11-30&apos;</default-expression>
       </column>
-      <index id="337" parent="24" name="codigo_actividad">
+      <column id="343" parent="24" name="fecha_eliminado">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0002-11-30&apos;</default-expression>
+      </column>
+      <column id="344" parent="24" name="hora_entrega">
+        <data-type>time</data-type>
+      </column>
+      <index id="345" parent="24" name="codigo_actividad">
         <columns>codigo_actividad</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="338" parent="24" name="codigo_meta">
+      <index id="346" parent="24" name="codigo_meta">
         <columns>codigo_meta</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="339" parent="24" name="codigo_objetivo">
+      <index id="347" parent="24" name="codigo_objetivo">
         <columns>codigo_objetivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="340" parent="24" name="codigo_proyecto">
+      <index id="348" parent="24" name="codigo_proyecto">
         <columns>codigo_proyecto</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="341" parent="24" name="PRIMARY">
+      <key id="349" parent="24" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="342" parent="24" name="tareas_ibfk_1">
+      <foreign-key id="350" parent="24" name="tareas_ibfk_1">
         <columns>codigo_proyecto</columns>
         <ref-key>sigepro.actividades(codigo_proyecto)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="343" parent="24" name="tareas_ibfk_2">
+      <foreign-key id="351" parent="24" name="tareas_ibfk_2">
         <columns>codigo_objetivo</columns>
         <ref-key>sigepro.actividades(codigo_objetivo)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="344" parent="24" name="tareas_ibfk_3">
+      <foreign-key id="352" parent="24" name="tareas_ibfk_3">
         <columns>codigo_meta</columns>
         <ref-key>sigepro.actividades(codigo_meta)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="345" parent="24" name="tareas_ibfk_4">
+      <foreign-key id="353" parent="24" name="tareas_ibfk_4">
         <columns>codigo_actividad</columns>
         <ref-key>~.actividades.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="346" parent="25" name="codigo">
+      <column id="354" parent="25" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="347" parent="25" name="codigo_recurso_economico">
+      <column id="355" parent="25" name="codigo_recurso_economico">
         <data-type>int(11)</data-type>
       </column>
-      <column id="348" parent="25" name="codigo_tarea">
+      <column id="356" parent="25" name="codigo_tarea">
         <data-type>int(11)</data-type>
       </column>
-      <column id="349" parent="25" name="cantidad_utilizada">
+      <column id="357" parent="25" name="cantidad_utilizada">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="350" parent="25" name="codigo_recurso_fisico">
+      <index id="358" parent="25" name="codigo_recurso_fisico">
         <columns>codigo_recurso_economico</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="351" parent="25" name="codigo_tarea">
+      <index id="359" parent="25" name="codigo_tarea">
         <columns>codigo_tarea</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="352" parent="25" name="PRIMARY">
+      <key id="360" parent="25" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="353" parent="25" name="tareas_recursos_economicos_ibfk_1">
+      <foreign-key id="361" parent="25" name="tareas_recursos_economicos_ibfk_1">
         <columns>codigo_recurso_economico</columns>
         <ref-key>~.recursos_fisicos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="354" parent="26" name="codigo">
+      <column id="362" parent="26" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="355" parent="26" name="codigo_recurso_fisico">
+      <column id="363" parent="26" name="codigo_recurso_fisico">
         <data-type>int(11)</data-type>
       </column>
-      <column id="356" parent="26" name="codigo_tarea">
+      <column id="364" parent="26" name="codigo_tarea">
         <data-type>int(11)</data-type>
       </column>
-      <column id="357" parent="26" name="cantidad_utilizada">
+      <column id="365" parent="26" name="cantidad_utilizada">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="358" parent="26" name="codigo_recurso_fisico">
+      <index id="366" parent="26" name="codigo_recurso_fisico">
         <columns>codigo_recurso_fisico</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="359" parent="26" name="codigo_tarea">
+      <index id="367" parent="26" name="codigo_tarea">
         <columns>codigo_tarea</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="360" parent="26" name="PRIMARY">
+      <key id="368" parent="26" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="361" parent="26" name="tareas_recursos_fisicos_ibfk_1">
+      <foreign-key id="369" parent="26" name="tareas_recursos_fisicos_ibfk_1">
         <columns>codigo_recurso_fisico</columns>
         <ref-key>~.recursos_fisicos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="362" parent="27" name="codigo">
+      <column id="370" parent="27" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="363" parent="27" name="nombre">
+      <column id="371" parent="27" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="364" parent="27" name="nombre_corto">
+      <column id="372" parent="27" name="nombre_corto">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="365" parent="27" name="indicador">
+      <column id="373" parent="27" name="indicador">
         <data-type>int(11)</data-type>
       </column>
-      <key id="366" parent="27" name="PRIMARY">
+      <key id="374" parent="27" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <column id="367" parent="28" name="codigo">
+      <column id="375" parent="28" name="codigo">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="368" parent="28" name="usuario">
+      <column id="376" parent="28" name="usuario">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="369" parent="28" name="contrasena">
+      <column id="377" parent="28" name="contrasena">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="370" parent="28" name="nombre">
+      <column id="378" parent="28" name="nombre">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="371" parent="28" name="apellido">
+      <column id="379" parent="28" name="apellido">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="372" parent="28" name="identificacion">
+      <column id="380" parent="28" name="identificacion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="373" parent="28" name="correo_electronico">
+      <column id="381" parent="28" name="correo_electronico">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="374" parent="28" name="fecha_creacion">
+      <column id="382" parent="28" name="fecha_creacion">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="375" parent="28" name="codigo_cargo">
+      <column id="383" parent="28" name="codigo_cargo">
         <data-type>int(255)</data-type>
       </column>
-      <column id="376" parent="28" name="descripcion_perfil">
+      <column id="384" parent="28" name="descripcion_perfil">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="377" parent="28" name="imagen">
+      <column id="385" parent="28" name="imagen">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="378" parent="28" name="telefono">
+      <column id="386" parent="28" name="telefono">
         <data-type>varchar(11)</data-type>
       </column>
-      <column id="379" parent="28" name="skype">
+      <column id="387" parent="28" name="skype">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="380" parent="28" name="intereses">
+      <column id="388" parent="28" name="intereses">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="381" parent="28" name="codigo_tipo_usuario">
+      <column id="389" parent="28" name="codigo_tipo_usuario">
         <data-type>int(11)</data-type>
       </column>
-      <column id="382" parent="28" name="direccion">
+      <column id="390" parent="28" name="direccion">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="383" parent="28" name="codigo_cargo">
+      <index id="391" parent="28" name="codigo_cargo">
         <columns>codigo_cargo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="384" parent="28" name="codigo_empresa">
+      <index id="392" parent="28" name="codigo_empresa">
         <columns>codigo_cargo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="385" parent="28" name="codigo_tipo_usuario">
+      <index id="393" parent="28" name="codigo_tipo_usuario">
         <columns>codigo_tipo_usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="386" parent="28" name="PRIMARY">
+      <key id="394" parent="28" name="PRIMARY">
         <columns>codigo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="387" parent="28" name="usuarios_ibfk_1">
+      <foreign-key id="395" parent="28" name="usuarios_ibfk_1">
         <columns>codigo_tipo_usuario</columns>
         <ref-key>~.tipos_usuarios.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="388" parent="28" name="usuarios_ibfk_4">
+      <foreign-key id="396" parent="28" name="usuarios_ibfk_4">
         <columns>codigo_cargo</columns>
         <ref-key>~.cargos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <argument id="389" parent="29" name="pass">
+      <argument id="397" parent="29" name="pass">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="390" parent="29" name="nameuser">
+      <argument id="398" parent="29" name="nameuser">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="391" parent="30" name="idparam">
+      <argument id="399" parent="30" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="392" parent="31" name="idparam">
+      <argument id="400" parent="31" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="393" parent="32" name="id">
+      <argument id="401" parent="32" name="id">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="394" parent="33" name="idparam">
+      <argument id="402" parent="33" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="395" parent="34" name="userId">
+      <argument id="403" parent="34" name="userId">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="396" parent="36" name="idparam">
+      <argument id="404" parent="36" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="397" parent="37" name="idparam">
+      <argument id="405" parent="37" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="398" parent="38" name="idparam">
+      <argument id="406" parent="38" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="399" parent="39" name="idparam">
+      <argument id="407" parent="39" name="idparam">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="400" parent="40" name="id">
+      <argument id="408" parent="40" name="id">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="401" parent="41" name="id">
+      <argument id="409" parent="41" name="id">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="402" parent="42" name="id">
+      <argument id="410" parent="42" name="id">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="403" parent="43" name="idProject">
+      <argument id="411" parent="43" name="idProject">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="404" parent="44" name="descriptionp">
+      <argument id="412" parent="44" name="descriptionp">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="405" parent="44" name="aliasp">
+      <argument id="413" parent="44" name="aliasp">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="406" parent="44" name="fechaentregap">
+      <argument id="414" parent="44" name="fechaentregap">
         <direction>IN</direction>
         <data-type>date</data-type>
       </argument>
-      <argument id="407" parent="44" name="fechainiciop">
+      <argument id="415" parent="44" name="fechainiciop">
         <direction>IN</direction>
         <data-type>date</data-type>
       </argument>
-      <argument id="408" parent="44" name="horaentregap">
+      <argument id="416" parent="44" name="horaentregap">
         <direction>IN</direction>
         <data-type>time</data-type>
       </argument>
-      <argument id="409" parent="44" name="horainiciop">
+      <argument id="417" parent="44" name="horainiciop">
         <direction>IN</direction>
         <data-type>time</data-type>
       </argument>
-      <argument id="410" parent="44" name="usercreadorp">
+      <argument id="418" parent="44" name="usercreadorp">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="411" parent="44" name="direccionipp">
+      <argument id="419" parent="44" name="direccionipp">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="412" parent="45" name="loginName">
+      <argument id="420" parent="45" name="loginName">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="413" parent="45" name="passwordValue">
+      <argument id="421" parent="45" name="passwordValue">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="414" parent="45" name="userName">
+      <argument id="422" parent="45" name="userName">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="415" parent="45" name="surName">
+      <argument id="423" parent="45" name="surName">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="416" parent="45" name="email">
+      <argument id="424" parent="45" name="email">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="417" parent="45" name="codePosition">
+      <argument id="425" parent="45" name="codePosition">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="418" parent="45" name="img">
+      <argument id="426" parent="45" name="img">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="419" parent="45" name="phone">
+      <argument id="427" parent="45" name="phone">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="420" parent="45" name="userType">
+      <argument id="428" parent="45" name="userType">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="421" parent="46" name="typeUsert">
+      <argument id="429" parent="46" name="typeUsert">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="422" parent="46" name="projectId">
+      <argument id="430" parent="46" name="projectId">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="423" parent="46" name="userId">
+      <argument id="431" parent="46" name="userId">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="424" parent="47" name="id_in">
+      <argument id="432" parent="47" name="id_in">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="425" parent="47" name="name_in">
+      <argument id="433" parent="47" name="name_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="426" parent="47" name="surname_in">
+      <argument id="434" parent="47" name="surname_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="427" parent="47" name="phone_in">
+      <argument id="435" parent="47" name="phone_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="428" parent="47" name="email_in">
+      <argument id="436" parent="47" name="email_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="429" parent="47" name="address_in">
+      <argument id="437" parent="47" name="address_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="430" parent="47" name="position_job_in">
+      <argument id="438" parent="47" name="position_job_in">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="431" parent="47" name="img_in">
+      <argument id="439" parent="47" name="img_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>
-      <argument id="432" parent="47" name="user_type_int">
+      <argument id="440" parent="47" name="user_type_int">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="433" parent="47" name="password_in">
+      <argument id="441" parent="47" name="password_in">
         <direction>IN</direction>
         <data-type>varchar(255)</data-type>
       </argument>

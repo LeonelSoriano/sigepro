@@ -1,131 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/application/helpers/comboformdb_helper.php" line="103" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/application/models/ProjectModel.php" line="130" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/application/controllers/Dashboard.php" line="254" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="58b474e9-386c-4815-8960-2977b5b0dd15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/doc/html/field-button.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/doc/reference.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/img.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/menuarrow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/menuarrow2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/active-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/dark-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/hover-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/menuarrow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/normal-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/rowhover-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/status-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/title-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/today-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/emi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/class/component/ListProject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listActividad.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listMeta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listObjetivo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listProjecto.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listTarea.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/ChangeLog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/bugtest-hidden-selects.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-blue2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-brown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-setup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-setup_ew.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-setup_stripped.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-system.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-tas.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-win2k-1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-win2k-2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-win2k-cold-1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar-win2k-cold-2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/calendar_stripped.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/dayinfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/doc/html/reference-Z-S.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/doc/html/reference.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/doc/html/reference.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-al.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-big5-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-big5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-cs-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-cs-win.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-du.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-he-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-hr-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-jp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ko-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-lt-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-pl-utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-ru_win_.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-sp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/lang/cn_utf8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/multiple-dates.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/release-notes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/simple-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/simple-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/simple-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/skins/aqua/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/test-position.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/calendar/test.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sigepro.sptl" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/listsTareas.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sigepro.iml" afterPath="$PROJECT_DIR$/.idea/sigepro.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/class/component/ComponentProject.php" afterPath="$PROJECT_DIR$/application/class/component/ComponentProject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/class/until/StateView.php" afterPath="$PROJECT_DIR$/application/class/until/StateView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Login.php" afterPath="$PROJECT_DIR$/application/controllers/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" afterPath="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ActividadModel.php" afterPath="$PROJECT_DIR$/application/models/ActividadModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/MetaModel.php" afterPath="$PROJECT_DIR$/application/models/MetaModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ObjetivoModel.php" afterPath="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ProjectModel.php" afterPath="$PROJECT_DIR$/application/models/ProjectModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/TareaModel.php" afterPath="$PROJECT_DIR$/application/models/TareaModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createActividad.php" afterPath="$PROJECT_DIR$/application/views/createActividad.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createMeta.php" afterPath="$PROJECT_DIR$/application/views/createMeta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createObjetivo.php" afterPath="$PROJECT_DIR$/application/views/createObjetivo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/createTarea.php" afterPath="$PROJECT_DIR$/application/views/createTarea.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-project-new.php" afterPath="$PROJECT_DIR$/application/views/dashboard-project-new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-add.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-list.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard.php" afterPath="$PROJECT_DIR$/application/views/dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listActividad.php" afterPath="$PROJECT_DIR$/application/views/listActividad.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listMeta.php" afterPath="$PROJECT_DIR$/application/views/listMeta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listObjetivo.php" afterPath="$PROJECT_DIR$/application/views/listObjetivo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listProjecto.php" afterPath="$PROJECT_DIR$/application/views/listProjecto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listTarea.php" afterPath="$PROJECT_DIR$/application/views/listTarea.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/sigepro.js" afterPath="$PROJECT_DIR$/assets/js/sigepro.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump-sigepro.sql" afterPath="$PROJECT_DIR$/dump-sigepro.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Controller.php" afterPath="$PROJECT_DIR$/system/core/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Model.php" afterPath="$PROJECT_DIR$/system/core/Model.php" />
     </list>
     <ignored path="sigepro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,43 +59,71 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - sigepro@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - sigepro@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="sigepro" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="492">
+              <caret line="503" column="41" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listProjecto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/listProjecto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding>
+                <marker date="1464671944130" expanded="true" signature="1803:2000" placeholder="..." />
+                <marker date="1464671944130" expanded="true" signature="1852:1995" placeholder="..." />
+                <marker date="1464671944130" expanded="true" signature="2024:2212" placeholder="..." />
+                <marker date="1464671944130" expanded="true" signature="2119:2207" placeholder="..." />
+                <marker date="1464671944130" expanded="true" signature="2246:2429" placeholder="..." />
+                <marker date="1464671944130" expanded="true" signature="2335:2424" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listsTareas.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/listsTareas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#85#0#PHP" expanded="true" />
+                <marker date="1464672383517" expanded="true" signature="1939:2133" placeholder="..." />
+                <marker date="1464672383517" expanded="true" signature="1992:2128" placeholder="..." />
+                <marker date="1464672383517" expanded="true" signature="2168:2357" placeholder="..." />
+                <marker date="1464672383517" expanded="true" signature="2221:2352" placeholder="..." />
+                <marker date="1464672383517" expanded="true" signature="2391:2575" placeholder="..." />
+                <marker date="1464672383517" expanded="true" signature="2440:2570" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listTarea.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/listTarea.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+              <folding>
+                <marker date="1464665817113" expanded="true" signature="1979:2173" placeholder="..." />
+                <marker date="1464665817113" expanded="true" signature="2032:2168" placeholder="..." />
+                <marker date="1464665817113" expanded="true" signature="2225:2414" placeholder="..." />
+                <marker date="1464665817113" expanded="true" signature="2278:2409" placeholder="..." />
+                <marker date="1464665817113" expanded="true" signature="2456:2640" placeholder="..." />
+                <marker date="1464665817113" expanded="true" signature="2505:2635" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,11 +133,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="dbroutine:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.sp_get_combo_user_to_typeuser" />
+        <option value="dbroutine:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.sp_get_combo_states" />
+        <option value="dbroutine:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.sp_get_combo_project_by_user" />
+        <option value="dbroutine:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.sp_get_combo_user" />
+        <option value="dbroutine:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.sp_get_combo_user_to_position" />
+        <option value="$PROJECT_DIR$/application/models/ProjectModel.php" />
+        <option value="$PROJECT_DIR$/application/views/dashboard-project-new.php" />
+        <option value="$PROJECT_DIR$/application/views/createObjetivo.php" />
+        <option value="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
+        <option value="$PROJECT_DIR$/application/views/listObjetivo.php" />
+        <option value="$PROJECT_DIR$/assets/js/sigepro.js" />
+        <option value="$PROJECT_DIR$/application/views/createMeta.php" />
+        <option value="$PROJECT_DIR$/application/views/listMeta.php" />
+        <option value="$PROJECT_DIR$/application/models/MetaModel.php" />
+        <option value="$PROJECT_DIR$/application/views/createActividad.php" />
+        <option value="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql" />
+        <option value="$PROJECT_DIR$/application/models/ActividadModel.php" />
+        <option value="$PROJECT_DIR$/application/views/createTarea.php" />
+        <option value="$PROJECT_DIR$/application/views/listTarea.php" />
+        <option value="$PROJECT_DIR$/application/class/until/StateView.php" />
+        <option value="$PROJECT_DIR$/application/models/TareaModel.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
+        <option value="$PROJECT_DIR$/application/views/listActividad.php" />
+        <option value="$PROJECT_DIR$/application/views/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/listProjecto.php" />
+        <option value="$PROJECT_DIR$/application/views/listsTareas.php" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -234,41 +212,41 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
+              <option name="myItemId" value="system" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -278,11 +256,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
+              <option name="myItemId" value="cladbox" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -294,78 +272,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hooks" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigepro" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -373,11 +279,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -395,6 +302,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -408,6 +321,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="58b474e9-386c-4815-8960-2977b5b0dd15" name="Default" comment="" />
@@ -415,49 +331,357 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464459033374</updated>
-      <workItem from="1464459036968" duration="846000" />
+      <workItem from="1464459036968" duration="1229000" />
+      <workItem from="1464460485197" duration="7425000" />
+      <workItem from="1464470326116" duration="4538000" />
+      <workItem from="1464487374122" duration="7530000" />
+      <workItem from="1464503391172" duration="1133000" />
+      <workItem from="1464511204244" duration="32000" />
+      <workItem from="1464511520065" duration="9814000" />
+      <workItem from="1464564031096" duration="383000" />
+      <workItem from="1464564428363" duration="16776000" />
+      <workItem from="1464645703174" duration="2912000" />
+      <workItem from="1464657766148" duration="7132000" />
+      <workItem from="1464670438399" duration="1476000" />
     </task>
+    <task id="LOCAL-00001" summary="terminado boton de culminar tareas">
+      <created>1464460157046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464460157046</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="846000" />
+    <option name="totallyTimeSpent" value="60380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1152" height="837" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22342342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34774774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2882883" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27207208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33427763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="terminado boton de culminar tareas" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado boton de culminar tareas" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.usuarios" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.proyectos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.actividades" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.objetivos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.responsables_objetivos" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.observadores_objetivos" />
+    <entry file="file://$PROJECT_DIR$/application/views/dashboard-project-new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.responsables_metas" />
+    <entry file="file://$PROJECT_DIR$/application/views/createObjetivo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/ObjetivoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.metas" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.actividades" />
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.actividades" />
+    <entry file="file://$PROJECT_DIR$/application/views/listMeta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="77" column="56" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listObjetivo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/MetaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/comboformdb_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <marker date="1464648165063" expanded="true" signature="492:503" placeholder="..." />
+            <marker date="1464648165063" expanded="true" signature="1243:1254" placeholder="..." />
+            <marker date="1464648165063" expanded="true" signature="1999:2010" placeholder="..." />
+            <marker date="1464648165063" expanded="true" signature="2658:2668" placeholder="..." />
+            <marker date="1464648165063" expanded="true" signature="5167:5229" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.actividades" />
+    <entry file="file://$PROJECT_DIR$/application/models/ProjectModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="244" selection-end-column="4" />
+          <folding>
+            <element signature="n#insertProject#0;n#ProjectModel#0;n#!!top" expanded="false" />
+            <marker date="1464513729880" expanded="true" signature="2548:2661" placeholder="select codig... proyectos" />
+            <marker date="1464513729880" expanded="true" signature="2548:2670" placeholder="select codig... proyectos" />
+            <marker date="1464513729880" expanded="true" signature="2548:2692" placeholder="select codig... proyectos" />
+            <marker date="1464513729880" expanded="true" signature="2548:2705" placeholder="select codig... proyectos" />
+            <marker date="1464513729880" expanded="true" signature="3127:3352" placeholder="SELECT estad... estados" />
+            <marker date="1464513729880" expanded="true" signature="3244:3306" placeholder="SELECT proye... proyectos" />
+            <marker date="1464513729880" expanded="true" signature="3488:3742" placeholder="SELECT usuar... responsables_proyectos" />
+            <marker date="1464513729880" expanded="true" signature="3870:4125" placeholder="SELECT usuar... observadores_proyectos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="301" column="24" selection-start-line="301" selection-start-column="22" selection-end-line="301" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
+    <entry file="file://$PROJECT_DIR$/application/views/createTarea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="172" column="89" selection-start-line="172" selection-start-column="78" selection-end-line="172" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/ActividadModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="250" column="10" selection-start-line="250" selection-start-column="10" selection-end-line="250" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/createActividad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/createMeta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="182" column="27" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/dashboard-user-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="555" column="42" selection-start-line="555" selection-start-column="42" selection-end-line="555" selection-end-column="42" />
+          <folding>
+            <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
+            <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listActividad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding>
+            <marker date="1464665817208" expanded="true" signature="2000:2193" placeholder="..." />
+            <marker date="1464665817208" expanded="true" signature="2049:2188" placeholder="..." />
+            <marker date="1464665817208" expanded="true" signature="2225:2411" placeholder="..." />
+            <marker date="1464665817208" expanded="true" signature="2278:2406" placeholder="..." />
+            <marker date="1464665817208" expanded="true" signature="2453:2639" placeholder="..." />
+            <marker date="1464665817208" expanded="true" signature="2502:2634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/sigepro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/TareaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="249" column="20" selection-start-line="249" selection-start-column="20" selection-end-line="249" selection-end-column="31" />
+          <folding>
+            <marker date="1464663170217" expanded="true" signature="2648:2864" placeholder="select codig... tareas" />
+            <marker date="1464663170217" expanded="true" signature="3309:3525" placeholder="SELECT estad... estados" />
+            <marker date="1464663170217" expanded="true" signature="3426:3479" placeholder="SELECT tarea... tareas" />
+            <marker date="1464663170217" expanded="true" signature="3662:3904" placeholder="SELECT usuar... responsables_tareas" />
+            <marker date="1464663170217" expanded="true" signature="4034:4277" placeholder="SELECT usuar... observadores_tareas" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="503" column="41" selection-start-line="503" selection-start-column="41" selection-end-line="503" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listProjecto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <marker date="1464671944130" expanded="true" signature="1803:2000" placeholder="..." />
+            <marker date="1464671944130" expanded="true" signature="1852:1995" placeholder="..." />
+            <marker date="1464671944130" expanded="true" signature="2024:2212" placeholder="..." />
+            <marker date="1464671944130" expanded="true" signature="2119:2207" placeholder="..." />
+            <marker date="1464671944130" expanded="true" signature="2246:2429" placeholder="..." />
+            <marker date="1464671944130" expanded="true" signature="2335:2424" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listTarea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <marker date="1464665817113" expanded="true" signature="1979:2173" placeholder="..." />
+            <marker date="1464665817113" expanded="true" signature="2032:2168" placeholder="..." />
+            <marker date="1464665817113" expanded="true" signature="2225:2414" placeholder="..." />
+            <marker date="1464665817113" expanded="true" signature="2278:2409" placeholder="..." />
+            <marker date="1464665817113" expanded="true" signature="2456:2640" placeholder="..." />
+            <marker date="1464665817113" expanded="true" signature="2505:2635" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listsTareas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1464672383517" expanded="true" signature="1939:2133" placeholder="..." />
+            <marker date="1464672383517" expanded="true" signature="1992:2128" placeholder="..." />
+            <marker date="1464672383517" expanded="true" signature="2168:2357" placeholder="..." />
+            <marker date="1464672383517" expanded="true" signature="2221:2352" placeholder="..." />
+            <marker date="1464672383517" expanded="true" signature="2391:2575" placeholder="..." />
+            <marker date="1464672383517" expanded="true" signature="2440:2570" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

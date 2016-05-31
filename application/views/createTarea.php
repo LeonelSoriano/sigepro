@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <input type="button" class="pullRight btn btn-success" name="btnAction" id="btnAction" value="Buscar"
                style="margin-left: 5px">
-        <input type="button" class="pullRight btn btn-success" name="btnAction" id="btnAction" value="Nuevo"/>
+<!--        <input type="button" class="pullRight btn btn-success" name="btnAction" id="btnAction" value="Nuevo"/>-->
 
     </div>
     <div class="container-fluid">
@@ -44,9 +44,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel-body">
                 <div class="table-responsive">
 
-                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/createTarea" method="post"
-                         >
+                    <form onsubmit="return testSelects();" name="fproyectosadd" id="fproyectosadd" action="Dashboard/createTarea" method="post">
 
+                        <?php if (isset($proyectActive) ): ?>
+                            <?php echo($idHidden); ?>
+                        <?php endif; ?>
 
 
                         <table class="table">
@@ -54,22 +56,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td class="ewTableHeader"><span>Descripción<span class='ewmsg'>&nbsp;*</span></span>
                                 </td>
                                 <td>
-                                    <textarea cols="0" rows="0" id="descripcion" name="descripcion"></textarea>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($inputName);?>
+                                    <?php else: ?>
+                                        <textarea cols="0" rows="0" id="descripcion" name="descripcion"></textarea>
+                                    <?php endif; ?>
+
                                 </td>
                             </tr>
                             <tr>
                                 <td class="ewTableHeader"><span>Alias</span></td>
                                 <td>
-                                    <input type="text" name="alias" id="x_alias" size="30" maxlength="255" value="">
+
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($inputAlias);?>
+                                    <?php else: ?>
+                                        <input type="text" name="alias" id="x_alias" size="30" maxlength="255" value="">
+                                    <?php endif; ?>
+                                    
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Responsables&nbsp;*</span></span></td>
                                 <td>
-                                    <select name="select-responsable[]" id="select-responsable" multiple="multiple" style="width: 80%">
-
-                                    </select>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($multiResponsable);?>
+                                    <?php else: ?>
+                                        <select name="select-responsable[]" id="select-responsable" multiple="multiple" style="width: 80%"></select>
+                                    <?php endif; ?>
 
                                     <div class="pull-right icons">
                                         <input type="button" data-toggle="modal" data-target="#mimodal-responsable"
@@ -90,9 +105,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tr>
                                 <td class="ewTableHeader">Observadores&nbsp;*</span></span></td>
                                 <td>
-                                    <select name="select-observador[]" id="select-observador"  class="ilstSelected" multiple="multiple" style="width: 80%">
 
-                                    </select>
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <?php echo($multiObservador);?>
+                                    <?php else: ?>
+                                        <select name="select-observador[]" id="select-observador"  class="ilstSelected" multiple="multiple" style="width: 80%"></select>
+                                    <?php endif; ?>
+
 
                                     <div class="pull-right icons">
                                         <input type="button" data-toggle="modal" data-target="#mimodal-observador"
@@ -109,57 +128,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </td>
                             </tr>
 
-
-                            <tr>
-                                <td class="ewTableHeader">Fecha Inicio&nbsp;*</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_inicio"
-                                           id="fecha_iniciojs" value="">&nbsp;<i class="icon-calendar"></i>
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="ewTableHeader">Hora Inicio&nbsp;*</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="hourstart" id="hourstartjs"
-                                           value="">&nbsp;<i class="icon-clock"></i>
-                                </td>
-                            </tr>
-
-
                             <tr>
                                 <td class="ewTableHeader">Fecha entrega&nbsp;*</span></span></td>
                                 <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_entrega"
-                                           id="fecha_entregajs" value="">&nbsp;<i class="icon-calendar"></i>
+
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <input style="width:  97% !important" type="text" name="fecha_entrega"
+                                               id="fecha_entregajs" value="<?php echo($fechaEntrega); ?>">&nbsp;<i class="icon-calendar"></i>
+                                    <?php else: ?>
+                                        <input style="width:  97% !important" type="text" name="fecha_entrega"
+                                               id="fecha_entregajs" value="">&nbsp;<i class="icon-calendar"></i>
+                                    <?php endif; ?>
+                                    
+                                    
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Hora Entrega&nbsp;*</span></span></td>
                                 <td>
-                                    <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
-                                           value="">&nbsp;<i class="icon-clock"></i>
+
+
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
+                                               value="<?php echo($horaEntrega); ?>">&nbsp;<i class="icon-clock"></i>
+                                    <?php else: ?>
+                                        <input style="width:  97% !important" type="text" name="hoursend" id="hoursendjs"
+                                               value="">&nbsp;<i class="icon-clock"></i>
+                                    <?php endif; ?> 
+                                    
+                                    
+                                    
                                 </td>
                             </tr>
-
 
                             <tr>
-                                <td class="ewTableHeader">Fecha Final</span></span></td>
+                                <td class="ewTableHeader">Porcentaje</span></span></td>
                                 <td>
-                                    <input style="width:  97% !important" type="text" name="fecha_final"
-                                           id="fecha_finaljs" value="">&nbsp;<i class="icon-calendar"></i>
+
+
+
+                                    <?php if (isset($proyectActive) ): ?>
+                                        <input style="width:  97% !important" type="number" min="0" max="100" maxlength="3" name="porcentaje"
+                                               id="porcent" value="<?php echo($porcentaje);?>">
+                                    <?php else: ?>
+                                        <input style="width:  97% !important" type="number" min="0" max="100" maxlength="3" name="porcentaje"
+                                               id="porcent" value="0">
+                                    <?php endif; ?>
+
+
+                                    
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="ewTableHeader">Hora Final</span></span></td>
-                                <td>
-                                    <input style="width:  97% !important" type="text" name="hoursfinal"
-                                           id="hourfinaldjs" value="">&nbsp;<i class="icon-clock"></i>
-                                </td>
-                            </tr>
 
                             <tr>
                                 <td class="ewTableHeader">Estados</span></span></td>
@@ -252,7 +273,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             </div>
                         </div>
-
                         <p>
                             <input type="submit" class="btn btn-success" name="btnAction" id="btnAction"
                                    value="Guardar">

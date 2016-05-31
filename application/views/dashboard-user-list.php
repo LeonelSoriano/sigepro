@@ -34,7 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!--ENCABEZADO DE CADA PAGINA FIN-->
     <!--..:::::::::::::::::::::..-->
 
-
     <p>TABLA: Usuarios</p>
 
     <table class="ewBasicSearch">
@@ -85,7 +84,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tr>
         </tfoot>
         <tbody>
-
 
         <tr>
             <td><?php echo($name); ?></td>
@@ -140,7 +138,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var parametros = { view : 3 };
             $.ajax({
                 data:  parametros,
-                url:   "/sigepro/dashboard/ajaxUserProfile/",
+                url:   "/cladbox/dashboard/ajaxUserProfile/",
                 type:  "post",
                 beforeSend: function () {
                     // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -158,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var parametros = { view : 2 };
             $.ajax({
                 data:  parametros,
-                url:   "/sigepro/dashboard/ajaxUserProfile/",
+                url:   "/cladbox/dashboard/ajaxUserProfile/",
                 type:  "post",
                 beforeSend: function () {
                     // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -177,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var parametros = { view : 6 };
             $.ajax({
                 data:  parametros,
-                url:   "/sigepro/dashboard/ajaxUserProfile/",
+                url:   "/cladbox/dashboard/ajaxUserProfile/",
                 type:  "post",
                 beforeSend: function () {
                     // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -196,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var parametros = { view : 5 };
             $.ajax({
                 data:  parametros,
-                url:   "/sigepro/dashboard/ajaxUserProfile/",
+                url:   "/cladbox/dashboard/ajaxUserProfile/",
                 type:  "post",
                 beforeSend: function () {
                     // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");

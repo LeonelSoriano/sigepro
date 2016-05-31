@@ -2,10 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: leonel
- * Date: 25/05/16
- * Time: 19:30
+ * Date: 31/05/16
+ * Time: 0:53
  */
 ?>
+
 
 <ol class="breadcrumb">
     <li class=""><a>System</a></li>
@@ -54,34 +55,34 @@
 
         <tbody>
         <?php foreach ($tabla as $item => $index) {
-            echo ("<tr>");
-            echo ("<td>".$index->nombre."</td>");
-            echo ("<td>".$index->alias."</td>");
-            echo ("<td>".$index->fecha_entrega."</td>");
+    echo ("<tr>");
+    echo ("<td>".$index->nombre."</td>");
+    echo ("<td>".$index->alias."</td>");
+    echo ("<td>".$index->fecha_entrega."</td>");
 
 
-            echo ("
+    echo ("
     <td><a href=\"javascript:void(0)\" id=\"modificateAjax\"
                  onclick='msgCompleteConfirm($index->codigo)'  class=\"btn btn-success-alt\"><i class=\"fa fa-check\"></i> Completar</a></td>
     
     ");
-         
-            echo ("
+
+    echo ("
     <td><a href=\"javascript:void(0)\" id=\"modificateAjax\"
                onclick='goUpdateProject($index->codigo)'      class=\"btn btn-info-alt\"><i class=\"fa fa-edit\"></i> Modificar</a></td>
     
     ");
-            echo ("
+    echo ("
     <td><a href=\"javascript:void(0)\" id=\"deleteAjax\"
                   onclick='deleteProyect($index->codigo)'   class=\"btn btn-danger-alt\"><i class=\"icon-trash\"></i> Eliminar</a></td>
     
     ");
 
-            echo ("</tr>");
-        } ?>
+    echo ("</tr>");
+} ?>
 
-        </tbody>
-    </table>
+</tbody>
+</table>
 
 
 
@@ -197,6 +198,5 @@
 
 
 </script>
-
 
 

@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     };
                                     $.ajax({
                                         data:  parametros,
-                                        url:   "/sigepro/dashboard/loadTableProject/",
+                                        url:   "/cladbox/dashboard/loadTableProject/",
                                         type:  "get",
                                         beforeSend: function () {
                                             // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
