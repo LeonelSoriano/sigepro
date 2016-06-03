@@ -40,7 +40,7 @@ class Dashboard extends CI_Controller {
         $this->load->model("TareaModel");
 
         $this->load->helper(array('url', 'form', 'sigeproSecurity','comboFormDb'));
-        $this->load->library(array('session','upload'));
+        $this->load->library(array('session','upload','parser'));
 
         $this->stateView = new StateView($this->session,$this->load);
     }
@@ -67,6 +67,8 @@ class Dashboard extends CI_Controller {
 
 
     public function ajaxUserProfile(){
+
+//        var_dump($this->session->userdata('view.active') );
 
         if($this->input->post('view') !== '0'){
             $this->stateView->setView($this->input->post('view'));
@@ -281,7 +283,6 @@ class Dashboard extends CI_Controller {
             }
 
 
-
         }else if($this->session->userdata('view.active') === '12'){
 
             require_once(APPPATH ."/class/orm/SpGetComboStates.php");
@@ -385,13 +386,17 @@ class Dashboard extends CI_Controller {
             }
 
 
-
         }else if($this->session->userdata('view.active') === '14'){
 
             $this->data = array();
             $this->data["tabla"] = $this->ProjectModel->findForList($this->session->userdata('user.id'));
 
+        }else if($this->session->userdata('view.active') === '20'){
+
+            $this->data = array();
+
         }else{
+
             $this->ajaxProject();
             $this->listView();
             return;
@@ -474,6 +479,10 @@ class Dashboard extends CI_Controller {
             $this->data = array();
             $this->data["tabla"] =$this->ObjetivoModel->findForList($this->session->userdata('list.objetivo'));
 
+            $this->data["project"] = $this->ProjectModel->findByidAlias($this->session->userdata('list.objetivo'));
+
+//            $this->data["father"] = $this->ObjetivoModel->getPrject($this->session->userdata('list.objetivo'));
+            
         }else if($this->session->userdata('view.active') === '16'){
 
 
@@ -487,6 +496,8 @@ class Dashboard extends CI_Controller {
 
             $this->data = array();
             $this->data["tabla"] =$this->MetaModel->findForList($this->session->userdata('list.meta'));
+            $this->data["objetivo"] =$this->ObjetivoModel->findByid($this->session->userdata('list.meta'));
+            
             
         }else if($this->session->userdata('view.active') === '15'){
             $renderHere = true;
@@ -500,7 +511,8 @@ class Dashboard extends CI_Controller {
 
             $this->data = array();
             $this->data["tabla"] =$this->ActividadModel->findForList($this->session->userdata('list.actividad'));
-
+            $this->data["meta"] = $this->MetaModel->findByid($this->session->userdata('list.actividad'));
+            
         }else if($this->session->userdata('view.active') === '18'){
             $renderHere = true;
             if($this->input->post('key') != null){
@@ -513,9 +525,11 @@ class Dashboard extends CI_Controller {
 
             $this->data = array();
             $this->data["tabla"] =$this->TareaModel->findForList($this->session->userdata('list.tarea'));
+            $this->data["actividad"] = $this->ActividadModel->findByid($this->session->userdata('list.tarea'));
+
 
         }else if($this->session->userdata('view.active') === '19'){
-            
+
             $renderHere = true;
             $this->data = array();
             $this->data["tabla"] =$this->TareaModel->findForListAll();
@@ -565,11 +579,17 @@ class Dashboard extends CI_Controller {
             $this->data = array();
             $this->data["tabla"] =$this->ActividadModel->findForList($this->session->userdata('list.actividad'));
 
-        }else if($this->session->userdata('view.active') === '18'){
+        }else if($this->session->userdata('view.active') === '18' ){
 
             $this->TareaModel->deleteTarea($this->input->post('deleteid'));
             $this->data = array();
             $this->data["tabla"] =$this->TareaModel->findForList($this->session->userdata('list.tarea'));
+
+        }else if($this->session->userdata('view.active') === '19'){
+
+            $this->TareaModel->deleteTarea($this->input->post('deleteid'));
+            $this->data = array();
+            $this->data["tabla"] =$this->TareaModel->findForListAll();
 
         }
         

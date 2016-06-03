@@ -11,7 +11,6 @@
 <!--ENCABEZADO DE CADA PAGINA-->
 <!--..:::::::::::::::::::::..-->
 
-
 <script ></script>
 
 <ol class="breadcrumb">
@@ -20,10 +19,9 @@
     <li class=""><a>Usuarios</a></li>
 </ol>
 <div class="page-heading">
-    <h1><i class="fa fa-book"></i> Listado Objetivos</b></h1>
+    <h1><i class="fa fa-book"></i> Listado Objetivos (Projecto: <?php echo($project->ProjectNombre);  ?>, fecha: <?php echo($project->ProjectFechaEntrega); ?>) </b></h1>
 
-    <a id="listProject" href="javascript:void(0)" style="color:#455A64" class="btnOnResponsiveLeft btn btn-default-alt pullRight mr2p"><i
-            class="icon-arrow-left"></i> Volver a las Proyectos</a>
+
 </div>
 <div class="container-fluid">
     <!--ENCABEZADO DE CADA PAGINA FIN-->

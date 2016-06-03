@@ -28,7 +28,7 @@
 <div class="container-fluid">
     <!--ENCABEZADO DE CADA PAGINA FIN-->
     <!--..:::::::::::::::::::::..-->
-
+    
 
 
     <table class="ewBasicSearch">
@@ -46,7 +46,7 @@
     </table>
     <p>
 
-
+<h1></h1>
     <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
         <tr>

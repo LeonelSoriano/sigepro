@@ -242,6 +242,17 @@ WHERE observadores_proyectos.codigo_proyecto = $id ");
         $this->db->where('codigo', $id);
         $this->db->update('proyectos', $dataProject);
     }
-    
+
+    public function  findByidAlias($id){
+
+        $this->db->select('nombre as ProjectNombre,alias as ProjectAlias,
+            fecha_creacion as ProjectFechaCreacion,hora_entrega as ProjectHoraEntrega,
+            fecha_entrega as ProjectFechaEntrega');
+        $this->db->from('proyectos');
+        $this->db->where('codigo', $id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result[0];
+    }
 
 }

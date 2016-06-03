@@ -250,5 +250,17 @@ class ObjetivoModel extends CI_Model
         $this->db->update('objetivos', $dataProject);
     }
 
+    
+    public function getPrject($id){
+        $query = $this->db->query('
+        SELECT
+  proyectos.nombre as nombreProjectoHeader,
+  proyectos.fecha_entrega as fechaEntregaHeader
+FROM objetivos
+inner join proyectos ON objetivos.codigo_proyecto = proyectos.codigo
+WHERE objetivos.codigo=$id;
+        ');
+        return $query->result()[0];
+    }
 
 }//END CLASS

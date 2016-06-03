@@ -50,7 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tr>
     </table>
     <p>
-    <p><span class="ewmsg">Actualización de Registro Exitosa</span></p>
 
     <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
@@ -62,27 +61,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th>Empresa</th>
             <th>Departamento</th>
             <th>Cargo</th>
-            <th>Foto</th>
             <th>Detalle</th>
             <th>Modificar</th>
             <th>Eliminar</th>
         </tr>
         </thead>
-        <tfoot>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Telefono</th>
-            <th>Correo</th>
-            <th>Empresa</th>
-            <th>Departamento</th>
-            <th>Cargo</th>
-            <th>Foto</th>
-            <th>Detalle</th>
-            <th>Modificar</th>
-            <th>Eliminar</th>
-        </tr>
-        </tfoot>
+
         <tbody>
 
         <tr>
@@ -93,16 +77,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td><?php echo($companyName); ?></td>
             <td><?php echo($departamentName); ?></td>
             <td><?php echo($positionName); ?></td>
-            <td><?php echo($img); ?></td>
-            <td><a href="javascript:void(0)" id="detailAjax"
-                                          class="btn btn-info-alt"><i class="fa fa-folder-open-o"></i> Detalles</a>
+            <td  data-toggle="tooltip" title="Actualizar"><div class="span12" style="text-align:center"><a href="javascript:void(0)" id="detailAjax"
+                                          class="btn btn-info-alt"><i class="fa fa-folder-open-o"></i> </div></a>
             </td>
 
-            <td><a href="javascript:void(0)" id="modificateAjax"
-                                          class="btn btn-info-alt"><i class="fa fa-edit"></i> Modificar</a></td>
+            <td data-toggle="tooltip" title="Modificar"><div class="span12" style="text-align:center"><a href="javascript:void(0)" id="modificateAjax"
+  class="btn btn-info-alt "><i class="fa fa-edit"></i> </a></div></td>
 
-            <td><a href="javascript:void(0)" id="deleteAjax"
-                                          class="btn btn-danger-alt"><i class="icon-trash"></i> Eliminar</a></td>
+            <td  data-toggle="tooltip" title="Eliminar"> <div class="span12" style="text-align:center"><a   href="javascript:void(0)" id="deleteAjax"
+                                           class="btn btn-danger-alt "><i   class="icon-trash "></i></a></div></td>
         </tr>
         </tbody>
     </table>

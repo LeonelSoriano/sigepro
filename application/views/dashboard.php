@@ -345,7 +345,11 @@
                                         <li><a href="empresaslist.php?cmd=resetall"><i class="fa fa-building-o"></i>Departamentos</a></li>
                                         <li><a href="estatuslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Tipos de Usuarios</a></li>
                                         <li><a href="estatus_recursos_financieroslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Usuarios</a></li>
-                                        <li><a href="userlevelslist.php?cmd=resetall"><i class="icon-users"></i> Tipos de Usuarios</a></li>
+
+                                        <?php  if ($_SESSION['user.typeUser'] === '1'): ?>
+                                            <li id="listUser"><a href="javascript:void(0)"><i class="icon-users"></i> Lista de Usuarios</a></li>
+                                        <?php endif; ?>
+                                      
                                     </ul>
                                 </li>
                                 <li><a href="#"><i class="fa fa-hdd-o"></i><span>Configuraciones</span></a>
@@ -432,7 +436,7 @@
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/bootbox/bootbox.js') ?>"></script>							<!-- Bootbox -->
 
-<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/simpleWeather/jquery.simpleWeather.min.js') ?><!--"></script> <!-- Weather plugin-->-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/simpleWeather/jquery.simpleWeather.min.js') ?><!--"></script> <!-- Weather plugin-->
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/nanoScroller/js/jquery.nanoscroller.min.js') ?>"></script> <!-- nano scroller -->
 
@@ -450,8 +454,8 @@
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/wijets/wijets.js') ?>"></script>     								<!-- Wijet -->
 
-<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.js') ?><!--"></script>               	<!-- Chartist -->-->
-<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist-plugin-tooltip.js') ?><!--"></script>    	<!-- Chartist -->-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist.min.js') ?><!--"></script>               	<!-- Chartist -->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/plugins/charts-chartistjs/chartist-plugin-tooltip.js') ?><!--"></script>    	<!-- Chartist -->
 
 <script type="text/javascript" src="<?= base_url('/assets/plugins/form-daterangepicker/moment.min.js') ?>"></script>              	<!-- Moment.js for Date Range Picker -->
 <script type="text/javascript" src="<?= base_url('/assets/plugins/form-daterangepicker/daterangepicker.js') ?>"></script>     				<!-- Date Range Picker -->
@@ -470,7 +474,7 @@
 
 <script src="<?= base_url('/assets/plugins/sweetalert-master/dist/sweetalert.min.js') ?>"></script>
 
-<!--<script type="text/javascript" src="--><?//= base_url('/assets/demo/demo-index.js') ?><!--"></script> 										<!-- Initialize scripts for this page-->-->
+<!--<script type="text/javascript" src="--><?//= base_url('/assets/demo/demo-index.js') ?><!--"></script> 										<!-- Initialize scripts for this page-->
 <link rel="stylesheet" type="text/css" media="all" href="<?php base_url("assets/calendar/calendar-win2k-1.css") ?>" title="win2k-1" />
 <script type="text/javascript" src="<?php base_url("assets/calendar/calendar.js") ?>"></script>
 <script type="text/javascript" src="<?php base_url("assets/calendar/lang/calendar-es.js") ?>"></script>
@@ -502,7 +506,7 @@
         loadAjax("#ajax-user-profile" ,2 );
         loadAjax("#createproject" ,7 );
         loadAjax("#projectasigned" ,14 );
-
+        loadAjax("#listUser" ,4 );
 
     });
 </script>

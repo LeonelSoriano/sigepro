@@ -63,6 +63,7 @@ class StateView
                 echo $this->load->view('dashboard-user-profile', $data, TRUE);
                 break;
             case $this->updateProfileUser:
+                
                 echo $this->load->view('dashboard-user-profile-update', $data, TRUE);
                 break;
             case $this->profileUserList:
@@ -112,7 +113,7 @@ class StateView
                 break;
             case $this->listsTareas:
             echo $this->load->view('listsTareas', $data, TRUE);
-            break;
+                break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));
         }

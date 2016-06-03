@@ -101,8 +101,7 @@ CREATE TABLE `cargos` (
   `alias` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
   KEY `codigo_empresa` (`codigo_departamento`),
-  KEY `codigo_departamento` (`codigo_departamento`),
-  CONSTRAINT `cargos_ibfk_2` FOREIGN KEY (`codigo_departamento`) REFERENCES `departamentos` (`codigo`)
+  KEY `codigo_departamento` (`codigo_departamento`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -157,8 +156,7 @@ CREATE TABLE `departamentos` (
   `nombre` varchar(255) DEFAULT NULL,
   `alias` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`codigo`),
-  KEY `codigo_empresa` (`codigo_empresa`),
-  CONSTRAINT `departamentos_ibfk_1` FOREIGN KEY (`codigo_empresa`) REFERENCES `empresas` (`codigo`)
+  KEY `codigo_empresa` (`codigo_empresa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -304,7 +302,7 @@ CREATE TABLE `objetivos` (
   KEY `codigo_proyecto` (`codigo_proyecto`),
   KEY `codigo` (`codigo`,`codigo_proyecto`),
   CONSTRAINT `objetivos_ibfk_1` FOREIGN KEY (`codigo_proyecto`) REFERENCES `proyectos` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,7 +311,7 @@ CREATE TABLE `objetivos` (
 
 LOCK TABLES `objetivos` WRITE;
 /*!40000 ALTER TABLE `objetivos` DISABLE KEYS */;
-INSERT INTO `objetivos` VALUES (1,1,'leonel2',NULL,'2016-05-16',NULL,NULL,NULL,'14:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,0,'0002-11-30'),(3,1,'objetivo2','aias objetivo2','2016-05-23',NULL,NULL,NULL,'19:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,1,'0002-11-30'),(4,1,'lleno','lleono','2016-05-25',NULL,NULL,NULL,'08:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,1,'2016-05-29');
+INSERT INTO `objetivos` VALUES (1,1,'leonel2',NULL,'2016-05-16',NULL,NULL,NULL,'14:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,0,'0002-11-30'),(3,1,'objetivo2','aias objetivo2','2016-05-23',NULL,NULL,NULL,'19:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,1,'0002-11-30'),(4,1,'lleno','lleono','2016-05-25',NULL,NULL,NULL,'08:25:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,1,'2016-05-29'),(5,1,NULL,NULL,NULL,NULL,NULL,NULL,'16:00:00',NULL,NULL,NULL,1,'127.0.0.1',NULL,NULL,NULL,'0002-11-30');
 /*!40000 ALTER TABLE `objetivos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -796,7 +794,7 @@ CREATE TABLE `tareas` (
 
 LOCK TABLES `tareas` WRITE;
 /*!40000 ALTER TABLE `tareas` DISABLE KEYS */;
-INSERT INTO `tareas` VALUES (1,NULL,NULL,NULL,1,'prueba','prueba2',NULL,NULL,NULL,NULL,NULL,'1',NULL,NULL,NULL,NULL,'0002-11-30','0002-11-30',NULL),(3,NULL,NULL,NULL,4,'tarea ejemplo2','tarea ejemplo2','2016-05-19',NULL,NULL,NULL,12,'1','127.0.0.1',1,NULL,NULL,'0002-11-30','2016-05-30','09:30:00');
+INSERT INTO `tareas` VALUES (1,NULL,NULL,NULL,4,'prueba','prueba2','2016-06-08',NULL,NULL,NULL,12,'1',NULL,2,NULL,NULL,'0002-11-30','0002-11-30',NULL),(3,NULL,NULL,NULL,4,'tarea ejemplo2','tarea ejemplo2','2016-05-19',NULL,NULL,NULL,12,'1','127.0.0.1',1,NULL,NULL,'0002-11-30','0002-11-30','09:30:00');
 /*!40000 ALTER TABLE `tareas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1384,7 +1382,7 @@ in direccionipp varchar(255)
 begin
 	
 	
-INSERT INTO proyectos
+INSERT INTO sigepro.proyectos
 ( nombre, alias, fecha_entrega, fecha_creacion,  fecha_inicio, hora_entrega, hora_creacion,  hora_inicio, usuario_creador, direccion_ip)
 VALUES(descriptionp, aliasp, fechaentregap, CURDATE(), fechainiciop, horaentregap, CURTIME(),  horainiciop, usercreadorp, direccionipp);
 
@@ -1530,4 +1528,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-30 22:57:31
+-- Dump completed on 2016-06-02 23:29:10

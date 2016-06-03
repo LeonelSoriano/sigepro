@@ -43,10 +43,11 @@
     <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
         <tr>
+            <th>Projecto</th>
             <th>Nombre</th>
             <th>Alias</th>
             <th>Fecha de Entrega</th>
-
+            
             <th>Completar</th>
             <th>Modificar</th>
             <th>Eliminar</th>
@@ -56,9 +57,11 @@
         <tbody>
         <?php foreach ($tabla as $item => $index) {
     echo ("<tr>");
+            echo ("<td>".$index->nameProjet."</td>");
     echo ("<td>".$index->nombre."</td>");
     echo ("<td>".$index->alias."</td>");
     echo ("<td>".$index->fecha_entrega."</td>");
+
 
 
     echo ("
