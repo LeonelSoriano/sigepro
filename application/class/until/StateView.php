@@ -33,6 +33,7 @@ class StateView
     private $listObjetivo = '17';
     private $listTarea = '18';
     private $listsTareas = '19';
+    private $configureCompany = '20';
 
 
     function __construct($session, $load)
@@ -112,7 +113,10 @@ class StateView
                 echo $this->load->view('listTarea', $data, TRUE);
                 break;
             case $this->listsTareas:
-            echo $this->load->view('listsTareas', $data, TRUE);
+                echo $this->load->view('listsTareas', $data, TRUE);
+                break;
+            case $this->configureCompany:
+                echo $this->load->view('configure-company', $data, TRUE);
                 break;
             default:
                 echo($this->load->view('dashboard-welcome', $data, TRUE));
@@ -120,3 +124,4 @@ class StateView
     }
 
 }
+ 

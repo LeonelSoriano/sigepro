@@ -125,7 +125,7 @@
         };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/ajaxUserProfile/",
+            url:   "./dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -145,7 +145,7 @@
         };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/deleteInList/",
+            url:   "./dashboard/deleteInList/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -178,7 +178,7 @@
                 };
                 $.ajax({
                     data:  parametros,
-                    url:   "/cladbox/dashboard/completeTask/",
+                    url:   "./dashboard/completeTask/",
                     type:  "post",
                     beforeSend: function () {
                         // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");

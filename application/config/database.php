@@ -76,7 +76,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+//	'hostname' =>  getenv('IP'),
+	'hostname' =>  'localhost',
+//	'username' => getenv('C9_USER'),
 	'username' => 'root',
 	'password' => '123456',
 	'database' => 'sigepro',

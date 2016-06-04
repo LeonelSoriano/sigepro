@@ -9,7 +9,7 @@ function loadAjax(id,numberview) {
         var parametros = { view : numberview };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/ajaxUserProfile/",
+            url:   "./dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -30,7 +30,7 @@ function loadAjaxtProject(numberview,pk) {
         };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/ajaxProject/",
+            url:   "./dashboard/ajaxProject/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -52,7 +52,7 @@ function loadAjaxtListView(numberview,key) {
         };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/listView/",
+            url:   "./dashboard/listView/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");

@@ -38,6 +38,7 @@ class Dashboard extends CI_Controller {
         $this->load->model("MetaModel");
         $this->load->model("ObjetivoModel");
         $this->load->model("TareaModel");
+        $this->load->model("EmpresaModel");
 
         $this->load->helper(array('url', 'form', 'sigeproSecurity','comboFormDb'));
         $this->load->library(array('session','upload','parser'));
@@ -394,6 +395,9 @@ class Dashboard extends CI_Controller {
         }else if($this->session->userdata('view.active') === '20'){
 
             $this->data = array();
+            
+            $this->data['companyName'] = form_input('companyName', '');
+            var_dump($this->EmpresaModel->deleteById(2));die;
 
         }else{
 

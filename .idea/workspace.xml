@@ -8,12 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b474e9-386c-4815-8960-2977b5b0dd15" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/EmpresaModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/class/until/StateView.php" afterPath="$PROJECT_DIR$/application/class/until/StateView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ObjetivoModel.php" afterPath="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/ProjectModel.php" afterPath="$PROJECT_DIR$/application/models/ProjectModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-add.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-involved.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-list.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile-update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" afterPath="$PROJECT_DIR$/application/views/dashboard-user-remove.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard.php" afterPath="$PROJECT_DIR$/application/views/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listActividad.php" afterPath="$PROJECT_DIR$/application/views/listActividad.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listMeta.php" afterPath="$PROJECT_DIR$/application/views/listMeta.php" />
@@ -21,7 +29,36 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listProjecto.php" afterPath="$PROJECT_DIR$/application/views/listProjecto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listTarea.php" afterPath="$PROJECT_DIR$/application/views/listTarea.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/listsTareas.php" afterPath="$PROJECT_DIR$/application/views/listsTareas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump-sigepro.sql" afterPath="$PROJECT_DIR$/dump-sigepro.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/bugtest-hidden-selects.html" afterPath="$PROJECT_DIR$/assets/calendar/bugtest-hidden-selects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/calendar-setup_ew.js" afterPath="$PROJECT_DIR$/assets/calendar/calendar-setup_ew.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/calendar-bg.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/calendar-el.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/calendar-hr-utf8.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-hr-utf8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/calendar-si.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/calendar-tr.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/calendar-tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/calendar/lang/cn_utf8.js" afterPath="$PROJECT_DIR$/assets/calendar/lang/cn_utf8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/ismcenter.css" afterPath="$PROJECT_DIR$/assets/css/ismcenter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/styles-blessed2.css" afterPath="$PROJECT_DIR$/assets/css/styles-blessed2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/sigepro.js" afterPath="$PROJECT_DIR$/assets/js/sigepro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/css/fileinput.min.css" afterPath="$PROJECT_DIR$/assets/login_style/css/fileinput.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/images/blur.svg" afterPath="$PROJECT_DIR$/assets/login_style/images/blur.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/app.js" afterPath="$PROJECT_DIR$/assets/login_style/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/blog.js" afterPath="$PROJECT_DIR$/assets/login_style/js/blog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/calendar.js" afterPath="$PROJECT_DIR$/assets/login_style/js/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/fileinput.min.js" afterPath="$PROJECT_DIR$/assets/login_style/js/fileinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/home.js" afterPath="$PROJECT_DIR$/assets/login_style/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/infobox.js" afterPath="$PROJECT_DIR$/assets/login_style/js/infobox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/jquery-ui-touch-punch.js" afterPath="$PROJECT_DIR$/assets/login_style/js/jquery-ui-touch-punch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/jquery.placeholder.js" afterPath="$PROJECT_DIR$/assets/login_style/js/jquery.placeholder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/jquery.visible.js" afterPath="$PROJECT_DIR$/assets/login_style/js/jquery.visible.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/signin.js" afterPath="$PROJECT_DIR$/assets/login_style/js/signin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/signup.js" afterPath="$PROJECT_DIR$/assets/login_style/js/signup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/sortable.js" afterPath="$PROJECT_DIR$/assets/login_style/js/sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/table.js" afterPath="$PROJECT_DIR$/assets/login_style/js/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/tablesorter.js" afterPath="$PROJECT_DIR$/assets/login_style/js/tablesorter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/login_style/js/underscore.js" afterPath="$PROJECT_DIR$/assets/login_style/js/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_guide/_static/jquery.js" afterPath="$PROJECT_DIR$/user_guide/_static/jquery.js" />
     </list>
     <ignored path="sigepro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,25 +87,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dashboard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <file leaf-file-name="ActividadModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/ActividadModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8010">
-              <caret line="539" column="0" selection-start-line="539" selection-start-column="0" selection-end-line="539" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="240" column="36" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="36" />
               <folding>
-                <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
-                <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+                <marker date="1465000360135" expanded="true" signature="2625:2778" placeholder="SELECT codig... actividades" />
+                <marker date="1465000360135" expanded="true" signature="3217:3448" placeholder="SELECT estad... estados" />
+                <marker date="1465000360135" expanded="true" signature="3334:3402" placeholder="SELECT activ... actividades" />
+                <marker date="1465000360135" expanded="true" signature="3585:3846" placeholder="SELECT usuar... responsables_actividades" />
+                <marker date="1465000360135" expanded="true" signature="3976:4238" placeholder="SELECT usuar... observadores_actividades" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
+      <file leaf-file-name="Dashboard.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7620">
-              <caret line="508" column="31" selection-start-line="508" selection-start-column="30" selection-end-line="508" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="281">
+              <caret line="397" column="12" selection-start-line="397" selection-start-column="12" selection-end-line="397" selection-end-column="12" />
+              <folding>
+                <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
+                <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,12 +122,12 @@
             <state relative-caret-position="240">
               <caret line="21" column="144" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="144" />
               <folding>
-                <marker date="1464842616568" expanded="true" signature="2148:2347" placeholder="..." />
-                <marker date="1464842616568" expanded="true" signature="2197:2342" placeholder="..." />
-                <marker date="1464842616568" expanded="true" signature="2379:2566" placeholder="..." />
-                <marker date="1464842616568" expanded="true" signature="2432:2561" placeholder="..." />
-                <marker date="1464842616568" expanded="true" signature="2608:2792" placeholder="..." />
-                <marker date="1464842616568" expanded="true" signature="2658:2787" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2148:2347" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2197:2342" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2379:2566" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2432:2561" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2608:2792" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2658:2787" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -93,70 +136,31 @@
       <file leaf-file-name="listObjetivo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/listObjetivo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="-1200">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
-                <marker date="1464843023949" expanded="true" signature="1949:2142" placeholder="..." />
-                <marker date="1464843023949" expanded="true" signature="1998:2137" placeholder="..." />
-                <marker date="1464843023949" expanded="true" signature="2174:2358" placeholder="..." />
-                <marker date="1464843023949" expanded="true" signature="2227:2353" placeholder="..." />
-                <marker date="1464843023949" expanded="true" signature="2400:2582" placeholder="..." />
-                <marker date="1464843023949" expanded="true" signature="2449:2577" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="1949:2142" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="1998:2137" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2174:2358" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2227:2353" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2400:2582" placeholder="..." />
+                <marker date="1465000360141" expanded="true" signature="2449:2577" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listTarea.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/listTarea.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <marker date="1464842890932" expanded="true" signature="2078:2272" placeholder="..." />
-                <marker date="1464842890932" expanded="true" signature="2131:2267" placeholder="..." />
-                <marker date="1464842890932" expanded="true" signature="2324:2513" placeholder="..." />
-                <marker date="1464842890932" expanded="true" signature="2377:2508" placeholder="..." />
-                <marker date="1464842890932" expanded="true" signature="2555:2739" placeholder="..." />
-                <marker date="1464842890932" expanded="true" signature="2604:2734" placeholder="..." />
-              </folding>
+      <file leaf-file-name="sigepro.empresas" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.empresas">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjetivoModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/ObjetivoModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="107" column="29" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="29" />
-              <folding>
-                <element signature="e#242#2552#0#PHP" expanded="false" />
-                <marker date="1464834321646" expanded="true" signature="2626:2792" placeholder="SELECT codig... objetivos" />
-                <marker date="1464834321646" expanded="true" signature="3213:3438" placeholder="SELECT estad... estados" />
-                <marker date="1464834321646" expanded="true" signature="3330:3392" placeholder="SELECT objet... objetivos" />
-                <marker date="1464834321646" expanded="true" signature="3574:3912" placeholder="SELECT usuar... responsables_objetivos" />
-                <marker date="1464834321646" expanded="true" signature="4040:4379" placeholder="SELECT usuar... observadores_objetivos" />
-                <marker date="1464834321646" expanded="true" signature="7263:7472" placeholder="SELECT proye... objetivos" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sigepro.objetivos" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.objetivos">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateView.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -192,7 +196,6 @@
         <option value="$PROJECT_DIR$/application/helpers/comboformdb_helper.php" />
         <option value="$PROJECT_DIR$/application/models/ActividadModel.php" />
         <option value="$PROJECT_DIR$/application/views/createTarea.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/models/TareaModel.php" />
         <option value="$PROJECT_DIR$/application/views/listsTareas.php" />
         <option value="$PROJECT_DIR$/assets/js/sigepro.js" />
@@ -200,15 +203,18 @@
         <option value="$PROJECT_DIR$/application/views/dashboard-user-list.php" />
         <option value="$PROJECT_DIR$/application/models/UserModel.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fc9c715-322c-4dac-871c-0d72b598a682/console.sql" />
-        <option value="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
         <option value="$PROJECT_DIR$/application/views/listProjecto.php" />
         <option value="$PROJECT_DIR$/application/models/ProjectModel.php" />
         <option value="$PROJECT_DIR$/application/views/listMeta.php" />
         <option value="$PROJECT_DIR$/application/views/listActividad.php" />
         <option value="$PROJECT_DIR$/application/views/listTarea.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/listObjetivo.php" />
         <option value="$PROJECT_DIR$/application/class/until/StateView.php" />
+        <option value="$PROJECT_DIR$/application/models/ObjetivoModel.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/views/listObjetivo.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
+        <option value="$PROJECT_DIR$/application/models/EmpresaModel.php" />
       </list>
     </option>
   </component>
@@ -238,7 +244,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scratches" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -252,28 +258,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cladbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cladbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cladbox" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,6 +274,22 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="72" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="90" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="832" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="72" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="90" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="832" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -346,7 +353,10 @@
       <workItem from="1464822053075" duration="10091000" />
       <workItem from="1464841304264" duration="170000" />
       <workItem from="1464841480308" duration="2216000" />
-      <workItem from="1464924686046" duration="193000" />
+      <workItem from="1464924686046" duration="294000" />
+      <workItem from="1465000746052" duration="52000" />
+      <workItem from="1465000855457" duration="1439000" />
+      <workItem from="1465002557413" duration="9984000" />
     </task>
     <task id="LOCAL-00001" summary="terminado boton de culminar tareas">
       <created>1464460157046</created>
@@ -369,23 +379,30 @@
       <option name="project" value="LOCAL" />
       <updated>1464674192955</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hacia el cloud">
+      <created>1464924890866</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1464924890866</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77462000" />
+    <option name="totallyTimeSpent" value="89038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1152" height="837" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36576578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25405404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15315315" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27657658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6723164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -424,15 +441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.actividades" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.tareas" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.objetivos" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.responsables_objetivos" />
-    <entry file="dbDummy://dbtable:/f9c95a6d/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.observadores_objetivos" />
     <entry file="file://$PROJECT_DIR$/application/views/dashboard-project-new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -462,13 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <marker date="1464648165063" expanded="true" signature="492:503" placeholder="..." />
-            <marker date="1464648165063" expanded="true" signature="1243:1254" placeholder="..." />
-            <marker date="1464648165063" expanded="true" signature="1999:2010" placeholder="..." />
-            <marker date="1464648165063" expanded="true" signature="2658:2668" placeholder="..." />
-            <marker date="1464648165063" expanded="true" signature="5167:5229" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -492,20 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/ActividadModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="250" column="10" selection-start-line="250" selection-start-column="10" selection-end-line="250" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -634,14 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <marker date="1464841935127" expanded="true" signature="1816:2013" placeholder="..." />
-            <marker date="1464841935127" expanded="true" signature="1865:2008" placeholder="..." />
-            <marker date="1464841935127" expanded="true" signature="2037:2225" placeholder="..." />
-            <marker date="1464841935127" expanded="true" signature="2132:2220" placeholder="..." />
-            <marker date="1464841935127" expanded="true" signature="2259:2442" placeholder="..." />
-            <marker date="1464841935127" expanded="true" signature="2348:2437" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,45 +631,6 @@
           <caret line="249" column="48" selection-start-line="249" selection-start-column="48" selection-end-line="249" selection-end-column="48" />
           <folding>
             <element signature="n#insertProject#0;n#ProjectModel#0;n#!!top" expanded="false" />
-            <marker date="1464842044276" expanded="true" signature="2548:2661" placeholder="select codig... proyectos" />
-            <marker date="1464842044276" expanded="true" signature="2548:2670" placeholder="select codig... proyectos" />
-            <marker date="1464842044276" expanded="true" signature="2548:2692" placeholder="select codig... proyectos" />
-            <marker date="1464842044276" expanded="true" signature="2548:2705" placeholder="select codig... proyectos" />
-            <marker date="1464842044276" expanded="true" signature="3127:3352" placeholder="SELECT estad... estados" />
-            <marker date="1464842044276" expanded="true" signature="3244:3306" placeholder="SELECT proye... proyectos" />
-            <marker date="1464842044276" expanded="true" signature="3488:3742" placeholder="SELECT usuar... responsables_proyectos" />
-            <marker date="1464842044276" expanded="true" signature="3870:4125" placeholder="SELECT usuar... observadores_proyectos" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/ObjetivoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="107" column="29" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="29" />
-          <folding>
-            <element signature="e#242#2552#0#PHP" expanded="false" />
-            <marker date="1464834321646" expanded="true" signature="2626:2792" placeholder="SELECT codig... objetivos" />
-            <marker date="1464834321646" expanded="true" signature="3213:3438" placeholder="SELECT estad... estados" />
-            <marker date="1464834321646" expanded="true" signature="3330:3392" placeholder="SELECT objet... objetivos" />
-            <marker date="1464834321646" expanded="true" signature="3574:3912" placeholder="SELECT usuar... responsables_objetivos" />
-            <marker date="1464834321646" expanded="true" signature="4040:4379" placeholder="SELECT usuar... observadores_objetivos" />
-            <marker date="1464834321646" expanded="true" signature="7263:7472" placeholder="SELECT proye... objetivos" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/listMeta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="144" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="144" />
-          <folding>
-            <marker date="1464842616568" expanded="true" signature="2148:2347" placeholder="..." />
-            <marker date="1464842616568" expanded="true" signature="2197:2342" placeholder="..." />
-            <marker date="1464842616568" expanded="true" signature="2379:2566" placeholder="..." />
-            <marker date="1464842616568" expanded="true" signature="2432:2561" placeholder="..." />
-            <marker date="1464842616568" expanded="true" signature="2608:2792" placeholder="..." />
-            <marker date="1464842616568" expanded="true" signature="2658:2787" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -698,14 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="141" />
-          <folding>
-            <marker date="1464842830712" expanded="true" signature="2084:2277" placeholder="..." />
-            <marker date="1464842830712" expanded="true" signature="2133:2272" placeholder="..." />
-            <marker date="1464842830712" expanded="true" signature="2309:2495" placeholder="..." />
-            <marker date="1464842830712" expanded="true" signature="2362:2490" placeholder="..." />
-            <marker date="1464842830712" expanded="true" signature="2537:2723" placeholder="..." />
-            <marker date="1464842830712" expanded="true" signature="2586:2718" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,55 +647,13 @@
         <state relative-caret-position="285">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1464842890932" expanded="true" signature="2078:2272" placeholder="..." />
-            <marker date="1464842890932" expanded="true" signature="2131:2267" placeholder="..." />
-            <marker date="1464842890932" expanded="true" signature="2324:2513" placeholder="..." />
-            <marker date="1464842890932" expanded="true" signature="2377:2508" placeholder="..." />
-            <marker date="1464842890932" expanded="true" signature="2555:2739" placeholder="..." />
-            <marker date="1464842890932" expanded="true" signature="2604:2734" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2078:2272" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2131:2267" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2324:2513" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2377:2508" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2555:2739" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2604:2734" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/listObjetivo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <marker date="1464843023949" expanded="true" signature="1949:2142" placeholder="..." />
-            <marker date="1464843023949" expanded="true" signature="1998:2137" placeholder="..." />
-            <marker date="1464843023949" expanded="true" signature="2174:2358" placeholder="..." />
-            <marker date="1464843023949" expanded="true" signature="2227:2353" placeholder="..." />
-            <marker date="1464843023949" expanded="true" signature="2400:2582" placeholder="..." />
-            <marker date="1464843023949" expanded="true" signature="2449:2577" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8010">
-          <caret line="539" column="0" selection-start-line="539" selection-start-column="0" selection-end-line="539" selection-end-column="0" />
-          <folding>
-            <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
-            <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7620">
-          <caret line="508" column="31" selection-start-line="508" selection-start-column="30" selection-end-line="508" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,6 +662,209 @@
         <state relative-caret-position="1095">
           <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.objetivos">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.objetivos">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="84" column="27" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/configure-company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="490" column="38" selection-start-line="490" selection-start-column="38" selection-end-line="490" selection-end-column="38" />
+          <caret line="477" column="66" selection-start-line="477" selection-start-column="66" selection-end-line="477" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/ActividadModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="240" column="36" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="36" />
+          <folding>
+            <marker date="1465000360135" expanded="true" signature="2625:2778" placeholder="SELECT codig... actividades" />
+            <marker date="1465000360135" expanded="true" signature="3217:3448" placeholder="SELECT estad... estados" />
+            <marker date="1465000360135" expanded="true" signature="3334:3402" placeholder="SELECT activ... actividades" />
+            <marker date="1465000360135" expanded="true" signature="3585:3846" placeholder="SELECT usuar... responsables_actividades" />
+            <marker date="1465000360135" expanded="true" signature="3976:4238" placeholder="SELECT usuar... observadores_actividades" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.usuarios">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/ObjetivoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="143" column="34" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
+          <caret line="144" column="68" selection-start-line="144" selection-start-column="68" selection-end-line="144" selection-end-column="68" />
+          <folding>
+            <element signature="e#242#2552#0#PHP" expanded="false" />
+            <marker date="1465000360136" expanded="true" signature="2626:2792" placeholder="SELECT codig... objetivos" />
+            <marker date="1465000360136" expanded="true" signature="3213:3438" placeholder="SELECT estad... estados" />
+            <marker date="1465000360136" expanded="true" signature="3330:3392" placeholder="SELECT objet... objetivos" />
+            <marker date="1465000360136" expanded="true" signature="3574:3912" placeholder="SELECT usuar... responsables_objetivos" />
+            <marker date="1465000360136" expanded="true" signature="4040:4379" placeholder="SELECT usuar... observadores_objetivos" />
+            <marker date="1465000360136" expanded="true" signature="7263:7472" placeholder="SELECT proye... objetivos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/class/until/StateView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.departamentos">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/2fc9c715-322c-4dac-871c-0d72b598a682.TABLE:sigepro.empresas">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>2fc9c715-322c-4dac-871c-0d72b598a682.TABLE:sigepro.empresas</OriginalElement>
+          <nodes>
+            <node x="" y="">2fc9c715-322c-4dac-871c-0d72b598a682.TABLE:sigepro.empresas</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="187.0" y="147.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b02ef9f3/2fc9c715-322c-4dac-871c-0d72b598a682/sigepro.empresas">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listMeta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="144" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="144" />
+          <folding>
+            <marker date="1465000360141" expanded="true" signature="2148:2347" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2197:2342" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2379:2566" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2432:2561" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2608:2792" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2658:2787" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/listObjetivo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <marker date="1465000360141" expanded="true" signature="1949:2142" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="1998:2137" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2174:2358" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2227:2353" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2400:2582" placeholder="..." />
+            <marker date="1465000360141" expanded="true" signature="2449:2577" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EmpresaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="397" column="12" selection-start-line="397" selection-start-column="12" selection-end-line="397" selection-end-column="12" />
+          <folding>
+            <element signature="n#loadTableProject#0;n#Dashboard#0;n#!!top" expanded="false" />
+            <element signature="n#updateUser#0;n#Dashboard#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

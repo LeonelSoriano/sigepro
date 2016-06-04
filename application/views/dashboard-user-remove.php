@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var parametros = {  };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/deleteUser/",
+            url:   "./dashboard/deleteUser/",
             type:  "post",
             beforeSend: function () {
 

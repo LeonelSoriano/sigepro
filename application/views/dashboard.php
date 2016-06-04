@@ -341,7 +341,7 @@
 
                                 <li><a href="#"><i class="fa fa-hdd-o"></i><span>Datos Maestros</span></a>
                                     <ul class="acc-menu" id="scrollingUlMenu">
-                                        <li><a href="cargolist.php?cmd=resetall"><i class="icon-trophy"></i>Empresas</a></li>
+                                        <li id="configureComnpnay"><a href="javascript:void(0)"><i class="icon-trophy"></i>Empresas</a></li>
                                         <li><a href="empresaslist.php?cmd=resetall"><i class="fa fa-building-o"></i>Departamentos</a></li>
                                         <li><a href="estatuslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Tipos de Usuarios</a></li>
                                         <li><a href="estatus_recursos_financieroslist.php?cmd=resetall"><i class="icon-bar-chart"></i>Usuarios</a></li>
@@ -494,7 +494,7 @@
         var parametros = { view : 0 };
         $.ajax({
             data:  parametros,
-            url:   "/cladbox/dashboard/ajaxUserProfile/",
+            url:   "./dashboard/ajaxUserProfile/",
             type:  "post",
             beforeSend: function () {
                 // $("#resultado").html("<img src="../../images/ajax-loader.gif" alt="Ajax Cargando" height="42" width="42">");
@@ -507,6 +507,7 @@
         loadAjax("#createproject" ,7 );
         loadAjax("#projectasigned" ,14 );
         loadAjax("#listUser" ,4 );
+        loadAjax('#configureComnpnay',20);
 
     });
 </script>
